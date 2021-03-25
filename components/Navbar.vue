@@ -8,7 +8,6 @@
           class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           href="#"
         >
-          <!--Icon from: http://www.potlabicons.com/ -->
           <svg
             id="Layer_1"
             class="h-8 fill-current inline"
