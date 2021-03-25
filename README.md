@@ -1,6 +1,6 @@
-# crypto-lion
+# CDC Chain Mainnet Crypto Lion Node Website
 
-## Build Setup
+## To build on your local
 
 ```bash
 # install dependencies
@@ -18,3 +18,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+Please check the license file.
+
+Special thanks:
+[tailwindtoolbox/Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
