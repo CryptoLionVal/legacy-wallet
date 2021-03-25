@@ -5,7 +5,7 @@
         <h1
           class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
         >
-          Title
+          How staking work?
         </h1>
         <div class="w-full mb-4">
           <div
@@ -15,18 +15,22 @@
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Lorem ipsum dolor sit amet
+              Hold CRO token and earn interest at the same time!
             </h3>
             <p class="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.
+              You already have some CRO in your wallet. Great! because fully
+              decentralized Crypto.org Chain offers you
+              <span class="font-bold">20%</span> APY
               <br />
               <br />
 
-              Images from:
+              Official source:
 
-              <a class="text-pink-500 underline" href="https://undraw.co/"
-                >undraw.co</a
+              <a
+                class="text-pink-500 underline"
+                target="_blank"
+                href="https://blog.crypto.com/cro-mainnet-staking-rewards-set-at-20-apy/"
+                >CRO Mainnet Staking Rewards</a
               >
             </p>
           </div>

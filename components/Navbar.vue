@@ -119,7 +119,7 @@
             <a
               class="inline-block no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#"
-              >Why staking?</a
+              >How staking work?</a
             >
           </li>
           <li class="mr-3">
