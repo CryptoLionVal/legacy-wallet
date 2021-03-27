@@ -20,6 +20,10 @@ export default {
     },
   },
 
+  router: {
+    linkExactActiveClass: 'font-bold',
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['@/assets/main.css'],
   tailwindcss: {},

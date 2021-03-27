@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 border-b py-8">
+  <section class="bg-gray-100 border-b py-10">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
@@ -41,7 +41,7 @@
         >
           <div class="flex items-center justify-center">
             <button
-              class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               See Statistics
             </button>
@@ -79,7 +79,7 @@
         >
           <div class="flex items-center justify-center">
             <button
-              class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               Visit Twitter
             </button>
@@ -117,7 +117,7 @@
         >
           <div class="flex items-center justify-center">
             <button
-              class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               See Delegators
             </button>

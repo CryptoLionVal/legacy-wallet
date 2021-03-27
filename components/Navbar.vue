@@ -110,28 +110,43 @@
       >
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 font-bold no-underline" href="#"
-              >Home</a
+            <NuxtLink
+              prefetch
+              to="/#validator-home"
+              class="inline-block py-2 px-4 no-underline"
+              title="Crypto Lion Node Homepage"
+              >Home</NuxtLink
             >
           </li>
           <li class="mr-3">
-            <a
-              class="inline-block no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
-              >How staking work?</a
+            <NuxtLink
+              to="/#how-cro-staking-work"
+              class="inline-block py-2 px-4 no-underline"
+              title="How CRO staking work on Crypto.org Chain"
+              >How staking work?</NuxtLink
             >
           </li>
           <li class="mr-3">
-            <a
-              class="inline-block no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
-              >Contact</a
+            <NuxtLink
+              prefetch
+              to="/how-to-stake-cro#delegating-steps"
+              class="inline-block py-2 px-4 no-underline"
+              title="CRO Staking on Crypto.org explained"
+              >Staking Explained</NuxtLink
+            >
+          </li>
+          <li class="mr-3">
+            <NuxtLink
+              to="/#f-a-qs"
+              class="inline-block py-2 px-4 no-underline"
+              title="Frequently asked questions about staking on Crypto.org Chain"
+              >FAQs</NuxtLink
             >
           </li>
         </ul>
         <button
           id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
         >
           Stake Now
         </button>
@@ -143,6 +158,9 @@
 
 <script>
 export default {
+  data() {
+    return {}
+  },
   mounted() {
     let scrollpos = window.scrollY
     const header = document.getElementById('header')
