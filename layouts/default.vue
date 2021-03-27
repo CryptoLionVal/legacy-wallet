@@ -7,5 +7,7 @@
     <Nuxt />
 
     <area-footer />
+
+    <address-copier />
   </div>
 </template>
