@@ -1,7 +1,7 @@
 <template>
   <div class="fixed z-50 container flex flex-row justify-end">
     <button
-      class="mx-auto flex flex-row lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow hover:opacity-100 opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+      class="mx-auto flex flex-row lg:mx-0 bg-white text-gray-800 font-bold rounded-l-full mt-4 lg:mt-0 py-3 px-6 hover:shadow-2xl shadow-xl hover:opacity-100 opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
       @click="copy"
     >
       <svg
@@ -40,7 +40,7 @@
       <div class="flex flex-col">
         <span v-if="copied">Copied!</span>
         <span v-else>Copy Staking Address</span>
-        <code class="opacity-75 bg-gray-400 rounded-full px-2">
+        <code class="address opacity-75 bg-gray-400 rounded-full px-2">
           {{ address }}
         </code>
       </div>
@@ -92,17 +92,21 @@ export default {
 
 <style scoped>
 .container {
-  width: 100vw;
+  width: 500px;
   top: 20vh;
-  left: 410px;
+  right: -405px;
 }
-
 .container:hover {
-  left: 40px;
+  right: 0;
 }
 @media only screen and (max-width: 600px) {
   .container {
-    left: 485px;
+    width: 350px;
+    right: -255px;
+  }
+  .address {
+    margin-top: 0.5em;
+    font-size: 0.5em;
   }
 }
 </style>
