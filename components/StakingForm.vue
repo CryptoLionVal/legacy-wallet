@@ -10,16 +10,6 @@
       <div
         class="flex items-end justify-center min-h-screen text-center sm:block sm:p-0"
       >
-        <!--
-          Background overlay, show/hide based on modal state.
-
-          Entering: "ease-out duration-300"
-            From: "opacity-0"
-            To: "opacity-100"
-          Leaving: "ease-in duration-200"
-            From: "opacity-100"
-            To: "opacity-0"
-        -->
         <div
           class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
           aria-hidden="true"
@@ -58,8 +48,8 @@
                   </code>
                 </button>
                 <p class="text-blue-900 mt-6">
-                  Then fill the below form as a second step. Thank you for
-                  choosing us.
+                  Then please fill the below form as a second step. Thank you
+                  for choosing us.
                 </p>
               </div>
             </div>

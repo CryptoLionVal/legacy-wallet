@@ -101,14 +101,15 @@
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://explorer.nebkas.ro/validator/8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB/missed/blocks"
+                  target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Statistics</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="mailto:cryptolion-node@protonmail.com"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Contact Us</a
                 >
@@ -120,14 +121,18 @@
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://twitter.com/CryptocomLion"
+                  target="_blank"
+                  title="Crypto Lion Validator Twitter Address"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Twitter</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://web.telegram.org/#/im?p=@mcanvar"
+                  target="_blank"
+                  title="Crypto Lion Validator Telegram"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Telegram</a
                 >
