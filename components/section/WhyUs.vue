@@ -4,7 +4,7 @@
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
       >
-        Title
+        Why Crypto Lion Node?
       </h1>
       <div class="w-full mb-4">
         <div
@@ -19,7 +19,7 @@
             <div
               class="w-full p-8 text-3xl font-bold text-center text-gray-800"
             >
-              Basic
+              Powerful Infostructure
             </div>
             <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
           </div>
@@ -43,7 +43,7 @@
             <button
               class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
-              Action
+              See Statistics
             </button>
           </div>
         </div>
@@ -57,7 +57,7 @@
             <div
               class="w-full p-8 text-3xl font-bold text-center text-gray-800"
             >
-              Basic
+              Community Supported
             </div>
             <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
           </div>
@@ -81,7 +81,7 @@
             <button
               class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
-              Action
+              Visit Twitter
             </button>
           </div>
         </div>
@@ -95,7 +95,7 @@
             <div
               class="w-full p-8 text-3xl font-bold text-center text-gray-800"
             >
-              Basic
+              Reliable
             </div>
             <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
           </div>
@@ -119,7 +119,7 @@
             <button
               class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
-              Action
+              See Delegators
             </button>
           </div>
         </div>

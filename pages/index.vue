@@ -2,7 +2,7 @@
   <div>
     <section-how-to />
 
-    <section-benefits />
+    <section-why-us />
 
     <section-f-a-qs />
 
