@@ -9,5 +9,7 @@
     <area-footer />
 
     <address-copier />
+
+    <staking-form />
   </div>
 </template>
