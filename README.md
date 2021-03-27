@@ -22,4 +22,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 Please check the license file.
 
 Special thanks:
-[tailwindtoolbox/Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
+ - [tailwindtoolbox/Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
+ - [Illustrations by IRA Design](https://iradesign.io)
