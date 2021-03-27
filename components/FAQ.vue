@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap pb-4">
     <div class="w-full font-bold text-xl text-gray-800 px-6">
-      Lorem ipsum dolor sit amet.
+      {{ title }}
       <svg
         class="float-right text-xl"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,8 +15,7 @@
       </svg>
     </div>
     <p class="text-gray-800 text-base px-6 mb-5">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum
-      eu nunc commodo posuere et sit amet ligula.
+      <slot></slot>
     </p>
 
     <div v-if="seperate" class="separator w-full gradient my-0 mx-6"></div>
@@ -29,6 +28,10 @@ export default {
     seperate: {
       type: Boolean,
       default: false,
+    },
+    title: {
+      type: String,
+      default: '',
     },
   },
 }

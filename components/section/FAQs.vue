@@ -12,11 +12,27 @@
         ></div>
       </div>
       <div class="flex flex-col justify-center pb-4 px-12 my-12">
-        <f-a-q seperate />
-        <f-a-q seperate />
-        <f-a-q seperate />
-        <f-a-q />
+        <f-a-q title="Lorem ipsum dolor sit amet." seperate>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+          ipsum eu nunc commodo posuere et sit amet ligula.
+        </f-a-q>
+        <f-a-q title="Lorem ipsum dolor sit amet." seperate>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+          ipsum eu nunc commodo posuere et sit amet ligula.
+        </f-a-q>
+        <f-a-q title="Lorem ipsum dolor sit amet." seperate>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+          ipsum eu nunc commodo posuere et sit amet ligula.
+        </f-a-q>
+        <f-a-q title="Lorem ipsum dolor sit amet.">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+          ipsum eu nunc commodo posuere et sit amet ligula.
+        </f-a-q>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {}
+</script>
