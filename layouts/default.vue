@@ -2,16 +2,10 @@
   <div>
     <navbar />
 
-    <hero />
+    <area-hero />
 
     <Nuxt />
 
-    <footer-area />
+    <area-footer />
   </div>
 </template>
-
-<script>
-export default {
-  mounted() {},
-}
-</script>
