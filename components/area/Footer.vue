@@ -90,7 +90,7 @@
             </a>
           </div>
           <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+            <p class="uppercase text-gray-500 md:mb-6">Validator</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
@@ -103,7 +103,14 @@
                 <a
                   href="#"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Privacy</a
+                  >Statistics</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Contact Us</a
                 >
               </li>
             </ul>
@@ -115,47 +122,43 @@
                 <a
                   href="#"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Facebook</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Linkedin</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Twitter</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Telegram</a
                 >
               </li>
             </ul>
           </div>
           <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <p class="uppercase text-gray-500 md:mb-6">Networks</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://crypto.org/explorer/validators"
+                  target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Official Blog</a
+                  >Official Mainnet</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
+                  target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >About Us</a
+                  >Nebkas's Explorer</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://crypto.org/explorer/croeseid/validators"
+                  target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Contact</a
+                  >Official Croeseid Testnet</a
                 >
               </li>
             </ul>
