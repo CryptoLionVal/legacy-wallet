@@ -140,6 +140,29 @@
             </ul>
           </div>
           <div class="flex-1 mt-5">
+            <p class="uppercase text-gray-500 md:mb-6">Official Resources</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="https://crypto.org/"
+                  target="_blank"
+                  title="Crypto.org Chain"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Crypto.org</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="https://crypto.org/docs/"
+                  target="_blank"
+                  title="Crypto.org Chain Documentation"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Crypto.org Chain Docs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1 mt-5">
             <p class="uppercase text-gray-500 md:mb-6">Networks</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -147,7 +170,7 @@
                   href="https://crypto.org/explorer/validators"
                   target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Official Mainnet</a
+                  >Mainnet Explorer</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -163,7 +186,7 @@
                   href="https://crypto.org/explorer/croeseid/validators"
                   target="_blank"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Official Croeseid Testnet</a
+                  >Croeseid Testnet</a
                 >
               </li>
             </ul>
