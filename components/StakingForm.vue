@@ -39,7 +39,7 @@
                 >
                   Copy our staking address and delegate your CROs.
                 </h2>
-                <button class="mt-6 relative" @click="copy">
+                <button class="mt-6" @click="copy">
                   <code
                     aria-selected
                     class="bg-blue-300 text-black text-sm rounded-full p-4"
@@ -56,7 +56,6 @@
             <iframe
               v-if="form"
               src="https://docs.google.com/forms/d/e/1FAIpQLSepTdC96GmAoXwPz6t1kuGaBYYyXzqPM7pKakRlnQhI0DMTww/viewform?embedded=true"
-              width="516"
               height="500"
               frameborder="0"
               marginheight="0"
@@ -133,5 +132,16 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+iframe {
+  width: 516px;
+}
+@media (max-width: 640px) {
+  iframe {
+    width: 100% !important;
+  }
+  code {
+    font-size: 9px;
+  }
 }
 </style>

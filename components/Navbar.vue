@@ -1,11 +1,12 @@
 <template>
-  <nav id="header" class="fixed w-full z-30 top-0 text-white">
+  <nav :class="headerClasses" class="fixed w-full z-30 top-0 text-white">
     <div
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-2"
     >
       <div class="pl-4 flex items-center text-gray-100">
         <a
-          class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+          :class="{ 'text-blue-900': floating }"
+          class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           href="#"
         >
           <svg
@@ -91,8 +92,8 @@
       </div>
       <div class="block lg:hidden pr-4">
         <button
-          id="nav-toggle"
-          class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="flex items-center p-1 text-gray-500 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          @click="hideMenu = !hideMenu"
         >
           <svg
             class="fill-current h-6 w-6"
@@ -105,11 +106,11 @@
         </button>
       </div>
       <div
-        id="nav-content"
-        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-gray-100 p-4 lg:p-0 z-20"
+        :class="contentClasses"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 bg-white lg:bg-transparent p-4 lg:p-0 z-20"
       >
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
-          <li class="mr-3">
+          <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
               prefetch
               to="/#validator-home"
@@ -118,7 +119,7 @@
               >Home</NuxtLink
             >
           </li>
-          <li class="mr-3">
+          <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
               to="/#how-cro-staking-work"
               class="inline-block py-2 px-4 no-underline"
@@ -126,7 +127,7 @@
               >How staking work?</NuxtLink
             >
           </li>
-          <li class="mr-3">
+          <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
               prefetch
               to="/how-to-stake-cro#delegating-steps"
@@ -135,7 +136,7 @@
               >Staking Explained</NuxtLink
             >
           </li>
-          <li class="mr-3">
+          <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
               to="/#f-a-qs"
               class="inline-block py-2 px-4 no-underline"
@@ -145,8 +146,8 @@
           </li>
         </ul>
         <button
-          id="navAction"
-          class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          :class="actionClasses"
+          class="mx-auto lg:mx-0 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           @click="$store.commit('show')"
         >
           Stake Now
@@ -160,86 +161,45 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      floating: false,
+      hideMenu: true,
+    }
+  },
+  computed: {
+    headerClasses() {
+      return {
+        'bg-white': this.floating,
+        shadow: this.floating,
+      }
+    },
+    contentClasses() {
+      return {
+        'text-gray-100': !this.floating,
+        'text-black': this.floating,
+        'bg-gray-100': !this.floating,
+        'bg-white': this.floating,
+        gradient: !this.hideMenu && !this.floating,
+        hidden: this.hideMenu,
+      }
+    },
+    actionClasses() {
+      return {
+        'bg-white': !this.floating,
+        gradient: this.floating,
+        'text-gray-800': !this.floating,
+        'text-white': this.floating,
+      }
+    },
   },
   mounted() {
-    let scrollpos = window.scrollY
-    const header = document.getElementById('header')
-    const navcontent = document.getElementById('nav-content')
-    const navaction = document.getElementById('navAction')
-    const toToggle = document.querySelectorAll('.toggleColour')
-
-    document.addEventListener('scroll', function () {
-      /* Apply classes for slide in bar */
-      scrollpos = window.scrollY
-
-      if (scrollpos > 10) {
-        header.classList.add('bg-white')
-        navaction.classList.remove('bg-white')
-        navaction.classList.add('gradient')
-        navcontent.classList.remove('text-gray-100')
-        navcontent.classList.add('text-black')
-        navaction.classList.remove('text-gray-800')
-        navaction.classList.add('text-white')
-        // Use to switch toggleColour colours
-        for (let i = 0; i < toToggle.length; i++) {
-          toToggle[i].classList.add('text-gray-800')
-          toToggle[i].classList.remove('text-white')
-        }
-        header.classList.add('shadow')
-        navcontent.classList.remove('bg-gray-100')
-        navcontent.classList.add('bg-white')
+    document.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        this.floating = true
       } else {
-        header.classList.remove('bg-white')
-        navaction.classList.remove('gradient')
-        navaction.classList.add('bg-white')
-        navcontent.classList.remove('text-black')
-        navcontent.classList.add('text-gray-100')
-        navaction.classList.add('text-gray-800')
-        // Use to switch toggleColour colours
-        for (let i = 0; i < toToggle.length; i++) {
-          toToggle[i].classList.add('text-white')
-          toToggle[i].classList.remove('text-gray-800')
-        }
-
-        header.classList.remove('shadow')
-        navcontent.classList.remove('bg-white')
-        navcontent.classList.add('bg-gray-100')
+        this.floating = false
       }
     })
-
-    const navMenuDiv = document.getElementById('nav-content')
-    const navMenu = document.getElementById('nav-toggle')
-
-    document.onclick = check
-    function check(e) {
-      const target = (e && e.target) || (event && event.srcElement)
-
-      // Nav Menu
-      if (!checkParent(target, navMenuDiv)) {
-        // click NOT on the menu
-        if (checkParent(target, navMenu)) {
-          // click on the link
-          if (navMenuDiv.classList.contains('hidden')) {
-            navMenuDiv.classList.remove('hidden')
-          } else {
-            navMenuDiv.classList.add('hidden')
-          }
-        } else {
-          // click both outside link and outside menu, hide menu
-          navMenuDiv.classList.add('hidden')
-        }
-      }
-    }
-    function checkParent(t, elm) {
-      while (t.parentNode) {
-        if (t === elm) {
-          return true
-        }
-        t = t.parentNode
-      }
-      return false
-    }
   },
 }
 </script>

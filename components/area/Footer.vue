@@ -193,16 +193,15 @@
           </div>
         </div>
       </div>
-      <p class="text-gray-500 text-sm pb-2 mx-20">
-        All rights reserved. Even this is a commercial business, we are really
-        happy to share our website source code on
+      <p class="text-gray-500 text-sm pb-2 mx-8 lg:mx-20">
+        All rights reserved. We are happy to share the source code on
         <a
           href="https://github.com/mcanvar/crypto-lion"
           title="A powerful CDC Chain Mainnet Node for staking purpose."
           target="_blank"
           class="no-underline hover:underline text-gray-800 hover:text-pink-500"
           >GitHub</a
-        >. Feel free to make a PR or Fork and use it for your non-commercial
+        >. Feel free to make a PR, fork and use it for your non-commercial
         purposes. May the world is a better place with our open ♥️.
       </p>
     </footer>
