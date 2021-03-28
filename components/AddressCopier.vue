@@ -81,6 +81,7 @@ export default {
 
         setTimeout(() => (this.copied = false), 1000)
       } catch (err) {
+        // eslint-disable-next-line no-console
         console.log('Oops, unable to copy')
       }
 

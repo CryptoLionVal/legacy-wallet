@@ -61,7 +61,7 @@
               frameborder="0"
               marginheight="0"
               marginwidth="0"
-              >Yükleniyor…</iframe
+              >…</iframe
             >
           </div>
         </div>
@@ -110,6 +110,7 @@ export default {
 
         setTimeout(() => (this.addressText = this.address), 1000)
       } catch (err) {
+        // eslint-disable-next-line no-console
         console.log('Oops, unable to copy')
       }
 

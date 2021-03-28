@@ -48,8 +48,8 @@
       </div>
       <h3 class="my-4 text-3xl leading-tight">Earn interest almost 20%!</h3>
       <button
-        @click="$store.commit('show')"
         class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        @click="$store.commit('show')"
       >
         Stake Now!
       </button>
