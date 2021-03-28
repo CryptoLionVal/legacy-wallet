@@ -170,11 +170,18 @@
           </div>
         </div>
       </div>
-      <a
-        href="https://www.freepik.com/free-photos-vectors/background"
-        class="text-gray-500 m-10"
-        >All rights reserved.</a
-      >
+      <p class="text-gray-500 text-sm pb-2 mx-20">
+        All rights reserved. Even this is a commercial business, we are really
+        happy to share our website source code on
+        <a
+          href="https://github.com/mcanvar/crypto-lion"
+          title="A powerful CDC Chain Mainnet Node for staking purpose."
+          target="_blank"
+          class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+          >GitHub</a
+        >. Feel free to make a PR or Fork and use it for your non-commercial
+        purposes. May the world is a better place with our open ♥️.
+      </p>
     </footer>
   </div>
 </template>
