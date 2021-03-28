@@ -21,3 +21,26 @@
     <section-action />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: 'Staking Explained',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Step by step explanation of staking CROs as a delegator to the Crypto Lion Crypto.org Mainnet node.',
+        },
+      ],
+    }
+  },
+}
+</script>
