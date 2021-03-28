@@ -108,10 +108,19 @@
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="mailto:cryptolion-node@protonmail.com"
+                <nuxt-link
+                  v-if="$i18n.locale === 'tr'"
+                  key="en"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Contact Us</a
+                  :to="switchLocalePath('en')"
+                  >English</nuxt-link
+                >
+                <nuxt-link
+                  v-else
+                  key="tr"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  :to="switchLocalePath('tr')"
+                  >Turkish</nuxt-link
                 >
               </li>
             </ul>
@@ -135,6 +144,13 @@
                   title="Crypto Lion Validator Telegram"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >Telegram</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="mailto:cryptolion-node@protonmail.com"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Contact Us</a
                 >
               </li>
             </ul>

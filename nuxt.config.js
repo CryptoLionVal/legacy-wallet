@@ -52,7 +52,31 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['nuxt-i18n'],
+
+  // i18n https://i18n.nuxtjs.org
+  i18n: {
+    locales: [
+      {
+        name: 'Turkish',
+        code: 'tr',
+        iso: 'tr',
+        file: 'tr.js',
+      },
+      {
+        name: 'English',
+        code: 'en',
+        iso: 'en',
+        file: 'en.js',
+      },
+    ],
+    lazy: true,
+    defaultLocale: 'tr',
+    langDir: 'languages/',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
