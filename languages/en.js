@@ -1,7 +1,8 @@
 export default {
   title_template: 'Crypto Lion Validator on CDC Chain Mainnet | %s',
   meta_description:
-    'Crypto Lion is a blockchain validator running on Crypto.org Mainnet Chain. You can make income by staking your CROs on it.',
+    'Crypto Lion is a blockchain validator running on Crypto.org Main-net Chain. ' +
+    'You can make passive income by staking your CROs on it.',
 
   pages: {
     home: {
@@ -44,7 +45,7 @@ export default {
 
   stake_now: {
     name: 'Stake Now',
-    title: 'Delegate your CROs to get your rewards!',
+    title: 'Stake your CROs to get your rewards!',
   },
 
   copier: {

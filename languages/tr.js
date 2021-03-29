@@ -1,11 +1,12 @@
 export default {
-  title_template: 'Crypto Lion Validator on CDC Chain Mainnet | %s',
+  title_template: 'Crypto Lion CDC Main-net Blokzincirinde | %s',
   meta_description:
-    'Crypto Lion is a blockchain validator running on Crypto.org Mainnet Chain. You can make income by staking your CROs on it.',
+    'Crypto Lion Crypto.org üzerinde çalışan bir imzalayıcıdır(validator).' +
+    ' Bu doğrulayıcıya CROlarınızı yatırarak(staking) pasif gelir elde edebilirsiniz.',
 
   pages: {
     home: {
-      title: 'Home',
+      title: 'Anasayfa',
     },
     how_to_stake_cro: {
       title: 'Nasıl stake edilir?',
@@ -15,19 +16,19 @@ export default {
   navbar: {
     logo: {
       link: {
-        title: 'Crypto Lion CRO Validator',
+        title: 'Crypto Lion CRO Node',
       },
     },
     links: [
       {
-        name: 'Home',
-        title: 'Crypto Lion Homepage',
-        href: '/#validator-home',
+        name: 'Anasayfa',
+        title: 'Crypto Lion Anasayfa',
+        href: '/#validator-anasayfa',
       },
       {
-        name: 'How staking work?',
-        title: 'Simple steps of CRO staking',
-        href: '/#how-cro-staking-work',
+        name: 'Staking nasıl çalışıyor?',
+        title: '4 basit adımda CRO stake etmeyi öğrenin.',
+        href: '/#cro-stake-adimlari',
       },
       {
         name: 'Nasıl stake edilir?',
@@ -35,22 +36,22 @@ export default {
         href: { path: 'how-to-stake-cro' },
       },
       {
-        name: 'FAQs',
-        title: 'Frequently Asked Questions About CDC Main-net',
-        href: '/#f-a-qs',
+        name: 'SSS',
+        title: 'CDC Main-net hakkında sıkça sorulan sorular',
+        href: '/#s-s-s',
       },
     ],
   },
 
   stake_now: {
-    name: 'Stake Now',
-    title: 'Delegate your CROs to get your rewards!',
+    name: 'Stake edin',
+    title: 'Ödül kazanmak için CROlarınızı stake edin!',
   },
 
   copier: {
-    title: 'Click to copy delegation address.',
-    message: 'Copy Staking Address',
-    done_message: 'Copied!',
+    title: 'Validator adresini kopyalamak için tıklayın.',
+    message: 'Validator adresini kopyala',
+    done_message: 'Kopyalandı!',
   },
 
   hero: {
@@ -66,6 +67,7 @@ export default {
   sections: {
     how_to: {
       title: 'How staking work?',
+      id: 'cro-stake-adimlari',
       steps: {
         first: {
           title: 'Hold CRO token and earn interest at the same time!',
@@ -169,6 +171,7 @@ export default {
     },
     f_a_qs: {
       title: 'FAQs',
+      id: 's-s-s',
       items: [
         {
           title: 'How can I stake?',
