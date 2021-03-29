@@ -6,7 +6,7 @@
           <div class="flex-2 mb-6 lg:mr-20 text-black">
             <NuxtLink
               prefetch
-              to="/"
+              :to="localePath('/')"
               class="text-blue-900 no-underline hover:no-underline font-bold text-4xl lg:text-5xl"
               :title="$t('footer.logo.link.title')"
             >

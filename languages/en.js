@@ -23,12 +23,12 @@ export default {
       {
         name: 'Home',
         title: 'Crypto Lion Homepage',
-        href: '/#validator-home',
+        href: '/en/#validator-home',
       },
       {
         name: 'How staking work?',
         title: 'Simple steps of CRO staking',
-        href: '/#how-cro-staking-work',
+        href: '/en/#how-cro-staking-work',
       },
       {
         name: 'Staking Explained',
@@ -38,7 +38,7 @@ export default {
       {
         name: 'FAQs',
         title: 'Frequently Asked Questions About CDC Main-net',
-        href: '/#f-a-qs',
+        href: '/en/#f-a-qs',
       },
     ],
   },
@@ -67,6 +67,7 @@ export default {
   sections: {
     how_to: {
       title: 'How staking work?',
+      id: 'how-cro-staking-work',
       steps: {
         first: {
           title: 'Hold CRO token and earn interest at the same time!',
@@ -170,6 +171,7 @@ export default {
     },
     f_a_qs: {
       title: 'FAQs',
+      id: 'f-a-qs',
       items: [
         {
           title: 'How can I stake?',

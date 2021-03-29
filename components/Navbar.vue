@@ -6,7 +6,7 @@
       <div class="pl-4 flex items-center text-gray-100">
         <NuxtLink
           prefetch
-          to="/"
+          :to="localePath('/')"
           :class="{ 'text-blue-900': floating }"
           class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           :title="$t('navbar.logo.link.title')"
