@@ -5,7 +5,7 @@
         <h1
           class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
         >
-          Staking Steps
+          {{ $t('pages.how_to_stake_cro.title') }}
         </h1>
         <div class="w-full mb-4">
           <div

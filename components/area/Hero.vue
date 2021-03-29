@@ -8,23 +8,20 @@
         <div
           class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
         >
-          <p class="uppercase tracking-loose w-full">
-            CRO Mainnet Staking Rewards Set at
-            <span class="font-bold">20%</span> APY
-          </p>
+          <p
+            class="uppercase tracking-loose w-full"
+            v-html="$t('hero.pre_title')"
+          ></p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            Time for Crypto.org Chain Mainnet!
+            {{ $t('hero.title') }}
           </h1>
-          <p class="leading-normal text-2xl mb-8">
-            <span class="font-bold">5 billion</span> CRO has been allocated for
-            distribution as rewards over the next
-            <span class="font-bold">10 years</span>.
-          </p>
+          <p class="leading-normal text-2xl mb-8" v-html="$t('hero.desc')"></p>
           <button
+            :title="$t('stake_now.title')"
             class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             @click="$store.commit('show')"
           >
-            Stake Now!
+            {{ $t('stake_now.name') }}!
           </button>
         </div>
         <!--Right Col-->

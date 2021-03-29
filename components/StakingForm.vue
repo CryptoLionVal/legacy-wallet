@@ -37,7 +37,7 @@
                   id="modal-title"
                   class="text-xl leading-8 font-medium text-blue-900"
                 >
-                  Copy our staking address and delegate your CROs.
+                  {{ $t('form.title') }}
                 </h2>
                 <button class="mt-6" @click="copy">
                   <code
@@ -48,8 +48,7 @@
                   </code>
                 </button>
                 <p class="text-blue-900 mt-6">
-                  Then please fill the below form as a second step. Thank you
-                  for choosing us.
+                  {{ $t('form.desc') }}
                 </p>
               </div>
             </div>

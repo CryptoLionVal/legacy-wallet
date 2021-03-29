@@ -17,9 +17,11 @@
         </svg>
       </button>
     </div>
-    <p v-if="readable" class="text-gray-800 text-base px-6 mb-5">
-      <slot></slot>
-    </p>
+    <p
+      v-if="readable"
+      class="text-gray-800 text-base px-6 mb-5"
+      v-html="desc"
+    ></p>
 
     <div v-if="seperate" class="separator w-full gradient my-0 mx-6"></div>
   </div>
@@ -33,6 +35,10 @@ export default {
       default: false,
     },
     title: {
+      type: String,
+      default: '',
+    },
+    desc: {
       type: String,
       default: '',
     },

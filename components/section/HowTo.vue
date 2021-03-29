@@ -4,33 +4,23 @@
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
       >
-        How staking work?
+        {{ $t('sections.how_to.title') }}
       </h1>
       <div class="w-full mb-4">
         <div
           class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
         ></div>
       </div>
+
       <div class="flex flex-wrap">
         <div class="w-5/6 sm:w-1/2 p-6">
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 mt-8">
-            Hold CRO token and earn interest at the same time!
+            {{ $t('sections.how_to.steps.first.title') }}
           </h3>
-          <p class="text-gray-600 mb-8">
-            You already have some CRO in your wallet. Great! because fully
-            decentralized Crypto.org Chain offers you
-            <span class="font-bold">20%</span> APY
-            <br />
-            <br />
-            Official source:
-
-            <a
-              class="text-pink-500 underline"
-              target="_blank"
-              href="https://blog.crypto.com/cro-mainnet-staking-rewards-set-at-20-apy/"
-              >CRO Mainnet Staking Rewards</a
-            >
-          </p>
+          <p
+            class="text-gray-600 mb-8"
+            v-html="$t('sections.how_to.steps.first.desc')"
+          ></p>
         </div>
         <div class="w-full sm:w-1/2 p-6">
           <img
@@ -51,40 +41,24 @@
         <div class="w-full sm:w-1/2 p-6 mt-6">
           <div class="align-middle">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 mt-8">
-              Create a brand new Crypto.org Wallet
+              {{ $t('sections.how_to.steps.second.title') }}
             </h3>
-            <p class="text-gray-600 mb-8">
-              You can delegate your CROs in minutes. Just download latest
-              official desktop wallet below link and join the party!
-              <br />
-              <br />
-              Download from:
-
-              <a
-                class="text-pink-500 underline"
-                target="_blank"
-                href="https://github.com/crypto-com/chain-desktop-wallet/releases"
-                >Crypto.org Chain Desktop Wallet</a
-              >
-            </p>
+            <p
+              class="text-gray-600 mb-8"
+              v-html="$t('sections.how_to.steps.second.desc')"
+            ></p>
           </div>
         </div>
       </div>
       <div class="flex flex-wrap">
         <div class="w-5/6 sm:w-1/2 p-6">
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 mt-8">
-            Delegate your CROs on Crypto Lion Node
+            {{ $t('sections.how_to.steps.third.title') }}
           </h3>
-          <p class="text-gray-600 mb-8">
-            Open the Wallet App then select
-            <span class="font-bold">Staking</span> tab, then switch
-            <span class="font-bold">Delegate Funds</span> tab on, copy our node
-            address from right top of this website and paste in
-            <span class="font-bold">Validator address</span>
-            area. Review and accept.
-            <br />
-            <br />
-          </p>
+          <p
+            class="text-gray-600 mb-8"
+            v-html="$t('sections.how_to.steps.third.desc')"
+          ></p>
         </div>
         <div class="w-full sm:w-1/2 p-6">
           <img
@@ -105,22 +79,12 @@
         <div class="w-full sm:w-1/2 p-6 mt-6">
           <div class="align-middle">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 mt-8">
-              Enjoy with 20% APY!
+              {{ $t('sections.how_to.steps.fourth.title') }}
             </h3>
-            <p class="text-gray-600 mb-8">
-              Tadaa! You have just staked your funds. Now you can have a look at
-              the transaction on our node's page and tract your rewards.
-              <br />
-              <br />
-              Our Validator's Page:
-
-              <a
-                class="text-pink-500 underline"
-                target="_blank"
-                href="https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
-                >Crypto Lion Node on Crypto.org Chain</a
-              >
-            </p>
+            <p
+              class="text-gray-600 mb-8"
+              v-html="$t('sections.how_to.steps.fourth.desc')"
+            ></p>
           </div>
         </div>
       </div>

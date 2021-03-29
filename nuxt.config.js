@@ -7,23 +7,11 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Homepage',
-    titleTemplate: 'CDC Chain Mainnet Crypto Lion Node | %s',
-    htmlAttrs: {
-      lang: 'en',
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Crypto Lion is a blockchain validator running on Crypto.org Mainnet Chain. You can make income by staking your CROs on it.',
-      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-
     bodyAttrs: {
       class: 'leading-normal tracking-normal text-white gradient source-sans',
     },
@@ -56,6 +44,7 @@ export default {
 
   // i18n https://i18n.nuxtjs.org
   i18n: {
+    seo: true,
     locales: [
       {
         name: 'Turkish',
@@ -75,6 +64,13 @@ export default {
     langDir: 'languages/',
     vueI18n: {
       fallbackLocale: 'en',
+    },
+    parsePages: false,
+    pages: {
+      'how-to-stake-cro': {
+        en: '/how-to-stake-cro',
+        tr: '/cro-nasil-stake-edilir',
+      },
     },
   },
 

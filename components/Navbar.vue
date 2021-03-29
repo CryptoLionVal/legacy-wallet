@@ -4,10 +4,12 @@
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-2"
     >
       <div class="pl-4 flex items-center text-gray-100">
-        <a
+        <NuxtLink
+          prefetch
+          to="/"
           :class="{ 'text-blue-900': floating }"
           class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-          href="#"
+          :title="$t('navbar.logo.link.title')"
         >
           <svg
             id="Layer_1"
@@ -88,7 +90,7 @@
             <g></g>
           </svg>
           CRYPTO LION
-        </a>
+        </NuxtLink>
       </div>
       <div class="block lg:hidden pr-4">
         <button
@@ -112,45 +114,27 @@
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
+              v-for="link in $t('navbar.links')"
+              :key="link.hash"
               prefetch
-              to="/#validator-home"
+              :to="
+                typeof link.href === 'string'
+                  ? link.href
+                  : localePath(link.href.path)
+              "
               class="inline-block py-2 px-4 no-underline"
-              title="Crypto Lion Node Homepage"
-              >Home</NuxtLink
-            >
-          </li>
-          <li class="mr-3" @click="hideMenu = true">
-            <NuxtLink
-              to="/#how-cro-staking-work"
-              class="inline-block py-2 px-4 no-underline"
-              title="How CRO staking work on Crypto.org Chain"
-              >How staking work?</NuxtLink
-            >
-          </li>
-          <li class="mr-3" @click="hideMenu = true">
-            <NuxtLink
-              prefetch
-              to="/how-to-stake-cro#delegating-steps"
-              class="inline-block py-2 px-4 no-underline"
-              title="CRO Staking on Crypto.org explained"
-              >Staking Explained</NuxtLink
-            >
-          </li>
-          <li class="mr-3" @click="hideMenu = true">
-            <NuxtLink
-              to="/#f-a-qs"
-              class="inline-block py-2 px-4 no-underline"
-              title="Frequently asked questions about staking on Crypto.org Chain"
-              >FAQs</NuxtLink
+              :title="link.title"
+              >{{ link.name }}</NuxtLink
             >
           </li>
         </ul>
         <button
           :class="actionClasses"
+          :title="$t('stake_now.title')"
           class="mx-auto lg:mx-0 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           @click="$store.commit('show')"
         >
-          Stake Now
+          {{ $t('stake_now.name') }}
         </button>
       </div>
     </div>
@@ -196,9 +180,11 @@ export default {
     document.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
         this.floating = true
-      } else {
-        this.floating = false
+
+        return
       }
+
+      this.floating = false
     })
   },
 }

@@ -4,9 +4,11 @@
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-2 mb-6 lg:mr-20 text-black">
-            <a
+            <NuxtLink
+              prefetch
+              to="/"
               class="text-blue-900 no-underline hover:no-underline font-bold text-4xl lg:text-5xl"
-              href="#"
+              :title="$t('footer.logo.link.title')"
             >
               <svg
                 id="Layer_1"
@@ -87,27 +89,32 @@
                 <g></g>
               </svg>
               CRYPTO LION
-            </a>
+            </NuxtLink>
           </div>
-          <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Validator</p>
+          <div
+            v-for="group in $t('footer.groups')"
+            :key="group.name"
+            class="flex-1 mt-5"
+          >
+            <p class="uppercase text-gray-500 md:mb-6">{{ group.name }}</p>
             <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <li
+                v-for="link in group.links"
+                :key="link.name"
+                class="mt-2 inline-block mr-2 md:block md:mr-0"
+              >
                 <a
-                  href="#"
+                  :href="link.href"
+                  :title="link.title"
+                  :target="link.target"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Terms</a
+                  >{{ link.name }}</a
                 >
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://explorer.nebkas.ro/validator/8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB/missed/blocks"
-                  target="_blank"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Statistics</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <li
+                v-if="group.name === 'Validator'"
+                class="mt-2 inline-block mr-2 md:block md:mr-0"
+              >
                 <nuxt-link
                   v-if="$i18n.locale === 'tr'"
                   key="en"
@@ -120,106 +127,17 @@
                   key="tr"
                   class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   :to="switchLocalePath('tr')"
-                  >Turkish</nuxt-link
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://twitter.com/CryptocomLion"
-                  target="_blank"
-                  title="Crypto Lion Validator Twitter Address"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Twitter</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://web.telegram.org/#/im?p=@mcanvar"
-                  target="_blank"
-                  title="Crypto Lion Validator Telegram"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Telegram</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="mailto:cryptolion-node@protonmail.com"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Official Resources</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://crypto.org/"
-                  target="_blank"
-                  title="Crypto.org Chain"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Crypto.org</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://crypto.org/docs/"
-                  target="_blank"
-                  title="Crypto.org Chain Documentation"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Crypto.org Chain Docs</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1 mt-5">
-            <p class="uppercase text-gray-500 md:mb-6">Networks</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://crypto.org/explorer/validators"
-                  target="_blank"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Mainnet Explorer</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
-                  target="_blank"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Nebkas's Explorer</a
-                >
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="https://crypto.org/explorer/croeseid/validators"
-                  target="_blank"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                  >Croeseid Testnet</a
+                  >Türkçe</nuxt-link
                 >
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <p class="text-gray-500 text-sm pb-2 mx-8 lg:mx-20">
-        All rights reserved. We are happy to share the source code on
-        <a
-          href="https://github.com/mcanvar/crypto-lion"
-          title="A powerful CDC Chain Mainnet Node for staking purpose."
-          target="_blank"
-          class="no-underline hover:underline text-gray-800 hover:text-pink-500"
-          >GitHub</a
-        >. Feel free to make a PR, fork and use it for your non-commercial
-        purposes. May the world is a better place with our open ♥️.
-      </p>
+      <p
+        class="text-gray-500 text-sm pb-2 mx-8 lg:mx-20"
+        v-html="$t('footer.copyright')"
+      ></p>
     </footer>
   </div>
 </template>
