@@ -304,7 +304,8 @@ export default {
             name: 'on Croeseid Testnet Explorer',
             target: '_blank',
             title: 'Crypto.org Croeseid Testnet Explorer',
-            href: 'https://crypto.org/explorer/croeseid/validators',
+            href:
+              'https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew',
           },
         ],
       },
