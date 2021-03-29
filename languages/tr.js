@@ -55,162 +55,168 @@ export default {
   },
 
   hero: {
-    pre_title: `CRO Mainnet Staking Rewards Set at <span class="font-bold">20%</span> APY`,
-    title: 'Time for Crypto.org Chain Mainnet!',
+    pre_title: `CRO Mainnet kazançları minimum <span class="font-bold">20%</span> APY oalrak belirlendi`,
+    title: 'Şimdi Crypto.org Chain Mainnet Zamanı!',
     desc: `
-    <span class="font-bold">5 billion</span> CRO has been allocated for
-            distribution as rewards over the next
-            <span class="font-bold">10 years</span>.
+    <span class="font-bold">5 milyar</span> CRO <span class="font-bold">10 yıl</span>
+    boyunca, her yıl <span class="font-bold">500 milyon</span> adet  olmak üzere dağıtım için ayrıldı.
     `,
   },
 
   sections: {
     how_to: {
-      title: 'How staking work?',
+      title: 'Staking nasıl çalışıyor?',
       id: 'cro-stake-adimlari',
       steps: {
         first: {
-          title: 'Hold CRO token and earn interest at the same time!',
+          title: "CRO'larınızı tutarken aynı zamanda ödül kazanın!",
           desc: `
-            You already have some CRO in your wallet. Great! because fully
-            decentralized Crypto.org Chain offers you
-            <span class="font-bold">20%</span> APY
+            Cüzdanınızda gelecek için tuttuğunuz CRO koinler mi var? Harika! çünkü
+            tam merkeziyetsiz yeni Crypto.org zinciri size minimum
+            <span class="font-bold">20%</span> APY(Yıllık) kazanç vadediyor. Üstelik bu
+            kazancın 10 yıl boyunca devam etmesi güvence altına alındı.
             <br />
             <br />
-            Official source:
+            Resmi kaynak:
 
             <a
               class="text-pink-500 underline"
               target="_blank"
+              title="CRO Mainnet yayını ödül haberi"
               href="https://blog.crypto.com/cro-mainnet-staking-rewards-set-at-20-apy/"
               >CRO Mainnet Staking Rewards</a
             >
           `,
         },
         second: {
-          title: 'Create a brand new Crypto.org Wallet',
+          title: 'Yeni bir Crypto.org CRO Cüzdanı açın',
           desc: `
-              You can delegate your CROs in minutes. Just download latest
-              official desktop wallet below link and join the party!
+              Cro'larınızı dakilar içinde stake edebilirsiniz. Aşağıdaki resmi linkten
+              Crypto.org Masaüstü Uygulamasını indirin ve partiye katılın!
               <br />
               <br />
-              Download from:
+              Son versiyona erişin:
 
               <a
                 class="text-pink-500 underline"
                 target="_blank"
+                title="Crypto.org Masaüstü Uygulaması"
                 href="https://github.com/crypto-com/chain-desktop-wallet/releases"
                 >Crypto.org Chain Desktop Wallet</a
               >
           `,
         },
         third: {
-          title: 'Delegate your CROs on Crypto Lion Node',
+          title: "CRO'larınızı Crypto Lion'a stake edin",
           desc: `
-            Open the Wallet App then select
-            <span class="font-bold">Staking</span> tab, then switch
-            <span class="font-bold">Delegate Funds</span> tab on, copy our node
-            address from right top of this website and paste in
-            <span class="font-bold">Validator address</span>
-            area. Review and accept.
+            Cüzdan uygulamasını açın ve
+            <span class="font-bold">Staking</span> sekmesini seçin, daha sonra
+            <span class="font-bold">Delegate Funds</span> sekmesini açın ve sağ üst
+            köşede bulunan validator adresimizi kopyalayın ve
+            <span class="font-bold">Validator address</span> kısmına yapıştırın
+            kontrol edin ve onaylayın.
           `,
         },
         fourth: {
           title: 'Enjoy with 20% APY!',
           desc: `
-              Tadaa! You have just staked your funds. Now you can have a look at
-              the transaction on our node's page and tract your rewards.
+              Tebrikler, dakilar içerisinde stake işleminizi tamamladınız! Şimdi sıra
+              arkanıza yaslanıp kazancınızın tadını çıkarmakta. Aşağıdaki resmi vaildator
+              adresimizden kazancınızı görüntüleyebilir, istediğiniz zaman çekebilirsiniz.
               <br />
               <br />
-              Our Validator's Page:
+              Validator Sayfamız:
 
               <a
                 class="text-pink-500 underline"
                 target="_blank"
+                title="Crypto Lion Doğrulayıcı Sunucu adresi"
                 href="https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
-                >Crypto Lion Node on Crypto.org Chain</a
+                >Crypto.org Chain Crypto Lion Doğrulayıcısı</a
               >
           `,
         },
       },
     },
     why_us: {
-      title: 'Why Crypto Lion Node?',
+      title: 'Neden Crypto Lion seçmelisiniz?',
       cards: {
         first: {
-          title: 'Powerful Infrastructure',
-          subtitle: 'We are using latest firmware and software.',
+          title: 'Güçlü Altyapı',
+          subtitle: 'Son sistem yazılım ve donanım araçlarını kullanıyoruz.',
           desc:
-            'We are using dedicated servers with industry standard high internet connection with latest version operating systems.',
+            'Endüstri standardında hızlı internet altyapısına sahip metal sunucularlarımızı ' +
+            'güncel işletim sistemleri ile donatıp kaliteli bir hizmet için hazırlıyoruz.',
           link: {
-            name: 'See Statistics',
-            title: 'See how the validator performs on blockchain',
+            name: 'İstatistikler',
+            title: 'Sunucumuzun blokzincir üzerindeki performansına göz atın.',
           },
         },
         second: {
-          title: 'Community Supported',
-          subtitle: 'We are from big Crypto.com family.',
+          title: 'Topluluk destekli',
+          subtitle: 'Bizler de büyük Crypto.com ailesindeniz.',
           desc:
-            'We are people from the turkish community of CDC. We care friendly medium and love to meet new crypto lovers.',
+            "CDC'nin Türkiye topluluğunun bir parçasıyız ve saygı bazlı arkadaşlık " +
+            'ortamına değer veriyoruz. Crypto dünyasına gönül vermiş insanlarla tanışmayı seviyoruz.',
           link: {
-            name: 'Checkout Twitter',
-            title: 'Follow us on Twitter!',
+            name: "Twitter'dayız",
+            title: 'Bizi takip edin.',
           },
         },
         third: {
-          title: 'Reliable',
-          subtitle: 'We are also delegators of our node.',
+          title: 'Güvenilir',
+          subtitle: "Biz de kendi CRO'larımızı Crypto Lion'da stake ediyoruz.",
           desc:
-            'We are also delegators of our node. Hundred thousands of CROs already staked on our validator.',
+            "Yüzbinlerce CRO hali hazırda Crypto Lion'da stake edilmiş durumda." +
+            'Çok yakında 1 milyon eşiğine ulaşmış olacağız.',
           link: {
-            name: 'Our Delegators',
-            title: 'See wallets of people who chosen us',
+            name: 'Bizi Seçenler',
+            title: 'Bizi seçen CRO sahiplerinin cüzdanlarını inceleyin.',
           },
         },
       },
     },
     f_a_qs: {
-      title: 'FAQs',
+      title: 'Sıkça Sorulan Sorular',
       id: 's-s-s',
       items: [
         {
-          title: 'How can I stake?',
+          title: 'Nasıl stake edebilirim?',
           desc: `
-          You can use Crypto.com's Desktop wallet to stake. Visit
+          Crypto.org'un Masaüstü Cüzdan Uygulaması'nı kullanarak.
           <a
             class="underline"
             href="https://github.com/crypto-com/chain-desktop-wallet/releases"
             target="_blank"
-            >this</a
-          >
-          link to download latest version and after installation click "Stake
-          Now" button on navbar.
+            >Bu</a
+          > linki kullanarak son sürümü indirin ve sağ üstteki "Stake Edin"
+           butonuna tıklayın.
           `,
           separate: true,
         },
         {
-          title: 'How often can I claim my rewards?',
+          title: 'Ödüllerimi ne sıklıkla cüzdanıma çekebilirim?',
           desc: `
-          You can withdraw your CROs whatever often you want. There is no limit
-          for this operation.
+          Bu işlem için herhangi bir limit bulunmuyor. Ödüllerinizi istediğiniz
+          sıklıkla cğzdanınıza minimum tutar olmaksınız çekebilirsiniz.
           `,
           separate: true,
         },
         {
           title:
-            'Is there a cool-down time when I want to undelegate my funds?',
+            'Yatırımımı geri çekmek istersem herhangi bir soğuma(cool-down) süresi söz konusu mu?',
           desc: `
-          Yes. You can undelegate whenever you want but there is 28 days
-          cool-down time to be available your CROs back to your delegator
-          wallet.
+          Evet. İstediğiniz zaman bu emri verebilirsiniz fakat 28 günlük bir güvenli
+          hareket süresi var ve bu süre boyunca CRO'larınız blockchain tarafından
+          tutuluyor ve süre sonunda cüzdanınızda aktif hale geliyor.
           `,
           separate: false,
         },
       ],
     },
     action: {
-      title: 'Start Enjoying the Benefits of Staking',
-      subtitle: 'Earn interest almost 20%!',
+      title: 'Ödül sisteminin bir parçası olun!',
+      subtitle: 'Yıllık %20 pasif ve risksiz kazanç sağlayın!',
     },
   },
 
@@ -231,14 +237,14 @@ export default {
         name: 'Validator',
         links: [
           {
-            name: 'Terms',
-            title: 'Crypto Lion Homepage',
+            name: 'Koşullar',
+            title: 'Koşullar ve şartlar',
             target: '_self',
             href: '#',
           },
           {
-            name: 'Statistics',
-            title: 'Simple steps of CRO staking',
+            name: 'İstatistikler',
+            title: 'Doğrulayıcı İstatistikleri',
             target: '_self',
             href:
               'https://explorer.nebkas.ro/validator/8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB/missed/blocks',
@@ -246,66 +252,66 @@ export default {
         ],
       },
       {
-        name: 'Social',
+        name: 'Sosyal',
         links: [
           {
             name: 'Twitter',
             target: '_blank',
-            title: 'Crypto Lion Validator Twitter Address',
+            title: 'Crypto Lion Validator Twitter Adresi',
             href: 'https://twitter.com/CryptocomLion',
           },
           {
             name: 'Telegram',
-            title: 'Contact with staff on Telegram',
+            title: 'Bizimle Telegram kanalıyla iletişim kurun',
             target: '_blank',
             href: 'https://web.telegram.org/#/im?p=@mcanvar',
           },
           {
-            name: 'Write Us',
-            title: 'Email us what you are thinking',
+            name: 'Bize yazın!',
+            title: 'Ne düşündüğünüzü merak ediyoruz, lütfen bize yazın.',
             target: '_self',
             href: 'mailto:cryptolion-node@protonmail.com',
           },
         ],
       },
       {
-        name: 'Official Resources',
+        name: 'Resmi Kaynaklar',
         links: [
           {
             name: 'Crypto.org',
             target: '_blank',
-            title: 'Crypto.org Chain',
+            title: 'Crypto.org Blokzincir Anasayfası',
             href: 'https://crypto.org/',
           },
           {
-            name: 'Crypto.org Chain Docs',
-            title: 'Crypto.org Chain Documentation',
+            name: 'Crypto.org Dökümantasyon',
+            title: 'Crypto.org Blokzincir Dökümantasyon',
             target: '_blank',
             href: 'https://crypto.org/docs/',
           },
         ],
       },
       {
-        name: 'Networks',
+        name: 'Ağlar',
         links: [
           {
-            name: 'on Main-net Explorer',
+            name: 'Ana Ağ',
             target: '_blank',
-            title: 'Crypto.org Chain Main-net Explorer',
+            title: 'Crypto.org Blokzincir Keşif Sitesindeyiz',
             href:
               'https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
           },
           {
-            name: "on Nebkas's Explorer",
+            name: 'Nebkas Explorer',
             target: '_blank',
-            title: "Nebkas.ro's Main-net Explorer",
+            title: "Nebkas.ro'ın Keşif Sitesindeyiz",
             href:
               'https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
           },
           {
-            name: 'on Croeseid Testnet Explorer',
+            name: 'Croeseid Testnet',
             target: '_blank',
-            title: 'Crypto.org Croeseid Testnet Explorer',
+            title: 'Croeseid Testnet Ağı Keşif Sitesindeyiz',
             href:
               'https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew',
           },
@@ -313,15 +319,16 @@ export default {
       },
     ],
     copyright: `
-        All rights reserved. We are happy to share the source code on
+        Bütün hakları saklıdır. Kaynak kodumuzu
         <a
           href="https://github.com/mcanvar/crypto-lion"
           title="A powerful CDC Chain Mainnet Node for staking purpose."
           target="_blank"
           class="no-underline hover:underline text-gray-800 hover:text-pink-500"
           >GitHub</a
-        >. Feel free to make a PR, fork and use it for your non-commercial
-        purposes. May the world is a better place with our open ♥️.
+        > üzerinden paylaşmaktan mutluluk duyuyoruz. PR veya çatallayarak
+        iş amaçlı projeleriniz haricinde kullanabilirsiniz. Paylaşımcı
+        dünyanın daha güzel bir yer olacağına inanıyoruz ♥️.
     `,
   },
 }

@@ -70,7 +70,7 @@ export default {
       id: 'how-cro-staking-work',
       steps: {
         first: {
-          title: 'Hold CRO token and earn interest at the same time!',
+          title: 'Hold CROs and earn interest at the same time!',
           desc: `
             You already have some CRO in your wallet. Great! because fully
             decentralized Crypto.org Chain offers you
@@ -88,7 +88,7 @@ export default {
           `,
         },
         second: {
-          title: 'Create a brand new Crypto.org Wallet',
+          title: 'Create a brand new Crypto.org Chain Wallet',
           desc: `
               You can delegate your CROs in minutes. Just download latest
               official desktop wallet below link and join the party!
