@@ -2,11 +2,11 @@
   <div class="flex flex-wrap pb-4">
     <div class="w-full font-bold text-xl text-gray-800 px-6">
       {{ title }}
-      <button class="float-right text-xl" @click="readable = !readable">
+      <button class="float-right text-xl" @click="opened = !opened">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class=""
-          :class="{ 'transform rotate-180': readable }"
+          :class="{ 'transform rotate-180': opened }"
           viewBox="0 0 24 24"
           width="24"
           height="24"
@@ -18,7 +18,7 @@
       </button>
     </div>
     <p
-      v-if="readable"
+      v-if="opened"
       class="text-gray-800 text-base px-6 mb-5"
       v-html="desc"
     ></p>
@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    readable: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: '',
@@ -45,8 +49,11 @@ export default {
   },
   data() {
     return {
-      readable: false,
+      opened: false,
     }
+  },
+  mounted() {
+    this.opened = this.readable
   },
 }
 </script>

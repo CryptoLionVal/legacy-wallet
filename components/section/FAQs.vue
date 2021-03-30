@@ -13,9 +13,10 @@
       </div>
       <div class="flex flex-col justify-center pb-4 px-12 my-12">
         <f-a-q
-          v-for="question in $t('sections.f_a_qs.items')"
+          v-for="(question, i) in $t('sections.f_a_qs.items')"
           :key="question.title"
           :title="question.title"
+          :readable="i === 0"
           :seperate="question.separate"
           :desc="question.desc"
         >
