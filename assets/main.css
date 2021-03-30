@@ -7,3 +7,15 @@
 .gradient {
   background: linear-gradient(90deg, #010b18 0%, #043970 100%);
 }
+
+.text-primary {
+  color: #010b18;
+}
+
+.bg-primary {
+  background-color: #010b18;
+}
+
+.text-secondary {
+  color: #043970;
+}
