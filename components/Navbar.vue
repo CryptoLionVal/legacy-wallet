@@ -120,7 +120,7 @@
               :to="
                 typeof link.href === 'string'
                   ? link.href
-                  : localePath(link.href.path)
+                  : localePath(link.href.path) + '#' + link.href.hash
               "
               class="inline-block py-2 px-4 no-underline"
               :title="link.title"

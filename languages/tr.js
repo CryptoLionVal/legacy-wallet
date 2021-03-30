@@ -10,6 +10,7 @@ export default {
     },
     how_to_stake_cro: {
       title: 'Nasıl stake edilir?',
+      steps_id: 'staking-adimlari',
       steps: [
         {
           title: 'Masaüstü Cüzdanı İndirin',
@@ -78,7 +79,7 @@ export default {
       {
         name: 'Nasıl stake edilir?',
         title: 'CRO koinlerinizi nasıl stake edeceğinizi öğrenin.',
-        href: { path: 'how-to-stake-cro' },
+        href: { path: 'how-to-stake-cro', hash: 'staking-adimlari' },
       },
       {
         name: 'SSS',

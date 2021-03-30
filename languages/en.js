@@ -10,6 +10,7 @@ export default {
     },
     how_to_stake_cro: {
       title: 'Staking Explained',
+      steps_id: 'staking-steps',
       steps: [
         {
           title: 'DownLoad Desktop Wallet',
@@ -78,7 +79,7 @@ export default {
       {
         name: 'Staking Explained',
         title: 'How to stake CROs on Main-net, Explained',
-        href: { path: 'how-to-stake-cro' },
+        href: { path: 'how-to-stake-cro', hash: 'staking-steps' },
       },
       {
         name: 'FAQs',
