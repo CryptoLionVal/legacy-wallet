@@ -226,6 +226,7 @@ export default {
     f_a_qs: {
       title: "Sıkça Sorulan Sorular",
       id: "s-s-s",
+      search_placeholder: "Arayın",
       items: [
         {
           title: "Main-net nedir?",

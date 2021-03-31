@@ -12,6 +12,14 @@ html {
   background: linear-gradient(90deg, #010b18 0%, #043970 100%);
 }
 
+.border-primary {
+  border-color: #010b18;
+}
+
+.border-secondary {
+  border-color: #043970;
+}
+
 .text-primary {
   color: #010b18;
 }

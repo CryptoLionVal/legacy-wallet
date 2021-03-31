@@ -6,14 +6,17 @@
       >
         {{ $t('sections.f_a_qs.title') }}
       </h1>
-      <div class="w-full mb-4">
-        <div
-          class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-        ></div>
+      <div class="w-full pt-2 flex justify-center">
+        <input
+          v-model="search"
+          :placeholder="$t('sections.f_a_qs.search_placeholder')"
+          class="border border-primary w-1/2 bg-white appearance-none block rounded-full py-3 px-4 focus:border-blue-500 focus:outline-none"
+          type="text"
+        />
       </div>
       <div class="flex flex-col justify-center pb-4 px-12 my-12">
         <f-a-q
-          v-for="(question, i) in $t('sections.f_a_qs.items')"
+          v-for="(question, i) in questions"
           :key="question.title"
           :title="question.title"
           :readable="i === 0"
@@ -27,5 +30,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      search: '',
+    }
+  },
+  computed: {
+    questions() {
+      return this.$t('sections.f_a_qs.items').filter(
+        (question) =>
+          question.title.includes(this.search) ||
+          question.desc.includes(this.search)
+      )
+    },
+  },
+}
 </script>
