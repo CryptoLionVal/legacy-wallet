@@ -1,8 +1,11 @@
 <template>
-  <div class="flex flex-wrap pb-4">
-    <div class="w-full font-bold text-xl text-gray-800 px-6">
-      {{ title }}
-      <button class="float-right text-xl" @click="opened = !opened">
+  <div class="flex flex-wrap">
+    <div
+      class="w-full flex flex-row align-middle font-bold text-xl text-gray-800 px-6 py-2 cursor-pointer"
+      @click="opened = !opened"
+    >
+      <span class="w-11/12">{{ title }}</span>
+      <button class="w-1/12 text-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class=""
