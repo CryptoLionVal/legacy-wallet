@@ -509,9 +509,9 @@ export default {
   },
 
   form: {
-    title: "Copy our staking address and delegate your CROs.",
+    title: "Stake adresimizi üzerine tıklayarak kopyalayın ve CRO'larınızı fonlayın.",
     desc:
-      "Then please fill the below form as a second step. Thank you for choosing us."
+      "Ve lütfen aşağıdaki formu doldurun, bizi seçtiğiniz için teşekkür ederiz."
   },
 
   footer: {
