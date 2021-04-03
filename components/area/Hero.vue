@@ -16,13 +16,13 @@
             {{ $t('hero.title') }}
           </h1>
           <p class="leading-normal text-2xl mb-8" v-html="$t('hero.desc')"></p>
-          <button
+          <NuxtLink
             :title="$t('stake_now.title')"
             class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            @click="$store.commit('show')"
+            :to="localePath('how-to-stake-cro')"
           >
             {{ $t('stake_now.name') }}!
-          </button>
+          </NuxtLink>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">

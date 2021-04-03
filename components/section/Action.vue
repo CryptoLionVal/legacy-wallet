@@ -46,16 +46,16 @@
           class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
         ></div>
       </div>
-      <h3 class="my-4 text-3xl leading-tight">
+      <h3 class="my-8 text-3xl leading-tight">
         {{ $t('sections.action.subtitle') }}
       </h3>
-      <button
+      <NuxtLink
         :title="$t('stake_now.title')"
-        class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-        @click="$store.commit('show')"
+        class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        :to="localePath('how-to-stake-cro')"
       >
         {{ $t('stake_now.name') }}!
-      </button>
+      </NuxtLink>
     </section>
   </div>
 </template>

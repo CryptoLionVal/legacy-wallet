@@ -128,14 +128,14 @@
             >
           </li>
         </ul>
-        <button
+        <NuxtLink
           :class="actionClasses"
           :title="$t('stake_now.title')"
           class="mx-auto lg:mx-0 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          @click="$store.commit('show')"
+          :to="localePath('how-to-stake-cro')"
         >
           {{ $t('stake_now.name') }}
-        </button>
+        </NuxtLink>
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />

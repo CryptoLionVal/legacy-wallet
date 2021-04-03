@@ -1,12 +1,19 @@
 export const state = () => ({
-  modal: false,
+  dialog: {
+    show: true,
+    message: '',
+  },
+  step: 'first',
 })
 
 export const mutations = {
-  show(state) {
-    state.modal = true
+  showDialog(state) {
+    state.dialog.show = true
   },
-  hide(state) {
-    state.modal = false
+  hideDialog(state) {
+    state.dialog.show = false
+  },
+  setStep(state, status) {
+    state.step = status
   },
 }
