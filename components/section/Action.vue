@@ -50,9 +50,13 @@
         {{ $t('sections.action.subtitle') }}
       </h3>
       <NuxtLink
+        tag="button"
+        :hidden="['wallet', 'form'].includes($store.state.step)"
+        prefetch
         :title="$t('stake_now.title')"
         class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
         :to="localePath('how-to-stake-cro')"
+        @click.native="$store.commit('setStep', 'mnemonic')"
       >
         {{ $t('stake_now.name') }}!
       </NuxtLink>
