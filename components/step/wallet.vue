@@ -7,8 +7,9 @@
       <div
         class="flex flex-col w-full justify-center items-start text-left md:text-left"
       >
-        <h1 class="my-12 text-5xl font-bold leading-tight">
-          Kullanılabilir Tutar: 115 CRO
+        <h1 class="my-12 text-5xl leading-tight">
+          Kullanılabilir Tutar:
+          <span class="font-bold">{{ $store.state.balance }} CRO</span>
         </h1>
         <p class="leading-normal text-sm md:text-xl mb-8">
           <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
@@ -25,6 +26,8 @@
           v-model="amount"
           :disabled="loading"
           type="number"
+          min="0"
+          :max="parseInt($store.state.balance)"
           class="rounded-full w-full md:w-2/6 h-16 px-12 mb-3 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
         />
         <button
@@ -85,19 +88,34 @@
 export default {
   data() {
     return {
-      amount: '',
+      amount: 0,
       loading: false,
     }
   },
   computed: {
     validAmount() {
-      return /^([0-9]*)$/.test(this.amount) && this.amount > 0 && !this.loading
+      return (
+        /^([0-9]*)$/.test(this.amount) &&
+        this.amount > 0 &&
+        this.amount <= parseInt(this.$store.state.balance) &&
+        !this.loading
+      )
     },
   },
   methods: {
-    stake() {
+    async stake() {
       this.loading = true
-      this.$store.commit('setStep', 'form')
+
+      try {
+        await this.$store.dispatch('stake', this.amount)
+
+        this.$store.commit('setStep', 'form')
+      } catch (error) {
+        this.$store.commit('setDialogMessage', error.message)
+        this.$store.commit('showDialog')
+      }
+
+      this.loading = false
     },
   },
 }

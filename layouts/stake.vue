@@ -8,7 +8,7 @@
 
     <address-copier />
 
-    <dialog />
+    <dialog-modal />
   </div>
 </template>
 

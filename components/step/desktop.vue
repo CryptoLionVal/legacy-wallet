@@ -34,7 +34,7 @@
         <div class="text-center w-full">
           <a
             class="rounded-full flex flex-row content-center cursor-pointer justify-center w-1/5 p-1 mt-6 mb-32 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-200 ease-in-out"
-            @click="$store.commit('setStep', 'first')"
+            @click.prevent="$store.commit('setStep', 'first')"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

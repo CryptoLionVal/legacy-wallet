@@ -129,12 +129,15 @@
           </li>
         </ul>
         <NuxtLink
+          tag="button"
+          prefetch
           :class="actionClasses"
           :title="$t('stake_now.title')"
           class="mx-auto lg:mx-0 font-bold rounded-full mt-4 lg:mt-0 py-3 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           :to="localePath('how-to-stake-cro')"
+          @click.native="navigate"
         >
-          {{ $t('stake_now.name') }}
+          {{ buttonText }}
         </NuxtLink>
       </div>
     </div>
@@ -175,6 +178,11 @@ export default {
         'text-white': this.floating,
       }
     },
+    buttonText() {
+      return this.$store.state.client === null
+        ? this.$t('stake_now.name')
+        : this.$store.state.balance + ' CRO'
+    },
   },
   mounted() {
     document.addEventListener('scroll', () => {
@@ -186,6 +194,17 @@ export default {
 
       this.floating = false
     })
+  },
+  methods: {
+    navigate() {
+      if (this.$store.state.client) {
+        this.$store.commit('setStep', 'wallet')
+
+        return
+      }
+
+      this.$store.commit('setStep', 'mnemonic')
+    },
   },
 }
 </script>
