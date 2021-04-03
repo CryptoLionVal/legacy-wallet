@@ -78,9 +78,9 @@ export default {
         href: "/#cro-stake-adimlari"
       },
       {
-        name: "Nasıl stake edilir?",
-        title: "CRO koinlerinizi nasıl stake edeceğinizi öğrenin.",
-        href: { path: "how-to-stake-cro", hash: "staking-adimlari" }
+        name: "Stake Yöntemleri",
+        title: "Hangi yöntemlerle CRO stake edilir?",
+        href: { path: "how-to-stake-cro", hash: "" }
       },
       {
         name: "SSS",

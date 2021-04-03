@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'mnemonic'"
-      class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
     >
       <div
         class="flex flex-col w-full justify-center items-start text-center md:text-left"
@@ -23,7 +23,7 @@
       <div class="w-full pt-1 pb-32 flex flex-col md:flex-row">
         <textarea
           v-model="mnemonic"
-          class="rounded-full w-full md:w-5/6 h-32 mb-3 px-12 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
+          class="rounded-full w-full md:w-5/6 h-32 mb-3 px-12 focus:bg-yellow-100 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
           cols="30"
           rows="5"
         ></textarea>

@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'first'"
-      class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
     >
       <div
         class="flex flex-col w-full justify-center items-start text-center md:text-left"

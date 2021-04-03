@@ -78,7 +78,7 @@ export default {
         href: "/en/#how-cro-staking-work"
       },
       {
-        name: "Staking Explained",
+        name: "Staking Ways",
         title: "How to stake CROs on Main-net, Explained",
         href: { path: "how-to-stake-cro", hash: "staking-steps" }
       },

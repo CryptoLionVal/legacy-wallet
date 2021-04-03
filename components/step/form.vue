@@ -2,9 +2,9 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'form'"
-      class="container px-3 flex flex-row w-full flex-wrap justify-start items-start text-center text-left"
+      class="container px-8 flex flex-row w-full flex-wrap justify-start items-start text-left"
     >
-      <h1 class="my-12 text-5xl font-bold text-green-700 leading-tight">
+      <h1 class="my-10 text-5xl w-full font-bold text-green-700 leading-tight">
         Aramıza hoşgeldiniz!
       </h1>
       <h3 class="mb-4">
@@ -12,7 +12,9 @@
         blokzincir tarayıcısında görüntüleyebilirsiniz.
       </h3>
 
-      <a href="#" class="text-gray-600 text-xxs m-4 md:m-8 break-all underline"
+      <a
+        href="#"
+        class="text-gray-500 text-xxs mx-4 md:mx-0 md:m-8 break-all underline"
         >F076A68CF2D298FC446293F1D1C3FF2D8EA468807731C2B4D79E47CAE09C79D8</a
       >
       <iframe

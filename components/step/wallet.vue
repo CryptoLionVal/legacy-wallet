@@ -2,10 +2,10 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'wallet'"
-      class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
     >
       <div
-        class="flex flex-col w-full justify-center items-start text-center md:text-left"
+        class="flex flex-col w-full justify-center items-start text-left md:text-left"
       >
         <h1 class="my-12 text-5xl font-bold leading-tight">
           Kullanılabilir Tutar: 115 CRO
