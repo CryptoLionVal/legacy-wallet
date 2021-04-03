@@ -38,7 +38,7 @@
         </button>
         <button
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          @click="$store.commit('setStep', 'desktop')"
+          @click="navigate"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,3 +60,18 @@
     </div>
   </transition>
 </template>
+
+<script>
+export default {
+  methods: {
+    navigate() {
+      this.$store.commit('setStep', 'desktop')
+      this.$router.push(
+        this.localePath('how-to-stake-cro') +
+          '#' +
+          this.$t('pages.how_to_stake_cro.steps_id')
+      )
+    },
+  },
+}
+</script>

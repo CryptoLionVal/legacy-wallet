@@ -116,14 +116,18 @@
             <NuxtLink
               v-for="link in $t('navbar.links')"
               :key="link.hash"
+              tag="button"
               prefetch
               :to="
                 typeof link.href === 'string'
                   ? link.href
+                  : link.href.hash.length === 0
+                  ? localePath(link.href.path)
                   : localePath(link.href.path) + '#' + link.href.hash
               "
               class="inline-block py-2 px-4 no-underline"
               :title="link.title"
+              @click.native="$store.commit('setStep', 'first')"
               >{{ link.name }}</NuxtLink
             >
           </li>

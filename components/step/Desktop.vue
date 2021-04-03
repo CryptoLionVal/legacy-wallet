@@ -5,7 +5,7 @@
       :id="$t('pages.how_to_stake_cro.steps_id')"
       class="bg-transparent border-b pb-10 px-4"
     >
-      <div class="container max-w-5xl mx-auto m-8">
+      <div class="container max-w-5xl mt-32 mx-auto m-8">
         <h1
           class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200"
         >
