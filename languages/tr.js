@@ -12,10 +12,24 @@ export default {
     how_to_stake_cro: {
       title: "Nasıl stake edilir?",
       steps_id: "staking-adimlari",
-      steps: [
-        {
-          title: "Masaüstü Cüzdanı İndirin",
-          desc: `
+      back_button: 'Geri Dön',
+      logout_button: 'Cüzdanı kapat',
+      dialog_button: 'Kapat',
+      steps: {
+        first: {
+          title: "Nasıl stake yapmak istiyorsunuz?",
+          desc: "Lütfen stake yapmak için bir yöntem seçin. Kolay ve hızlı bir " +
+            "yöntem olarak cüzdanınızı buradan gizli kelimeleriniz ile açabilirsiniz.",
+          buttons: {
+            mnemonic: 'Cüzdanını Mnemonic Kullanarak Aç',
+            desktop: 'CDC Masaüstü Cüzdanını Kur',
+          }
+        },
+        desktop: {
+          steps: [
+            {
+              title: "Masaüstü Cüzdanı İndirin",
+              desc: `
           Link:
               <a
                 class="text-pink-500 underline"
@@ -24,39 +38,74 @@ export default {
                 >Crypto.org Masaüstü Cüzdan</a
               >
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path class="heroicon-ui" d="M11 14.59V3a1 1 0 0 1 2 0v11.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"/>
             </svg>
           `,
-          next: true
-        },
-        {
-          title: "İçeri Aktar veya Yeni Oluştur",
-          desc: `
+              next: true
+            },
+            {
+              title: "İçeri Aktar veya Yeni Oluştur",
+              desc: `
           Gizli kelimeleriniz ile cüzdanınızı içeri aktarın veya yeni bir tane oluşturun.
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path class="heroicon-ui" d="M11.85 17.56a1.5 1.5 0 0 1-1.06.44H10v.5c0 .83-.67 1.5-1.5 1.5H8v.5c0 .83-.67 1.5-1.5 1.5H4a2 2 0 0 1-2-2v-2.59A2 2 0 0 1 2.59 16l5.56-5.56A7.03 7.03 0 0 1 15 2a7 7 0 1 1-1.44 13.85l-1.7 1.71zm1.12-3.95l.58.18a5 5 0 1 0-3.34-3.34l.18.58L4 17.4V20h2v-.5c0-.83.67-1.5 1.5-1.5H8v-.5c0-.83.67-1.5 1.5-1.5h1.09l2.38-2.39zM18 9a1 1 0 0 1-2 0 1 1 0 0 0-1-1 1 1 0 0 1 0-2 3 3 0 0 1 3 3z"/>
             </svg>
           `,
-          next: true
-        },
-        {
-          title: "Yatırımınızı Stake Edin",
-          desc: `
+              next: true
+            },
+            {
+              title: "Yatırımınızı Stake Edin",
+              desc: `
            Stake sekmesine gidin ve cüzdan adresimizi yapıştırın.
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path
                     d="M17.62 10H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8.5c-1.2 0-2.3-.72-2.74-1.79l-3.5-7-.03-.06A3 3 0 0 1 5 9h5V4c0-1.1.9-2 2-2h1.62l4 8zM16 11.24L12.38 4H12v7H5a1 1 0 0 0-.93 1.36l3.5 7.02a1 1 0 0 0 .93.62H16v-8.76zm2 .76v8h2v-8h-2z" />
             </svg>
           `,
-          next: false
-        }
-      ]
+              next: false
+            }
+          ]
+        },
+        mnemonic: {
+          title: `Lütfen gizli kelimelerinizi girin.`,
+          desc: `
+          <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
+          kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.
+          Crypto Lion bu hizmeti yalnızca
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          adresinden sağlamaktadır. Cüzdan bilgileriniz hiçbir şekilde
+          saklanmaz. Kaynak kodunu en altta yer alan bağlantıdan
+          inceleyebilirsiniz.
+          `,
+          button: `Cüzdanımı Aç`
+        },
+        wallet: {
+          title: `Kullanılabilir Tutar:`,
+          desc: `
+          <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
+          kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.
+          Crypto Lion bu hizmeti yalnızca
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          adresinden sağlamaktadır. Cüzdan bilgileriniz hiçbir şekilde
+          saklanmaz. Kaynak kodunu en altta yer alan bağlantıdan
+          inceleyebilirsiniz.
+          `,
+          button: `Stake Et`
+        },
+        form: {
+          title: `Stake işlemi başarılı!`,
+          desc: `
+          Tebrikler, stake işlemini başarıyla tamamladınız. Aşağıdaki bağlantıya
+          tıklaayrak işlemi blokzincir tarayıcısında görüntüleyebilirsiniz.
+          `,
+        },
+      }
     }
   },
 

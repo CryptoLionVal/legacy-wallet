@@ -16,7 +16,7 @@
             class="flex flex-wrap md:flex-no-wrap space-y-2 md:space-y-0 md:space-x-5 content-between"
           >
             <step-card
-              v-for="step in $t('pages.how_to_stake_cro.steps')"
+              v-for="step in $t('pages.how_to_stake_cro.steps.desktop.steps')"
               :key="step.title"
               :title="step.title"
               :icon="step.icon"
@@ -48,7 +48,9 @@
                 d="M14.7 15.3a1 1 0 0 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 1.4L11.42 12l3.3 3.3z"
               />
             </svg>
-            <span class="text-xl">Geri Dön</span>
+            <span class="text-xl">
+              {{ $t('pages.how_to_stake_cro.back_button') }}
+            </span>
           </a>
         </div>
       </div>

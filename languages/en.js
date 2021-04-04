@@ -12,10 +12,24 @@ export default {
     how_to_stake_cro: {
       title: "Staking Explained",
       steps_id: "staking-steps",
-      steps: [
-        {
-          title: "DownLoad Desktop Wallet",
-          desc: `
+      back_button: 'Go back',
+      logout_button: 'Logout',
+      dialog_button: 'Close',
+      steps: {
+        first: {
+          title: "How would you like to stake?",
+          desc: "Please choose a comfortable way to stake. It is easy to stake " +
+            "your CROs here in the Crypto Lion Website. Feel free to check source code, we are open source.",
+          buttons: {
+            mnemonic: "Access Wallet with Mnemonic",
+            desktop: "Download CDC Desktop Wallet"
+          }
+        },
+        desktop: {
+          steps: [
+            {
+              title: "DownLoad Desktop Wallet",
+              desc: `
           Download:
               <a
                 class="text-pink-500 underline"
@@ -24,39 +38,72 @@ export default {
                 >Crypto.org Chain Desktop Wallet</a
               >
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path class="heroicon-ui" d="M11 14.59V3a1 1 0 0 1 2 0v11.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"/>
             </svg>
           `,
-          next: true
-        },
-        {
-          title: "Import or Create Wallet",
-          desc: `
+              next: true
+            },
+            {
+              title: "Import or Create Wallet",
+              desc: `
           Create or import a new wallet with your mnemonic keys.
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path class="heroicon-ui" d="M11.85 17.56a1.5 1.5 0 0 1-1.06.44H10v.5c0 .83-.67 1.5-1.5 1.5H8v.5c0 .83-.67 1.5-1.5 1.5H4a2 2 0 0 1-2-2v-2.59A2 2 0 0 1 2.59 16l5.56-5.56A7.03 7.03 0 0 1 15 2a7 7 0 1 1-1.44 13.85l-1.7 1.71zm1.12-3.95l.58.18a5 5 0 1 0-3.34-3.34l.18.58L4 17.4V20h2v-.5c0-.83.67-1.5 1.5-1.5H8v-.5c0-.83.67-1.5 1.5-1.5h1.09l2.38-2.39zM18 9a1 1 0 0 1-2 0 1 1 0 0 0-1-1 1 1 0 0 1 0-2 3 3 0 0 1 3 3z"/>
             </svg>
           `,
-          next: true
-        },
-        {
-          title: "Stake your Funds",
-          desc: `
+              next: true
+            },
+            {
+              title: "Stake your Funds",
+              desc: `
           Select staking tab and click delegate and paste our address.
           `,
-          icon: `
+              icon: `
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 24 24" width="48" height="48">
               <path
                     d="M17.62 10H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8.5c-1.2 0-2.3-.72-2.74-1.79l-3.5-7-.03-.06A3 3 0 0 1 5 9h5V4c0-1.1.9-2 2-2h1.62l4 8zM16 11.24L12.38 4H12v7H5a1 1 0 0 0-.93 1.36l3.5 7.02a1 1 0 0 0 .93.62H16v-8.76zm2 .76v8h2v-8h-2z" />
             </svg>
           `,
-          next: false
-        }
-      ]
+              next: false
+            }
+          ]
+        },
+        mnemonic: {
+          title: `Please enter your mnemonic phrase.`,
+          desc: `
+          <strong class="text-red-600">Disclaimer:</strong> By using this option,
+          you are accepting that all responsibility belongs to you.
+          Crypto Lion only serve this option on
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          address. Please beware of scammers. We never store any data of you, and your wallet.
+          You can check our open source code from the link on footer.
+          `,
+          button: `Access Wallet`
+        },
+        wallet: {
+          title: `Available Balance:`,
+          desc: `
+          <strong class="text-red-600">Disclaimer:</strong> By using this option,
+          you are accepting that all responsibility belongs to you.
+          Crypto Lion only serve this option on
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          address. Please beware of scammers. We never store any data of you, and your wallet.
+          You can check our open source code from the link on footer.
+          `,
+          button: `Delegate`
+        },
+        form: {
+          title: `Staked successfully!`,
+          desc: `
+          Congratulations, you have just comleted staking process. You can now click
+          below link in order to see further details on official blockchain explorer.
+          `,
+        },
+      }
     }
   },
 

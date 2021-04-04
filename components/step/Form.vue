@@ -8,11 +8,10 @@
         <h1
           class="my-10 text-5xl w-full font-bold text-green-700 leading-tight"
         >
-          Stake işlemi başarılı!
+          {{ $t('pages.how_to_stake_cro.steps.form.title') }}
         </h1>
         <h3 class="mb-4">
-          Stake işleminiz başarıyla tamamlandı. Bağlantıya tıklayarak işlemi
-          blokzincir tarayıcısında görüntüleyebilirsiniz.
+          {{ $t('pages.how_to_stake_cro.steps.form.desc') }}
         </h3>
 
         <a
@@ -49,7 +48,9 @@
               d="M14.7 15.3a1 1 0 0 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 1.4L11.42 12l3.3 3.3z"
             />
           </svg>
-          <span class="text-xl">Cüzdana Geri Dön</span>
+          <span class="text-xl">
+            {{ $t('pages.how_to_stake_cro.back_button') }}
+          </span>
         </a>
 
         <a
@@ -57,7 +58,9 @@
           class="rounded-full flex flex-row content-center cursor-pointer justify-center w-full md:w-1/5 p-1 mt-6 bg-red-600 mb-32 text-gray-200 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-200 ease-in-out"
           @click.prevent="$store.dispatch('resetStore')"
         >
-          <span class="text-xl">Cüzdanı kapat</span>
+          <span class="text-xl">
+            {{ $t('pages.how_to_stake_cro.logout_button') }}
+          </span>
         </a>
       </div>
       <div class="w-full pt-1 pb-32 flex flex-row"></div>

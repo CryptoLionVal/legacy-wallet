@@ -31,7 +31,9 @@
                 class="rounded-full self-end flex flex-row content-center cursor-pointer justify-center w-1/5 p-1 mt-6 bg-transparent text-red-600 font-bold transform transition hover:scale-105 duration-200 ease-in-out"
                 @click.prevent="$store.commit('hideDialog')"
               >
-                <span class="text-xl">Kapat</span>
+                <span class="text-xl">
+                  {{ $t('pages.how_to_stake_cro.dialog_button') }}
+                </span>
               </a>
             </div>
           </div>

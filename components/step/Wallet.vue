@@ -8,18 +8,13 @@
         class="flex flex-col w-full justify-center items-start text-left md:text-left"
       >
         <h1 class="my-12 text-5xl leading-tight">
-          Kullanılabilir Tutar:
+          {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
           <span class="font-bold">{{ $store.state.balance }} CRO</span>
         </h1>
-        <p class="leading-normal text-sm md:text-xl mb-8">
-          <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
-          kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.
-          Crypto Lion bu hizmeti yalnızca
-          <strong class="text-green-500">https://cryptolion.finance</strong>
-          adresinden sağlamaktadır. Cüzdan bilgileriniz hiçbir şekilde
-          saklanmaz. Kaynak kodunu en altta yer alan bağlantıdan
-          inceleyebilirsiniz.
-        </p>
+        <p
+          class="leading-normal text-sm md:text-xl mb-8"
+          v-html="$t('pages.how_to_stake_cro.steps.wallet.desc')"
+        ></p>
       </div>
       <div class="w-full pt-1 pb-32 flex flex-col md:flex-row">
         <input
@@ -77,7 +72,9 @@
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             ></path>
           </svg>
-          <span class="text-2xl">Stake Et</span>
+          <span class="text-2xl">{{
+            $t('pages.how_to_stake_cro.steps.wallet.button')
+          }}</span>
         </button>
       </div>
     </div>

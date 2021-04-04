@@ -8,12 +8,10 @@
         class="flex flex-col w-full justify-center items-start text-center md:text-left"
       >
         <h1 class="my-16 text-5xl font-bold leading-tight">
-          Nasıl stake yapmak istiyorsunuz?
+          {{ $t('pages.how_to_stake_cro.steps.first.title') }}
         </h1>
         <p class="leading-normal text-2xl mb-8">
-          Lütfen stake yapmak için bir yöntem seçin. Kolay ve hızlı bir yöntem
-          olarak cüzdanınızı buradan gizli kelimeleriniz ile açmanızı tavsiye
-          ediyoruz.
+          {{ $t('pages.how_to_stake_cro.steps.first.desc') }}
         </p>
       </div>
       <div class="w-full pt-6 pb-32 flex flex-col md:flex-row">
@@ -34,7 +32,9 @@
             />
           </svg>
 
-          <span class="text-l md:text-3xl">Cüzdanımı mnemonic ile açarak</span>
+          <span class="text-l md:text-3xl">
+            {{ $t('pages.how_to_stake_cro.steps.first.buttons.mnemonic') }}
+          </span>
         </button>
         <button
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
@@ -52,9 +52,9 @@
               d="M11 14.59V3a1 1 0 0 1 2 0v11.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"
             />
           </svg>
-          <span class="text-l md:text-3xl"
-            >Resmi Masaüstü Cüzdanını Kurarak</span
-          >
+          <span class="text-l md:text-3xl">
+            {{ $t('pages.how_to_stake_cro.steps.first.buttons.desktop') }}
+          </span>
         </button>
       </div>
     </div>
