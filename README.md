@@ -1,5 +1,9 @@
 # CDC Chain Mainnet Crypto Lion Node Website
 
+This is a website runs totally on GitHub Pages to serve info and help people out there looking for a reliable cryptocoin staking services from the first hand.
+
+![](assets/images/staking-on-website.gif)
+
 ## To build on your local
 
 ```bash
@@ -19,8 +23,9 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-Please check the license file.
-
-Special thanks:
+Big thanks going to these wonderful people:
  - [tailwindtoolbox/Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
  - [Illustrations by IRA Design](https://iradesign.io)
+ - [Heroicons UI](https://github.com/sschoger/heroicons-ui)
+ - [CosmJS](https://github.com/cosmos/cosmjs)
+
