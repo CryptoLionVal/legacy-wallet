@@ -40,7 +40,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['nuxt-i18n'],
+  modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
 
   // i18n https://i18n.nuxtjs.org
   i18n: {
@@ -72,6 +72,11 @@ export default {
         tr: '/cro-nasil-stake-edilir',
       },
     },
+  },
+
+  sitemap: {
+    hostname: 'https://cryptolion.finance',
+    gzip: true,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
