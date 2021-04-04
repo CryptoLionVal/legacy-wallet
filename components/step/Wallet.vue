@@ -7,9 +7,24 @@
       <div
         class="flex flex-col w-full justify-center items-start text-left md:text-left"
       >
-        <h1 class="my-12 text-5xl leading-tight">
-          {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
+        <h1 class="my-12 text-5xl leading-tight flex flex-row items-center">
+          <span>{{ $t('pages.how_to_stake_cro.steps.wallet.title') }}</span>
           <span class="font-bold">{{ $store.state.balance }} CRO</span>
+          <a class="cursor-pointer" @click.prevent="reloadBalance">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              :class="{ 'animate-spin': loading && reloadingBalance }"
+              class="ml-2 mr-3 text-white fill-current"
+              viewBox="0 0 24 24"
+              width="48"
+              height="48"
+            >
+              <path
+                class="heroicon-ui"
+                d="M6 18.7V21a1 1 0 0 1-2 0v-5a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H7.1A7 7 0 0 0 19 12a1 1 0 1 1 2 0 9 9 0 0 1-15 6.7zM18 5.3V3a1 1 0 0 1 2 0v5a1 1 0 0 1-1 1h-5a1 1 0 0 1 0-2h2.9A7 7 0 0 0 5 12a1 1 0 1 1-2 0 9 9 0 0 1 15-6.7z"
+              />
+            </svg>
+          </a>
         </h1>
         <p
           class="leading-normal text-sm md:text-xl mb-8"
@@ -87,6 +102,7 @@ export default {
     return {
       amount: 0,
       loading: false,
+      reloadingBalance: false,
     }
   },
   computed: {
@@ -113,6 +129,22 @@ export default {
       }
 
       this.loading = false
+    },
+    async reloadBalance() {
+      if (this.reloadingBalance) return
+
+      this.loading = true
+      this.reloadingBalance = true
+
+      try {
+        await this.$store.dispatch('fetchBalance')
+      } catch (error) {
+        this.$store.commit('setDialogMessage', error.message)
+        this.$store.commit('showDialog')
+      }
+
+      this.loading = false
+      this.reloadingBalance = false
     },
   },
 }
