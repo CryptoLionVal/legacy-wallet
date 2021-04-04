@@ -40,7 +40,11 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
+  modules: [
+    'nuxt-i18n',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+  ],
 
   // i18n https://i18n.nuxtjs.org
   i18n: {
@@ -77,6 +81,11 @@ export default {
   sitemap: {
     hostname: 'https://cryptolion.finance',
     gzip: true,
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

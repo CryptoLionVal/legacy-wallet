@@ -15,11 +15,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --no-verify"
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
     "@mcanvar/lion": "^1.0.1",
+    "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "big.js": "^5.2.2",
     "core-js": "^3.6.5",
