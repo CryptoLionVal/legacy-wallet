@@ -1,9 +1,9 @@
 import Lion from '@mcanvar/lion'
 import Big from 'big.js'
 
-const path = "m/44'/1'/0'/0/0"
-const prefix = 'tcro'
-const RPC = 'https://testnet-croeseid.crypto.org:26657'
+const path = "m/44'/394'/0'/0/0"
+const prefix = 'cro'
+const RPC = 'https://mainnet.crypto.org:26657'
 const lion = new Lion(path, prefix, RPC)
 
 export const state = () => ({
@@ -12,7 +12,7 @@ export const state = () => ({
     message: '',
   },
   step: 'first',
-  validator: 'tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew',
+  validator: 'crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
   wallet: null,
   client: null,
   balance: 0,

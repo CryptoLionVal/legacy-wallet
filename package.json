@@ -19,7 +19,7 @@
     }
   },
   "dependencies": {
-    "@mcanvar/lion": "^1.0.0",
+    "@mcanvar/lion": "^1.0.1",
     "big.js": "^5.2.2",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
