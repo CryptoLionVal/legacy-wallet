@@ -40,11 +40,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    'nuxt-i18n',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-  ],
+  modules: ['nuxt-i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxtjs/axios'],
 
   // i18n https://i18n.nuxtjs.org
   i18n: {
