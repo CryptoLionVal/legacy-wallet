@@ -134,8 +134,18 @@
           </div>
         </div>
       </div>
+
+      <div class="flex flex-row space-x-2 mx-8 mb-2">
+        <lazy-status name="Mainnet" />
+        <lazy-status
+          name="Croeseid Testnet"
+          validator="15CDB1DCB71FE74CB7EA971E2CC17751F21984E8"
+          rpc="https://testnet-croeseid.crypto.com:26657"
+        />
+      </div>
+
       <p
-        class="text-gray-500 text-sm pb-2 mx-8 lg:mx-20"
+        class="text-gray-500 text-sm pb-2 mx-8"
         v-html="$t('footer.copyright')"
       ></p>
     </footer>

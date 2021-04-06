@@ -26,6 +26,7 @@ html {
 
 .bg-primary {
   background-color: #010b18;
+  background-color: rgba(1, 11, 24, var(--bg-opacity));
 }
 
 .text-secondary {
