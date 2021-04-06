@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       copied: false,
-      address: 'crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
+      address: this.$chain.config('VALIDATOR'),
     }
   },
   methods: {

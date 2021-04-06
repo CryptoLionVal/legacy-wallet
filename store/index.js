@@ -1,10 +1,15 @@
 import Lion from '@mcanvar/lion'
 import Big from 'big.js'
+import Chain from '@/plugins/core/Chain'
 
-const path = "m/44'/394'/0'/0/0"
-const prefix = 'cro'
-const RPC = 'https://mainnet.crypto.org:26657'
-const lion = new Lion(path, prefix, RPC)
+const chain = new Chain(process.env)
+
+// TODO: move lion into chain plugin
+const lion = new Lion(
+  chain.config('HD_PATH'),
+  chain.config('PREFIX'),
+  chain.config('RPC')
+)
 
 export const state = () => ({
   dialog: {
@@ -12,13 +17,14 @@ export const state = () => ({
     message: '',
   },
   step: 'first',
-  validator: 'crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
+  validator: '',
   wallet: null,
   client: null,
   balance: 0,
   lastHash: '',
 })
 
+// TODO: refactor
 export const mutations = {
   showDialog(state) {
     state.dialog.show = true
@@ -31,6 +37,9 @@ export const mutations = {
   },
   setStep(state, status) {
     state.step = status
+  },
+  setValidator(state) {
+    state.validator = this.$chain.config('VALIDATOR')
   },
   setWallet(state, wallet) {
     state.wallet = wallet
@@ -62,6 +71,8 @@ export const actions = {
     commit('setClient', client)
 
     await dispatch('fetchBalance')
+
+    commit('setValidator')
   },
 
   async fetchBalance({ commit, state }) {

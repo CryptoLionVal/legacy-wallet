@@ -5,6 +5,22 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  env: {
+    ON_MAIN_NET: true,
+    RPC: 'https://mainnet.crypto.org:26657',
+    T_VALIDATOR: '8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB',
+    VALIDATOR: 'crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495',
+    HD_PATH: "m/44'/394'/0'/0/0",
+    PREFIX: 'cro',
+    EXPLORER: 'https://crypto.org/explorer',
+    TESTNET_RPC: 'https://testnet-croeseid.crypto.com:26657',
+    TESTNET_T_VALIDATOR: '15CDB1DCB71FE74CB7EA971E2CC17751F21984E8',
+    TESTNET_VALIDATOR: 'tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew',
+    TESTNET_HD_PATH: "m/44'/1'/0'/0/0",
+    TESTNET_PREFIX: 'tcro',
+    TESTNET_EXPLORER: 'https://crypto.org/explorer/croeseid',
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     meta: [
@@ -26,7 +42,7 @@ export default {
   tailwindcss: {},
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/chain.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

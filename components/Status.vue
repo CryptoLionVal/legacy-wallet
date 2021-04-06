@@ -11,7 +11,7 @@
     >
       {{ name }}
       <span :class="{ hidden: !showDesc }"
-        >: Missed {{ this.missed }} blocks in last {{ this.gap }} blocks.</span
+        >: Missed {{ missed }} blocks in last {{ gap }} blocks.</span
       >
     </span>
   </div>
@@ -26,11 +26,11 @@ export default {
     },
     rpc: {
       type: String,
-      default: 'https://mainnet.crypto.org:26657',
+      required: true,
     },
     validator: {
       type: String,
-      default: '8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB',
+      required: true,
     },
   },
   data() {
@@ -68,6 +68,7 @@ export default {
       }
       this.loaded = true
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
     }
   },
