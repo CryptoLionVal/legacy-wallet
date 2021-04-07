@@ -91,6 +91,8 @@ export default {
           rewards: `Ödül:`,
           rewards_button_title: `Hepsini çek`,
           renew_button_title: `Yenile`,
+          rewards_confirm: `Bütün ödülleriniz cüzdanınıza çekilecektir. Onaylıyor musunuz?`,
+          stake_confirm: `Girilen tutar stake edilecektir. Lütfen onaylayın.`,
           desc: `
           <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
           kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.

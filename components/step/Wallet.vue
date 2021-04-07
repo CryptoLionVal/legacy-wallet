@@ -218,6 +218,12 @@ export default {
   },
   methods: {
     async stake() {
+      if (
+        this.loading ||
+        !confirm(this.$t('pages.how_to_stake_cro.steps.wallet.stake_confirm'))
+      )
+        return
+
       this.loading = true
 
       try {
@@ -232,7 +238,11 @@ export default {
       this.loading = false
     },
     async withdrawRewards() {
-      if (this.withdrawingRewards) return
+      if (
+        this.withdrawingRewards ||
+        !confirm(this.$t('pages.how_to_stake_cro.steps.wallet.rewards_confirm'))
+      )
+        return
 
       this.loading = true
       this.withdrawingRewards = true
