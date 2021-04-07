@@ -164,6 +164,8 @@
           }}</span>
         </button>
       </div>
+
+      <logout-button />
     </div>
   </transition>
 </template>

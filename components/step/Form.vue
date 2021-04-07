@@ -51,15 +51,7 @@
           </span>
         </a>
 
-        <a
-          :hidden="this.$store.state.client === null"
-          class="rounded-full flex flex-row content-center cursor-pointer justify-center w-full md:w-1/5 p-1 mt-6 bg-red-600 mb-32 text-gray-200 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-200 ease-in-out"
-          @click.prevent="$store.dispatch('resetStore')"
-        >
-          <span class="text-xl">
-            {{ $t('pages.how_to_stake_cro.logout_button') }}
-          </span>
-        </a>
+        <logout-button />
       </div>
       <div class="w-full pt-1 pb-32 flex flex-row"></div>
     </div>

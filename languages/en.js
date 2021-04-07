@@ -14,6 +14,7 @@ export default {
       steps_id: "staking-steps",
       back_button: 'Go back',
       logout_button: 'Logout',
+      logout_confirm: `You will be remove your wallet. Please confirm.`,
       dialog_button: 'Close',
       steps: {
         first: {

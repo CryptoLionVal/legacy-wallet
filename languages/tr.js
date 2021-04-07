@@ -14,6 +14,7 @@ export default {
       steps_id: "staking-adimlari",
       back_button: 'Geri Dön',
       logout_button: 'Cüzdanı kapat',
+      logout_confirm: `Cüzdanınız kapatılacaktır. Lütfen onaylayın.`,
       dialog_button: 'Kapat',
       steps: {
         first: {
