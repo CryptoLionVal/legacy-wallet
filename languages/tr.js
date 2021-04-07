@@ -88,7 +88,7 @@ export default {
         wallet: {
           title: `Cüzdanım`,
           available_balance: `Kullanılabilir Tutar:`,
-          rewards: `Ödüller:`,
+          rewards: `Ödül:`,
           desc: `
           <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
           kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.

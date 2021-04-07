@@ -19,8 +19,10 @@ export const state = () => ({
   step: 'first',
   validator: '',
   wallet: null,
+  account: null,
   client: null,
   balance: 0,
+  rewards: 0,
   lastHash: '',
 })
 
@@ -53,6 +55,9 @@ export const mutations = {
   setBalance(state, balance) {
     state.balance = balance
   },
+  setReward(state, rewards) {
+    state.rewards = rewards
+  },
   setLastHash(state, lastHash) {
     state.lastHash = lastHash
   },
@@ -70,19 +75,25 @@ export const actions = {
 
     commit('setClient', client)
 
-    await dispatch('fetchBalance')
+    await dispatch('fetchBalances')
 
     commit('setValidator')
   },
 
-  async fetchBalance({ commit, state }) {
+  async fetchBalances({ commit, state }) {
     let balance = await lion.getBalance(state.account.address)
+    let rewards = await this.$axios.$get(
+      this.$chain.config('EXPLORER_API') + '/accounts/' + state.account.address
+    )
 
     balance = new Big(balance.amount)
+    rewards = new Big(rewards.result.totalRewards[0].amount)
 
     balance = balance.div(100000000)
+    rewards = rewards.div(100000000)
 
     commit('setBalance', balance.toPrecision(5))
+    commit('setReward', rewards.toPrecision(5))
   },
 
   async stake({ commit, state, dispatch }, amount) {
@@ -96,7 +107,7 @@ export const actions = {
 
     commit('setLastHash', response.transactionHash)
 
-    await dispatch('fetchBalance')
+    await dispatch('fetchBalances')
   },
 
   resetStore({ commit }) {

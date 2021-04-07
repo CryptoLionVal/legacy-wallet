@@ -12,7 +12,7 @@
             $t('pages.how_to_stake_cro.steps.wallet.title')
           }}</span>
         </h1>
-        <div class="my-6 text-3xl leading-tight flex flex-row items-center">
+        <div class="mt-6 text-3xl leading-tight flex flex-row items-center">
           <span class="font-bold">{{
             $t('pages.how_to_stake_cro.steps.wallet.available_balance')
           }}</span>
@@ -39,6 +39,12 @@
               />
             </svg>
           </button>
+        </div>
+        <div class="mb-6 text-3xl leading-tight flex flex-row items-center">
+          <span class="font-bold">{{
+            $t('pages.how_to_stake_cro.steps.wallet.rewards')
+          }}</span>
+          <span class="ml-1">{{ rewards }}</span>
         </div>
         <p
           class="leading-normal text-sm md:text-xl mb-8"
@@ -135,6 +141,13 @@ export default {
         this.$chain.config('PREFIX').toUpperCase()
       )
     },
+    rewards() {
+      return (
+        this.$store.state.rewards +
+        ' ' +
+        this.$chain.config('PREFIX').toUpperCase()
+      )
+    },
   },
   methods: {
     async stake() {
@@ -158,7 +171,7 @@ export default {
       this.reloadingBalance = true
 
       try {
-        await this.$store.dispatch('fetchBalance')
+        await this.$store.dispatch('fetchBalances')
       } catch (error) {
         this.$store.commit('setDialogMessage', error.message)
         this.$store.commit('showDialog')

@@ -6,6 +6,7 @@ const NETWORKS = {
     HD_PATH: "m/44'/1'/0'/0/0",
     PREFIX: 'tcro',
     EXPLORER: 'https://crypto.org/explorer/croeseid',
+    EXPLORER_API: 'https://crypto.org/explorer/croeseid/api/v1',
   },
   MAINNET: {
     RPC: 'https://mainnet.crypto.org:26657',
@@ -14,6 +15,7 @@ const NETWORKS = {
     HD_PATH: "m/44'/394'/0'/0/0",
     PREFIX: 'cro',
     EXPLORER: 'https://crypto.org/explorer',
+    EXPLORER_API: 'https://crypto.org/explorer/api/v1',
   },
 }
 
