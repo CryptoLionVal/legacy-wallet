@@ -1,15 +1,4 @@
-import Lion from '@mcanvar/lion'
 import Big from 'big.js'
-import Chain from '@/plugins/core/Chain'
-
-const chain = new Chain(process.env.CHAIN)
-
-// TODO: move lion into chain plugin
-const lion = new Lion(
-  chain.config('HD_PATH'),
-  chain.config('PREFIX'),
-  chain.config('RPC')
-)
 
 export const state = () => ({
   dialog: {
@@ -65,13 +54,13 @@ export const mutations = {
 
 export const actions = {
   async initClient({ commit, state, dispatch }, mnemonic) {
-    const wallet = await lion.setWallet(mnemonic)
+    const wallet = await this.$chain.lion.setWallet(mnemonic)
     const account = (await wallet.getAccounts()).shift()
 
     commit('setWallet', wallet)
     commit('setAccount', account)
 
-    const client = await lion.setClient()
+    const client = await this.$chain.lion.setClient()
 
     commit('setClient', client)
 
@@ -82,7 +71,7 @@ export const actions = {
   },
 
   async fetchBalance({ commit, state }) {
-    let balance = await lion.getBalance(state.account.address)
+    let balance = await this.$chain.lion.getBalance(state.account.address)
 
     balance = new Big(balance.amount)
     balance = balance.div(100000000)
@@ -106,7 +95,7 @@ export const actions = {
   },
 
   async stake({ commit, state, dispatch }, amount) {
-    const response = await lion.delegate(
+    const response = await this.$chain.lion.delegate(
       state.account.address,
       state.validator,
       amount * 100000000
@@ -119,9 +108,11 @@ export const actions = {
     await dispatch('fetchBalance')
   },
 
-  // TODO: fix balance reload issue
   async withdraw({ state, dispatch }) {
-    const response = await lion.withdraw(state.account.address, state.validator)
+    const response = await this.$chain.lion.withdraw(
+      state.account.address,
+      state.validator
+    )
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 

@@ -1,4 +1,4 @@
-const NETWORKS = {
+const NetworksConfig = {
   TESTNET: {
     RPC: 'https://testnet-croeseid.crypto.com:26657',
     T_VALIDATOR: '15CDB1DCB71FE74CB7EA971E2CC17751F21984E8',
@@ -19,15 +19,4 @@ const NETWORKS = {
   },
 }
 
-export default class Chain {
-  constructor(chain, networks = NETWORKS) {
-    this.chain = chain
-    this.networks = networks
-  }
-
-  config(key, network = null) {
-    if (network) return this.networks[network][key]
-
-    return this.networks[this.chain][key]
-  }
-}
+export default NetworksConfig
