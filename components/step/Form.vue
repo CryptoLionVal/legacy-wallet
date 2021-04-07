@@ -15,7 +15,7 @@
         </h3>
 
         <a
-          :href="$chain.config('EXPLORER') + '/' + $store.state.lastHash"
+          :href="$chain.config('EXPLORER') + '/tx/' + $store.state.lastHash"
           target="_blank"
           class="text-gray-500 text-xxs mx-4 md:mx-0 md:m-8 break-all underline"
           >{{ $store.state.lastHash }}</a
