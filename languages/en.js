@@ -85,7 +85,9 @@ export default {
           button: `Access Wallet`
         },
         wallet: {
-          title: `Available Balance:`,
+          title: `My Wallet`,
+          available_balance: `Available Balance:`,
+          rewards: `Rewards:`,
           desc: `
           <strong class="text-red-600">Disclaimer:</strong> By using this option,
           you are accepting that all responsibility belongs to you.
