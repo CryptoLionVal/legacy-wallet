@@ -75,13 +75,21 @@ export const actions = {
 
     commit('setClient', client)
 
-    await dispatch('fetchBalances')
+    await dispatch('fetchBalance')
+    await dispatch('fetchRewards')
 
     commit('setValidator')
   },
 
-  async fetchBalances({ commit, state }) {
+  async fetchBalance({ commit, state }) {
     let balance = await lion.getBalance(state.account.address)
+
+    balance = new Big(balance.amount)
+    balance = balance.div(100000000)
+    commit('setBalance', balance.toPrecision(5))
+  },
+
+  async fetchRewards({ commit, state }) {
     let rewards = await this.$axios.$get(
       this.$chain.config('EXPLORER_API') + '/accounts/' + state.account.address
     )
@@ -90,11 +98,11 @@ export const actions = {
       rewards = new Big(rewards.result.totalRewards[0].amount)
       rewards = rewards.div(100000000)
       commit('setReward', rewards.toPrecision(5))
+
+      return
     }
 
-    balance = new Big(balance.amount)
-    balance = balance.div(100000000)
-    commit('setBalance', balance.toPrecision(5))
+    commit('setReward', 0)
   },
 
   async stake({ commit, state, dispatch }, amount) {
@@ -108,16 +116,18 @@ export const actions = {
 
     commit('setLastHash', response.transactionHash)
 
-    await dispatch('fetchBalances')
+    await dispatch('fetchBalance')
   },
 
   // TODO: fix balance reload issue
-  async withdraw({ commit, state, dispatch }) {
+  async withdraw({ state, dispatch }) {
     const response = await lion.withdraw(state.account.address, state.validator)
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 
-    await dispatch('fetchBalances')
+    await dispatch('fetchBalance')
+
+    dispatch('fetchRewards')
   },
 
   resetStore({ commit }) {
