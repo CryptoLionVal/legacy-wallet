@@ -19,7 +19,7 @@
     }
   },
   "dependencies": {
-    "@mcanvar/lion": "^1.0.1",
+    "@mcanvar/lion": "^1.1.0",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",

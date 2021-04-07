@@ -86,14 +86,15 @@ export const actions = {
       this.$chain.config('EXPLORER_API') + '/accounts/' + state.account.address
     )
 
+    if (rewards.result.totalRewards.length) {
+      rewards = new Big(rewards.result.totalRewards[0].amount)
+      rewards = rewards.div(100000000)
+      commit('setReward', rewards.toPrecision(5))
+    }
+
     balance = new Big(balance.amount)
-    rewards = new Big(rewards.result.totalRewards[0].amount)
-
     balance = balance.div(100000000)
-    rewards = rewards.div(100000000)
-
     commit('setBalance', balance.toPrecision(5))
-    commit('setReward', rewards.toPrecision(5))
   },
 
   async stake({ commit, state, dispatch }, amount) {
@@ -106,6 +107,15 @@ export const actions = {
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 
     commit('setLastHash', response.transactionHash)
+
+    await dispatch('fetchBalances')
+  },
+
+  // TODO: fix balance reload issue
+  async withdraw({ commit, state, dispatch }) {
+    const response = await lion.withdraw(state.account.address, state.validator)
+
+    if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 
     await dispatch('fetchBalances')
   },

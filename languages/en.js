@@ -88,6 +88,7 @@ export default {
           title: `My Wallet`,
           available_balance: `Available Balance:`,
           rewards: `Rewards:`,
+          rewards_button: `Withdraw all`,
           desc: `
           <strong class="text-red-600">Disclaimer:</strong> By using this option,
           you are accepting that all responsibility belongs to you.
