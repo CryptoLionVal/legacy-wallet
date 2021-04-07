@@ -9,7 +9,7 @@
       >
         <h1 class="my-12 text-5xl leading-tight flex flex-row items-center">
           <span>{{ $t('pages.how_to_stake_cro.steps.wallet.title') }}</span>
-          <span class="font-bold">{{ $store.state.balance }} CRO</span>
+          <span class="font-bold ml-1">{{ balance }}</span>
           <a class="cursor-pointer" @click.prevent="reloadBalance">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,6 +112,13 @@ export default {
         this.amount > 0 &&
         this.amount <= parseInt(this.$store.state.balance) &&
         !this.loading
+      )
+    },
+    balance() {
+      return (
+        this.$store.state.balance +
+        ' ' +
+        this.$chain.config('PREFIX').toUpperCase()
       )
     },
   },

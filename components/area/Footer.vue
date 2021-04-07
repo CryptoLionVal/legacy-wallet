@@ -138,13 +138,13 @@
       <div class="flex flex-row space-x-2 mx-8 mb-3">
         <lazy-status
           name="Mainnet"
-          :validator="$chain.config('T_VALIDATOR', true)"
-          :rpc="$chain.config('RPC', true)"
+          :validator="$chain.config('T_VALIDATOR')"
+          :rpc="$chain.config('RPC')"
         />
         <lazy-status
           name="Croeseid Testnet"
-          :validator="$chain.config('TESTNET_T_VALIDATOR', true)"
-          :rpc="$chain.config('TESTNET_RPC', true)"
+          :validator="$chain.config('T_VALIDATOR', 'TESTNET')"
+          :rpc="$chain.config('RPC', 'TESTNET')"
         />
       </div>
 

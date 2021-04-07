@@ -185,7 +185,9 @@ export default {
     buttonText() {
       return this.$store.state.client === null
         ? this.$t('stake_now.name')
-        : this.$store.state.balance + ' CRO'
+        : this.$store.state.balance +
+            ' ' +
+            this.$chain.config('PREFIX').toUpperCase()
     },
   },
   mounted() {

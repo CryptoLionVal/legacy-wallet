@@ -15,7 +15,7 @@
         </h3>
 
         <a
-          :href="'https://crypto.org/explorer/tx/' + $store.state.lastHash"
+          :href="$chain.config('EXPLORER') + '/' + $store.state.lastHash"
           target="_blank"
           class="text-gray-500 text-xxs mx-4 md:mx-0 md:m-8 break-all underline"
           >{{ $store.state.lastHash }}</a

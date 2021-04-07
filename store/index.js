@@ -2,7 +2,7 @@ import Lion from '@mcanvar/lion'
 import Big from 'big.js'
 import Chain from '@/plugins/core/Chain'
 
-const chain = new Chain(process.env)
+const chain = new Chain(process.env.CHAIN)
 
 // TODO: move lion into chain plugin
 const lion = new Lion(
@@ -66,7 +66,7 @@ export const actions = {
     commit('setWallet', wallet)
     commit('setAccount', account)
 
-    const client = await lion.setClient(state.RPC)
+    const client = await lion.setClient()
 
     commit('setClient', client)
 
