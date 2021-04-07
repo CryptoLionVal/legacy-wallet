@@ -7,7 +7,7 @@ export default {
 
   // MAINNET or TESTNET
   env: {
-    CHAIN: 'TESTNET',
+    CHAIN: 'MAINNET',
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
