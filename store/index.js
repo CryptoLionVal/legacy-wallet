@@ -13,6 +13,7 @@ export const state = () => ({
   balance: 0,
   rewards: 0,
   lastHash: '',
+  memo: 'Tx created via cryptolion.finance wallet.',
 })
 
 // TODO: refactor
@@ -98,7 +99,8 @@ export const actions = {
     const response = await this.$chain.lion.delegate(
       state.account.address,
       state.validator,
-      amount * 100000000
+      amount * 100000000,
+      state.memo
     )
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
@@ -111,7 +113,8 @@ export const actions = {
   async withdraw({ state, dispatch }) {
     const response = await this.$chain.lion.withdraw(
       state.account.address,
-      state.validator
+      state.validator,
+      state.memo
     )
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
