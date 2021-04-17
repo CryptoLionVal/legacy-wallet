@@ -14,7 +14,28 @@
           {{ $t('pages.how_to_stake_cro.steps.first.desc') }}
         </p>
       </div>
-      <div class="w-full pt-6 pb-32 flex flex-col md:flex-row">
+      <div class="w-full pt-6 pb-32 flex flex-col">
+        <button
+          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          @click="$store.commit('setStep', 'defi')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-gray-700 stroke-2 fill-current"
+            viewBox="0 0 24 24"
+            width="48"
+            height="48"
+          >
+            <path
+              class="heroicon-ui"
+              d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2zm0 2v16h8V4H8zm4 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+            />
+          </svg>
+
+          <span class="text-l md:text-3xl">
+            {{ $t('pages.how_to_stake_cro.steps.first.buttons.defi') }}
+          </span>
+        </button>
         <button
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           @click="$store.commit('setStep', 'mnemonic')"

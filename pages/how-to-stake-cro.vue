@@ -6,9 +6,12 @@
 
     <step-mnemonic />
 
+    <step-defi />
+
     <step-wallet />
 
     <step-form />
+
     <divider />
   </div>
 </template>
