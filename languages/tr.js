@@ -593,11 +593,11 @@ export default {
             href: `#`
           },
           {
-            name: `İstatistikler`,
-            title: `Doğrulayıcı İstatistikleri`,
-            target: `_self`,
+            name: `Sunucularımzın Durumu`,
+            title: `Doğrulayıcı sunucuların durumu`,
+            target: `_blank`,
             href:
-              `https://explorer.nebkas.ro/validator/8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB/missed/blocks`
+              `https://status.cryptolion.finance/`
           }
         ]
       },

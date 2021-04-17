@@ -339,11 +339,11 @@ export default {
             href: "#"
           },
           {
-            name: "Statistics",
-            title: "Simple steps of CRO staking",
-            target: "_self",
+            name: `Status`,
+            title: `Status of both maın and test net servers`,
+            target: `_blank`,
             href:
-              "https://explorer.nebkas.ro/validator/8F7012771B173B8DD2E7A9FBC9EAF7B1E3C055FB/missed/blocks"
+              `https://status.cryptolion.finance/`
           }
         ]
       },
