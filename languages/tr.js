@@ -612,9 +612,9 @@ export default {
           },
           {
             name: `Telegram`,
-            title: `Bizimle Telegram kanalıyla iletişim kurun`,
+            title: `Bizi Telegram kanalıyla takip edin`,
             target: `_blank`,
-            href: `https://web.telegram.org/#/im?p=@mcanvar`
+            href: `https://t.me/CryptoLionValidator`
           },
           {
             name: `Bize yazın!`,
@@ -634,6 +634,12 @@ export default {
             href: `https://crypto.org/`
           },
           {
+            name: `Crypto.org Blokzincir Beyaz Kitabı`,
+            title: `Crypto.org Blokzincir Beyaz Kitabı PDF`,
+            target: `_blank`,
+            href: `https://crypto.org/chain_whitepaper.pdf`
+          },
+          {
             name: `Crypto.org Dökümantasyon`,
             title: `Crypto.org Blokzincir Dökümantasyon`,
             target: `_blank`,
@@ -642,7 +648,7 @@ export default {
         ]
       },
       {
-        name: `Ağlar`,
+        name: `Blokzincir Tarayıcıları`,
         links: [
           {
             name: `Ana Ağ`,
@@ -657,6 +663,13 @@ export default {
             title: `Nebkas.ro'ın Keşif Sitesindeyiz`,
             href:
               `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
+          },
+          {
+            name: `Smart Stake Analiz Sitesi`,
+            target: `_blank`,
+            title: `Smart Stake analiz sitesindeyiz.`,
+            href:
+              `https://cc.smartstake.io/val/27`
           },
           {
             name: `Croeseid Testnet`,

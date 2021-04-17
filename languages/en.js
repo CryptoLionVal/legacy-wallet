@@ -358,9 +358,9 @@ export default {
           },
           {
             name: "Telegram",
-            title: "Contact with staff on Telegram",
+            title: "Follow us from our Telegram channel",
             target: "_blank",
-            href: "https://web.telegram.org/#/im?p=@mcanvar"
+            href: `https://t.me/CryptoLionValidator`
           },
           {
             name: "Write Us",
@@ -380,6 +380,12 @@ export default {
             href: "https://crypto.org/"
           },
           {
+            name: `Crypto.org Chain Whitepaper`,
+            title: `Crypto.org Chain Whitepaper PDF`,
+            target: `_blank`,
+            href: `https://crypto.org/chain_whitepaper.pdf`
+          },
+          {
             name: "Crypto.org Chain Docs",
             title: "Crypto.org Chain Documentation",
             target: "_blank",
@@ -388,7 +394,7 @@ export default {
         ]
       },
       {
-        name: "Networks",
+        name: "Explorers",
         links: [
           {
             name: "on Main-net Explorer",
@@ -403,6 +409,13 @@ export default {
             title: "Nebkas.ro's Main-net Explorer",
             href:
               "https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
+          },
+          {
+            name: `Smart Stake's Analytics Website`,
+            target: `_blank`,
+            title: `Smart Stake's Analytics Website`,
+            href:
+              `https://cc.smartstake.io/val/27`
           },
           {
             name: "on Croeseid Testnet Explorer",
