@@ -1,9 +1,8 @@
 <template>
   <apexchart
     v-if="loaded"
-    height="400"
     type="area"
-    class="m-10"
+    class="m-0 md:m-10 h-64"
     :options="chartOptions"
     :series="series"
   ></apexchart>
@@ -156,5 +155,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>
