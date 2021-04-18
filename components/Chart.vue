@@ -29,12 +29,16 @@ export default {
           data: [],
         },
         {
+          name: 'Market Cap',
+          data: [],
+        },
+        {
           name: 'BTC',
           data: [],
         },
       ],
       chartOptions: {
-        colors: ['#8fbbb7', '#fda425'],
+        colors: ['#8fbbb7', '#d7441e', '#fda425'],
         chart: {
           height: 400,
           type: 'area',
@@ -69,6 +73,20 @@ export default {
                 return (
                   value.toLocaleString('en-US', {
                     maximumFractionDigits: 4,
+                  }) + ' $'
+                )
+              },
+            },
+          },
+          {
+            show: false,
+            min: 0.1,
+            seriesName: 'Market Cap',
+            labels: {
+              formatter(value) {
+                return (
+                  value.toLocaleString('en-US', {
+                    maximumFractionDigits: 0,
                   }) + ' $'
                 )
               },
@@ -125,7 +143,8 @@ export default {
 
       for (let i = 0; i < usd.prices.length; i++) {
         this.series[0].data.push(usd.prices[i][1])
-        this.series[1].data.push(btc.prices[i][1])
+        this.series[1].data.push(usd.market_caps[i][1])
+        this.series[2].data.push(btc.prices[i][1])
         this.chartOptions.xaxis.categories.push(usd.prices[i][0])
       }
 
