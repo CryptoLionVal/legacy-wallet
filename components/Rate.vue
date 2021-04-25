@@ -15,8 +15,6 @@
 </template>
 
 <script>
-// import NetworksConfig from '@/core/networks.config'
-
 import NetworksConfig from '@/core/networks.config'
 import Big from 'big.js'
 
