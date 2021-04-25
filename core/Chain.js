@@ -1,5 +1,5 @@
 import Lion from '@mcanvar/lion'
-import NetworksConfig from '@/core/networks.config'
+import NetworksConfig from '@/networks.config'
 
 export default class Chain {
   constructor(chain, networks = NetworksConfig) {

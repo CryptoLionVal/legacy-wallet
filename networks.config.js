@@ -1,4 +1,4 @@
-const NetworksConfig = {
+export default {
   TESTNET: {
     RPC: 'https://testnet-croeseid.crypto.com:26657',
     LCD: 'https://testnet-croeseid.crypto.com:1317',
@@ -20,5 +20,3 @@ const NetworksConfig = {
     EXPLORER_API: 'https://crypto.org/explorer/api/v1',
   },
 }
-
-export default NetworksConfig
