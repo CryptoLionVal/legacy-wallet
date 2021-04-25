@@ -93,7 +93,7 @@ export default {
           },
           {
             show: false,
-            min: 0.0000034,
+            min: 0.0000028,
             seriesName: 'BTC',
             labels: {
               formatter(value) {
