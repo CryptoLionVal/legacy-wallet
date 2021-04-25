@@ -1,36 +1,34 @@
 /* eslint-disable prettier/prettier */
 export default {
-  title_template: "Crypto Lion Validator on CDC Chain Mainnet | %s",
+  title_template: `Crypto Lion Validator on CDC Chain Mainnet | %s`,
   meta_description:
-    "Crypto Lion is a blockchain validator running on Crypto.org Main-net Chain. " +
-    "You can make passive income by staking your CROs on it.",
+    `Crypto Lion is a blockchain validator running on Crypto.org Main-net Chain. You can make passive income by staking your CROs on it.`,
 
   pages: {
     home: {
-      title: "Home"
+      title: `Home`
     },
     how_to_stake_cro: {
-      title: "Staking Explained",
-      steps_id: "staking-steps",
-      back_button: 'Go back',
-      logout_button: 'Logout',
+      title: `Staking Explained`,
+      steps_id: `staking-steps`,
+      back_button: `Go back`,
+      logout_button: `Logout`,
       logout_confirm: `You will be remove your wallet. Please confirm.`,
-      dialog_button: 'Close',
+      dialog_button: `Close`,
       steps: {
         first: {
-          title: "How would you like to stake?",
-          desc: "Please choose a comfortable way to stake. It is easy to stake " +
-            "your CROs here in the Crypto Lion Website. Feel free to check source code, we are open source.",
+          title: `How would you like to stake?`,
+          desc: `Please choose a comfortable way to stake. It is easy to stake your CROs here in the Crypto Lion Website. Feel free to check source code, we are open source.`,
           buttons: {
-            defi: "Install Mobile DeFi Wallet App",
-            mnemonic: "Access Wallet with Mnemonic",
-            desktop: "Download CDC Desktop Wallet"
+            defi: `Install Mobile DeFi Wallet App`,
+            mnemonic: `Access Wallet with Mnemonic`,
+            desktop: `Download CDC Desktop Walle`
           }
         },
         defi: {
           steps: [
             {
-              title: "Install DeFi App",
+              title: `Install DeFi App`,
               desc: `
           Android:
           <a
@@ -58,7 +56,7 @@ export default {
               next: true
             },
             {
-              title: "Import or Create Wallet",
+              title: `Import or Create Wallet`,
               desc: `
           Create or import a new wallet with your mnemonic keys.
           `,
@@ -70,7 +68,7 @@ export default {
               next: true
             },
             {
-              title: "Stake your Funds",
+              title: `Stake your Funds`,
               desc: `
           Select staking tab and click delegate and paste our address.
           `,
@@ -87,7 +85,7 @@ export default {
         desktop: {
           steps: [
             {
-              title: "DownLoad Desktop Wallet",
+              title: `DownLoad Desktop Wallet`,
               desc: `
           Download:
               <a
@@ -105,7 +103,7 @@ export default {
               next: true
             },
             {
-              title: "Import or Create Wallet",
+              title: `Import or Create Wallet`,
               desc: `
           Create or import a new wallet with your mnemonic keys.
           `,
@@ -117,7 +115,7 @@ export default {
               next: true
             },
             {
-              title: "Stake your Funds",
+              title: `Stake your Funds`,
               desc: `
           Select staking tab and click delegate and paste our address.
           `,
@@ -175,29 +173,29 @@ export default {
   navbar: {
     logo: {
       link: {
-        title: "Crypto Lion CRO Validator"
+        title: `Crypto Lion CRO Validator`
       }
     },
     links: [
       {
-        name: "Home",
-        title: "Crypto Lion Homepage",
-        href: "/en/#validator-home"
+        name: `Home`,
+        title: `Crypto Lion Homepage`,
+        href: `/en/#validator-home`
       },
       {
-        name: "How staking work?",
-        title: "Simple steps of CRO staking",
-        href: "/en/#how-cro-staking-work"
+        name: `How staking work?`,
+        title: `Simple steps of CRO staking`,
+        href: `/en/#how-cro-staking-work`
       },
       {
-        name: "Staking Ways",
-        title: "How to stake CROs on Main-net, Explained",
-        href: { path: "how-to-stake-cro", hash: "staking-steps" }
+        name: `Staking Ways`,
+        title: `How to stake CROs on Main-net, Explained`,
+        href: { path: 'how-to-stake-cro', hash: 'staking-steps' }
       },
       {
-        name: "FAQs",
-        title: "Frequently Asked Questions About CDC Main-net",
-        href: "/en/#f-a-qs"
+        name: `FAQs`,
+        title: `Frequently Asked Questions About CDC Main-net`,
+        href: `/en/#f-a-qs`
       }
     ],
     rate: {
@@ -207,19 +205,19 @@ export default {
   },
 
   stake_now: {
-    name: "Stake Now",
-    title: "Stake your CROs to get your rewards!"
+    name: `Stake Now`,
+    title: `Stake your CROs to get your rewards!`
   },
 
   copier: {
-    title: "Click to copy delegation address.",
-    message: "Copy Staking Address",
-    done_message: "Copied!"
+    title: `Click to copy delegation address.`,
+    message: `Copy Staking Address`,
+    done_message: `Copied!`
   },
 
   hero: {
     pre_title: `CRO Mainnet Staking Rewards Set at <span class="font-bold">20%</span> APY`,
-    title: "Time for Crypto.org Chain Mainnet!",
+    title: `Time for Crypto.org Chain Mainnet!`,
     desc: `
     <span class="font-bold">5 billion</span> CRO has been allocated for
             distribution as rewards over the next
@@ -229,11 +227,11 @@ export default {
 
   sections: {
     how_to: {
-      title: "How staking work?",
-      id: "how-cro-staking-work",
+      title: `How staking work?`,
+      id: `how-cro-staking-work`,
       steps: {
         first: {
-          title: "Hold CROs and earn interest at the same time!",
+          title: `Hold CROs and earn interest at the same time!`,
           desc: `
             You already have some CRO in your wallet. Great! because fully
             decentralized Crypto.org Chain offers you
@@ -251,7 +249,7 @@ export default {
           `
         },
         second: {
-          title: "Create a brand new Crypto.org Chain Wallet",
+          title: `Create a brand new Crypto.org Chain Wallet`,
           desc: `
               You can delegate your CROs in minutes. Just download latest
               official desktop wallet below link and join the party!
@@ -268,7 +266,7 @@ export default {
           `
         },
         third: {
-          title: "Delegate your CROs on Crypto Lion Node",
+          title: `Delegate your CROs on Crypto Lion Node`,
           desc: `
             Open the Wallet App then select
             <span class="font-bold">Staking</span> tab, then switch
@@ -279,7 +277,7 @@ export default {
           `
         },
         fourth: {
-          title: "Enjoy with 20% APY!",
+          title: `Enjoy with 20% APY!`,
           desc: `
               Tadaa! You have just staked your funds. Now you can have a look at
               the transaction on our node's page and tract your rewards.
@@ -298,47 +296,47 @@ export default {
       }
     },
     why_us: {
-      title: "Why Crypto Lion Node?",
+      title: `Why Crypto Lion Node?`,
       cards: {
         first: {
-          title: "Powerful Infrastructure",
-          subtitle: "We are using latest firmware and software.",
+          title: `Powerful Infrastructure`,
+          subtitle: `We are using latest firmware and software.`,
           desc:
-            "We are using dedicated servers with industry standard high internet connection with latest version operating systems.",
+            `We are using dedicated servers with industry standard high internet connection with latest version operating systems.`,
           link: {
-            name: "See Statistics",
-            title: "See how the validator performs on blockchain"
+            name: `See Statistics`,
+            title: `See how the validator performs on blockchain`
           }
         },
         second: {
-          title: "Community Supported",
-          subtitle: "We are from big Crypto.com family.",
+          title: `Community Supported`,
+          subtitle: `We are from big Crypto.com family.`,
           desc:
-            "We are people from the turkish community of CDC. We care friendly medium and love to meet new crypto lovers.",
+            `We are people from the turkish community of CDC. We care friendly medium and love to meet new crypto lovers.`,
           link: {
-            name: "Checkout Twitter",
-            title: "Follow us on Twitter!"
+            name: `Checkout Twitter`,
+            title: `Follow us on Twitter!`
           }
         },
         third: {
-          title: "Reliable",
-          subtitle: "We are also delegators of our node.",
+          title: `Reliable`,
+          subtitle: `We are also delegators of our node.`,
           desc:
-            "We are also delegators of our node. Hundred thousands of CROs already staked on our validator.",
+            `We are also delegators of our node. Hundred thousands of CROs already staked on our validator.`,
           link: {
-            name: "Our Delegators",
-            title: "See wallets of people who chosen us"
+            name: `Our Delegators`,
+            title: `See wallets of people who chosen us`
           }
         }
       }
     },
     f_a_qs: {
-      title: "FAQs",
-      id: "f-a-qs",
-      search_placeholder: "Search",
+      title: `FAQs`,
+      id: `f-a-qs`,
+      search_placeholder: `Search`,
       items: [
         {
-          title: "How can I stake?",
+          title: `How can I stake?`,
           desc: `
           You can use Crypto.com's Desktop wallet to stake. Visit
           <a
@@ -353,7 +351,7 @@ export default {
           separate: true
         },
         {
-          title: "How often can I claim my rewards?",
+          title: `How often can I claim my rewards?`,
           desc: `
           You can withdraw your CROs whatever often you want. There is no limit
           for this operation.
@@ -362,7 +360,7 @@ export default {
         },
         {
           title:
-            "Is there a cool-down time when I want to undelegate my funds?",
+            `Is there a cool-down time when I want to undelegate my funds?`,
           desc: `
           Yes. You can undelegate whenever you want but there is 28 days
           cool-down time to be available your CROs back to your delegator
@@ -373,13 +371,13 @@ export default {
       ]
     },
     action: {
-      title: "Start Enjoying the Benefits of Staking",
-      subtitle: "Earn interest almost 20%!"
+      title: `Start Enjoying the Benefits of Staking`,
+      subtitle: `Earn interest almost 20%!`
     }
   },
 
   form: {
-    title: "Copy our staking address and delegate your CROs.",
+    title: `Copy our staking address and delegate your CROs.`,
     desc:
       "Then please fill the below form as a second step. Thank you for choosing us."
   },
@@ -387,18 +385,18 @@ export default {
   footer: {
     logo: {
       link: {
-        title: "Crypto Lion CRO Validator"
+        title: `Crypto Lion CRO Validator`
       }
     },
     groups: [
       {
-        name: "Validator",
+        name: `Validator`,
         links: [
           {
-            name: "Terms",
-            title: "Crypto Lion Homepage",
-            target: "_self",
-            href: "#"
+            name: `Terms`,
+            title: `Crypto Lion Homepage`,
+            target: `_self`,
+            href: `#`
           },
           {
             name: `Status`,
@@ -410,36 +408,36 @@ export default {
         ]
       },
       {
-        name: "Social",
+        name: `Social`,
         links: [
           {
-            name: "Twitter",
-            target: "_blank",
-            title: "Crypto Lion Validator Twitter Address",
-            href: "https://twitter.com/CryptocomLion"
+            name: `Twitter`,
+            target: `_blank`,
+            title: `Crypto Lion Validator Twitter Address`,
+            href: `https://twitter.com/CryptocomLion`
           },
           {
-            name: "Telegram",
-            title: "Follow us from our Telegram channel",
-            target: "_blank",
+            name: `Telegram`,
+            title: `Follow us from our Telegram channel`,
+            target: `_blank`,
             href: `https://t.me/CryptoLionValidator`
           },
           {
-            name: "Write Us",
-            title: "Email us what you are thinking",
-            target: "_self",
-            href: "mailto:cryptolion-node@protonmail.com"
+            name: `Write Us`,
+            title: `Email us what you are thinking`,
+            target: `_self`,
+            href: `mailto:cryptolion-node@protonmail.com`
           }
         ]
       },
       {
-        name: "Official Resources",
+        name: `Official Resources`,
         links: [
           {
-            name: "Crypto.org",
-            target: "_blank",
-            title: "Crypto.org Chain",
-            href: "https://crypto.org/"
+            name: `Crypto.org`,
+            target: `_blank`,
+            title: `Crypto.org Chain`,
+            href: `https://crypto.org/`
           },
           {
             name: `Crypto.org Chain Whitepaper`,
@@ -448,29 +446,29 @@ export default {
             href: `https://crypto.org/chain_whitepaper.pdf`
           },
           {
-            name: "Crypto.org Chain Docs",
-            title: "Crypto.org Chain Documentation",
-            target: "_blank",
-            href: "https://crypto.org/docs/"
+            name: `Crypto.org Chain Docs`,
+            title: `Crypto.org Chain Documentation`,
+            target: `_blank`,
+            href: `https://crypto.org/docs/`
           }
         ]
       },
       {
-        name: "Explorers",
+        name: `Explorers`,
         links: [
           {
-            name: "on Main-net Explorer",
-            target: "_blank",
-            title: "Crypto.org Chain Main-net Explorer",
+            name: `on Main-net Explorer`,
+            target: `_blank`,
+            title: `Crypto.org Chain Main-net Explorer`,
             href:
-              "https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
+              `https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: "on Nebkas's Explorer",
-            target: "_blank",
-            title: "Nebkas.ro's Main-net Explorer",
+            name: `on Nebkas's Explorer`,
+            target: `_blank`,
+            title: `Nebkas.ro's Main-net Explorer`,
             href:
-              "https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
+              `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
             name: `Smart Stake's Analytics Website`,
@@ -480,11 +478,11 @@ export default {
               `https://cc.smartstake.io/val/27`
           },
           {
-            name: "on Croeseid Testnet Explorer",
-            target: "_blank",
-            title: "Crypto.org Croeseid Testnet Explorer",
+            name: `on Croeseid Testnet Explorer`,
+            target: `_blank`,
+            title: `Crypto.org Croeseid Testnet Explorer`,
             href:
-              "https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew"
+              `https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew`
           }
         ]
       }
