@@ -3,7 +3,7 @@
     <div
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-2"
     >
-      <div class="pl-4 flex items-center text-gray-100">
+      <div class="pl-4 flex flex-col md:flex-row items-center text-gray-100">
         <NuxtLink
           prefetch
           :to="localePath('/')"
@@ -91,6 +91,7 @@
           </svg>
           CRYPTO LION
         </NuxtLink>
+        <rate />
       </div>
       <div class="block lg:hidden pr-4">
         <button

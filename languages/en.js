@@ -199,7 +199,11 @@ export default {
         title: "Frequently Asked Questions About CDC Main-net",
         href: "/en/#f-a-qs"
       }
-    ]
+    ],
+    rate: {
+      title: `Current rewards p.a. & validator commissions. Click to renew!`,
+      fee: `fee`,
+    }
   },
 
   stake_now: {

@@ -201,7 +201,11 @@ export default {
         title: `CDC Main-net hakkında sıkça sorulan sorular`,
         href: `/#s-s-s`
       }
-    ]
+    ],
+    rate: {
+      title: `Anlık yıllık kazanç ve komisyon oranları. Yenilemek için tıklayın!`,
+      fee: `komisyon`,
+    }
   },
 
   stake_now: {
