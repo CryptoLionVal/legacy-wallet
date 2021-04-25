@@ -457,7 +457,7 @@ export default {
         name: `Explorers`,
         links: [
           {
-            name: `on Main-net Explorer`,
+            name: `on Main-net`,
             target: `_blank`,
             title: `Crypto.org Chain Main-net Explorer`,
             href:
@@ -471,14 +471,7 @@ export default {
               `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `Smart Stake's Analytics Website`,
-            target: `_blank`,
-            title: `Smart Stake's Analytics Website`,
-            href:
-              `https://cc.smartstake.io/val/27`
-          },
-          {
-            name: `on Croeseid Testnet Explorer`,
+            name: `on Croeseid Testnet`,
             target: `_blank`,
             title: `Crypto.org Croeseid Testnet Explorer`,
             href:

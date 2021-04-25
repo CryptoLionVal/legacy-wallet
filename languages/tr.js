@@ -727,13 +727,6 @@ export default {
               `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `Smart Stake Analiz Sitesi`,
-            target: `_blank`,
-            title: `Smart Stake analiz sitesindeyiz.`,
-            href:
-              `https://cc.smartstake.io/val/27`
-          },
-          {
             name: `Croeseid Testnet`,
             target: `_blank`,
             title: `Croeseid Testnet Ağı Keşif Sitesindeyiz`,
