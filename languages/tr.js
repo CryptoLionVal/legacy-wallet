@@ -446,7 +446,7 @@ export default {
         {
           title: `Güncel yıllık kazancı(APY) nasıl takip edebilirim?`,
           desc: `
-          Güncel APY oranını Crypto.com Defi Wallet üzerinden takip edebilirsiniz.
+          Güncel APY oranını sitemiz üst kısmından veya Crypto.com Defi Wallet üzerinden takip edebilirsiniz.
           `,
           separate: true
         },

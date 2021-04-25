@@ -336,17 +336,37 @@ export default {
       search_placeholder: `Search`,
       items: [
         {
+          title: `What is a validator?`,
+          desc: `
+          A full-node in consensus by broadcasting votes which contain cryptographic
+          signatures signed by their private key. Validators commit new blocks
+          in the blockchain and receive revenue in exchange for their work.
+          `,
+          separate: true
+        },
+        {
+          title: `What is 'staking'?`,
+          desc: `
+          Crypto.org Chain is a public Proof-Of-Stake (PoS) blockchain, meaning
+          that the weight of validators is determined by the amount of staking
+          tokens (CROs) bonded as collateral. These CROs can be self-delegated
+          directly by the validator or delegated to them by other CRO holders.
+          `,
+          separate: true
+        },
+        {
+          title: `What is a delegator?`,
+          desc: `
+          Delegators are CRO holders who cannot, or do not want to run a validator
+          themselves. CRO holders can delegate CROs to a validator and obtain a
+          part of their revenue in exchange.
+          `,
+          separate: true
+        },
+        {
           title: `How can I stake?`,
           desc: `
-          You can use Crypto.com's Desktop wallet to stake. Visit
-          <a
-            class="underline"
-            href="https://github.com/crypto-com/chain-desktop-wallet/releases"
-            target="_blank"
-            >this</a
-          >
-          link to download latest version and after installation click "Stake
-          Now" button on navbar.
+          You can use our website, Defi App for mobiles, Crypto.com's Desktop wallet or using command line.
           `,
           separate: true
         },
@@ -365,6 +385,19 @@ export default {
           Yes. You can undelegate whenever you want but there is 28 days
           cool-down time to be available your CROs back to your delegator
           wallet.
+          `,
+          separate: false
+        },
+        {
+          title:
+            `Why should I trust you as a delegator? Can you access our coins?`,
+          desc: `
+          Your wallet completely belongs to you and only you have access with your
+          mnemonic secret words. You should keep them safe. We are Crossfire competition
+          participants which has experience running a tendermint node and maintenance it.
+          Plus you can always undelegate your staked CROs even any validator stop working and
+          jailed for some reason. We are guarantee that we will announce any forecast
+          about maintaining and upgrading jobs that reflects your staking.
           `,
           separate: false
         }
