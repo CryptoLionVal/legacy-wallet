@@ -117,7 +117,6 @@
             <NuxtLink
               v-for="link in $t('navbar.links')"
               :key="link.hash"
-              tag="button"
               prefetch
               :to="
                 typeof link.href === 'string'
@@ -134,7 +133,6 @@
           </li>
         </ul>
         <NuxtLink
-          tag="button"
           prefetch
           :class="actionClasses"
           :title="$t('stake_now.title')"

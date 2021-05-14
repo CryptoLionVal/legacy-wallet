@@ -2,15 +2,28 @@
 export default {
   title_template: `Crypto Lion CDC Main-net Blokzincirinde | %s`,
   meta_description:
-    `Crypto Lion Crypto.org üzerinde çalışan bir imzalayıcıdır(validator).` +
+    `Crypto Lion Crypto.org deride çalışan bir imzalayıcıdır(validator).` +
     ` Bu doğrulayıcıya CROlarınızı yatırarak(staking) pasif gelir elde edebilirsiniz.`,
 
   pages: {
     home: {
-      title: `Anasayfa`
+      title: `Anasayfa`,
+      meta_description: `Crypto.org ana ağı doğrulayıcı sunucusu olan Crypto Lion bir CRO fonlama servisidir.`
+    },
+    terms: {
+      title: `Kurallar ve Koşullar`,
+      meta_description: `Crypto Lion CRO fonlama servisinin kuralları ve koşulları.`,
+      content: `TODO`,
+    },
+    privacy: {
+      title: `Gizlilik Politikası`,
+      meta_description: `Crypto Lion CRO fonlama servisinin gizlilik politikası.`,
+      content: `TODO`,
     },
     how_to_stake_cro: {
       title: `Nasıl stake edilir?`,
+      meta_description: `Crypto.org Ana Ağının bir doğrulayıcı sunucusu olan Crypto
+      Lion'a nasıl CRO fonlanacağının adım adım anlatımı.`,
       steps_id: `staking-adimlari`,
       back_button: "Geri Dön",
       logout_button: "Cüzdanı kapat",
@@ -654,10 +667,16 @@ export default {
         name: `Validator`,
         links: [
           {
-            name: `Koşullar`,
-            title: `Koşullar ve şartlar`,
+            name: `Kurallar ve Koşullar`,
+            title: `Kurallar ve Koşullar`,
             target: `_self`,
-            href: `#`
+            href: { path: `terms-and-conditions` }
+          },
+          {
+            name: `Gizlilik Politikası`,
+            title: `Gizlilik Politikası`,
+            target: `_self`,
+            href: { path: `privacy-policy` }
           },
           {
             name: `Sunucularımzın Durumu`,

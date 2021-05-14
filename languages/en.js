@@ -6,10 +6,22 @@ export default {
 
   pages: {
     home: {
-      title: `Home`
+      title: `Home`,
+      meta_description: `Crypto Lion is a Validator of Crypto.org Main-net to serve service of passive income for CRO holders.`
+    },
+    terms: {
+      title: `Terms & Conditions`,
+      meta_description: `Terms & Conditions of using Crypto Lion Staking Service`,
+      content: `TODO`,
+    },
+    privacy: {
+      title: `Privacy Policy`,
+      meta_description: `Privacy Policy of using Crypto Lion Staking Service`,
+      content: `TODO`,
     },
     how_to_stake_cro: {
       title: `Staking Explained`,
+      meta_description: `Step by step explanation of staking CROs as a delegator to the Crypto Lion Crypto.org Main-net node.`,
       steps_id: `staking-steps`,
       back_button: `Go back`,
       logout_button: `Logout`,
@@ -431,10 +443,16 @@ export default {
         name: `Validator`,
         links: [
           {
-            name: `Terms`,
-            title: `Crypto Lion Homepage`,
+            name: `Terms & Conditions`,
+            title: `Terms & Conditions`,
             target: `_self`,
-            href: `#`
+            href: `terms-and-conditions`
+          },
+          {
+            name: `Privacy Policy`,
+            title: `Privacy Policy`,
+            target: `_self`,
+            href: `privacy-policy`,
           },
           {
             name: `Status`,

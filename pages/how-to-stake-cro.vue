@@ -31,11 +31,16 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content:
-            'Step by step explanation of staking CROs as a delegator to the Crypto Lion Crypto.org Mainnet node.',
+          content: this.$t('pages.how_to_stake_cro.meta_description'),
         },
       ],
     }
+  },
+  nuxtI18n: {
+    paths: {
+      en: '/how-to-stake-cro',
+      tr: '/cro-nasil-stake-edilir',
+    },
   },
 }
 </script>

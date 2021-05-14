@@ -80,13 +80,6 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
-    parsePages: false,
-    pages: {
-      'how-to-stake-cro': {
-        en: '/how-to-stake-cro',
-        tr: '/cro-nasil-stake-edilir',
-      },
-    },
   },
 
   sitemap: {

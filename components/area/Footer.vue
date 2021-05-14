@@ -104,11 +104,19 @@
                 class="mt-2 inline-block mr-2 md:block md:mr-0"
               >
                 <a
+                  v-if="typeof link.href === 'string'"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   :href="link.href"
                   :title="link.title"
-                  :target="link.target"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
                   >{{ link.name }}</a
+                >
+                <NuxtLink
+                  v-else
+                  prefetch
+                  :to="localePath(link.href.path)"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  :title="link.title"
+                  >{{ link.name }}</NuxtLink
                 >
               </li>
               <li
