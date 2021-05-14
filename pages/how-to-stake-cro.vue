@@ -10,7 +10,7 @@
 
     <step-wallet />
 
-    <step-form />
+    <step-final />
 
     <divider />
   </div>

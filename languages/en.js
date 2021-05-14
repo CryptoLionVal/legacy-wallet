@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 export default {
-  title_template: `Crypto Lion Validator on CDC Chain Mainnet | %s`,
+  title_template: `Crypto Lion Validator on CDC Chain Main-net | %s`,
   meta_description:
     `Crypto Lion is a blockchain validator running on Crypto.org Main-net Chain. You can make passive income by staking your CROs on it.`,
 
@@ -159,12 +159,17 @@ export default {
           `,
           button: `Delegate`
         },
-        form: {
+        final: {
           title: `Staked successfully!`,
           desc: `
-          Congratulations, you have just comleted staking process. You can now click
+          Congratulations, you have just completed staking process. You can now click
           below link in order to see further details on official blockchain explorer.
+          Please follow us on Twitter & Telegram in order to get news and promotions.
           `,
+          buttons: {
+            telegram: `Crypto Lion Telegram Channel`,
+            twitter: `Crypto Lion Twitter Page`,
+          }
         },
       }
     }
@@ -216,8 +221,8 @@ export default {
   },
 
   hero: {
-    pre_title: `CRO Mainnet Staking Rewards Set at <span class="font-bold">20%</span> APY`,
-    title: `Time for Crypto.org Chain Mainnet!`,
+    pre_title: `CRO Main-net Staking Rewards Set at <span class="font-bold">20%</span> APY`,
+    title: `Time for Crypto.org Chain Main-net!`,
     desc: `
     <span class="font-bold">5 billion</span> CRO has been allocated for
             distribution as rewards over the next
@@ -244,7 +249,7 @@ export default {
               class="text-pink-500 underline"
               target="_blank"
               href="https://blog.crypto.com/cro-mainnet-staking-rewards-set-at-20-apy/"
-              >CRO Mainnet Staking Rewards</a
+              >CRO Main-net Staking Rewards</a
             >
           `
         },
@@ -517,7 +522,7 @@ export default {
         All rights reserved. We are happy to share the source code on
         <a
           href="https://github.com/mcanvar/crypto-lion"
-          title="A powerful CDC Chain Mainnet Node for staking purpose."
+          title="A powerful CDC Chain Main-net Node for staking purpose."
           target="_blank"
           class="no-underline hover:underline text-gray-800 hover:text-pink-500"
           >GitHub</a

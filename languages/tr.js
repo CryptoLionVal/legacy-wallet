@@ -163,12 +163,17 @@ export default {
           `,
           button: `Stake Et`
         },
-        form: {
+        final: {
           title: `Stake işlemi başarılı!`,
           desc: `
           Tebrikler, stake işlemini başarıyla tamamladınız. Aşağıdaki bağlantıya
           tıklaayrak işlemi blokzincir tarayıcısında görüntüleyebilirsiniz.
-          `
+          Lütfen bizi Twitter ve Telegram'dan takip ederek gelişmelerden haberdar olun.
+          `,
+          buttons: {
+            telegram: `Crypto Lion Telegram Kanalı`,
+            twitter: `Crypto Lion Twitter Sayfası`,
+          }
         }
       }
     }
