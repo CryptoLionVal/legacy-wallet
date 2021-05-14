@@ -42,8 +42,6 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // https://google-analytics.nuxtjs.org
-    '@nuxtjs/google-analytics',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -89,11 +87,6 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '',
-  },
-
-  googleAnalytics: {
-    id: 'G-F9Y4W7BYBQ',
-    // dev: process.env.NODE_ENV !== 'production',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
