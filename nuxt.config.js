@@ -31,7 +31,17 @@ export default {
   tailwindcss: {},
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/chain.js'],
+  plugins: [
+    '@/plugins/chain.js',
+    ...(process.env.NODE_ENV === 'production'
+      ? [
+          {
+            src: '@/plugins/gtag.js',
+            mode: 'client',
+          },
+        ]
+      : []),
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -90,11 +100,5 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    extend(config, { isDev, isClient }) {
-      if (!isDev && isClient) {
-        config.plugins.push({ src: '@/plugins/gtag', ssr: false })
-      }
-    },
-  },
+  build: {},
 }
