@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div
-      v-if="$store.state.step === 'form'"
+      v-if="$store.state.step === 'final'"
       class="container px-8 flex flex-col w-full flex-wrap justify-start items-start text-left"
     >
       <h1 class="my-10 text-5xl w-full font-bold text-green-700 leading-tight">

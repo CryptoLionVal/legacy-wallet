@@ -231,7 +231,7 @@ export default {
       try {
         await this.$store.dispatch('stake', this.amount)
 
-        this.$store.commit('setStep', 'form')
+        this.$store.commit('setStep', 'final')
       } catch (error) {
         this.$store.commit('setDialogMessage', error.message)
         this.$store.commit('showDialog')

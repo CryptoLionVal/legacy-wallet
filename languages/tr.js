@@ -650,12 +650,6 @@ export default {
     }
   },
 
-  form: {
-    title: `Stake adresimizi üzerine tıklayarak kopyalayın ve CRO'larınızı fonlayın.`,
-    desc:
-      `Ve lütfen aşağıdaki formu doldurun, bizi seçtiğiniz için teşekkür ederiz.`
-  },
-
   footer: {
     logo: {
       link: {

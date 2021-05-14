@@ -426,12 +426,6 @@ export default {
     }
   },
 
-  form: {
-    title: `Copy our staking address and delegate your CROs.`,
-    desc:
-      "Then please fill the below form as a second step. Thank you for choosing us."
-  },
-
   footer: {
     logo: {
       link: {
