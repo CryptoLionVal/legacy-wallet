@@ -60,7 +60,7 @@ export default {
     }
   },
   created() {
-    if (!this.getGDPR() === true) {
+    if (this.getGDPR() === null) {
       this.isOpen = true
     }
   },
@@ -68,17 +68,17 @@ export default {
   methods: {
     getGDPR() {
       if (process.browser && !!localStorage) {
-        return localStorage.getItem('GDPR:accepted', true)
+        return localStorage.getItem('GDPR:accepted')
       }
+
+      return undefined
     },
     accept() {
       if (process.browser && !!localStorage) {
-        bootstrap().then((gtag) => {
+        bootstrap().then(() => {
           this.isOpen = false
 
           localStorage.setItem('GDPR:accepted', true)
-
-          location.reload()
         })
       }
     },
