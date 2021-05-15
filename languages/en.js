@@ -188,6 +188,8 @@ export default {
         },
         wallet: {
           title: `My Wallet`,
+          explorer: `Show in Explorer`,
+          staked_balance: `Delegated Balance:`,
           available_balance: `Available Balance:`,
           rewards: `Rewards:`,
           rewards_button_title: `Withdraw all`,

@@ -197,6 +197,8 @@ export default {
         },
         wallet: {
           title: `Cüzdanım`,
+          explorer: `Blok Zincir Tarayıcısında Görüntüle`,
+          staked_balance: `Fonlanmış Tutar:`,
           available_balance: `Kullanılabilir Tutar:`,
           rewards: `Ödül:`,
           rewards_button_title: `Hepsini çek`,

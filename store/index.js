@@ -12,6 +12,7 @@ export const state = () => ({
   client: null,
   balance: 0,
   rewards: 0,
+  staked: 0,
   lastHash: '',
   memo: 'Tx created via cryptolion.finance wallet.',
 })
@@ -48,6 +49,9 @@ export const mutations = {
   setReward(state, rewards) {
     state.rewards = rewards
   },
+  setStaked(state, staked) {
+    state.staked = staked
+  },
   setLastHash(state, lastHash) {
     state.lastHash = lastHash
   },
@@ -80,14 +84,18 @@ export const actions = {
   },
 
   async fetchRewards({ commit, state }) {
-    let rewards = await this.$axios.$get(
+    const account = await this.$axios.$get(
       this.$chain.config('EXPLORER_API') + '/accounts/' + state.account.address
     )
 
-    if (rewards.result.totalRewards.length) {
-      rewards = new Big(rewards.result.totalRewards[0].amount)
+    if (account.result.totalRewards.length) {
+      let rewards = new Big(account.result.totalRewards[0].amount)
       rewards = rewards.div(100000000)
       commit('setReward', rewards.toPrecision(5))
+
+      let staked = new Big(account.result.bondedBalance[0].amount)
+      staked = staked.div(100000000)
+      commit('setStaked', staked.toPrecision(5))
 
       return
     }

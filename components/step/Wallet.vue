@@ -12,10 +12,20 @@
             {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
           </span>
         </h1>
+        <input
+          :value="$store.state.account.address"
+          readonly
+          type="text"
+          size="46"
+          class="bg-white opacity-75 py-1 focus:outline-none px-3 text-gray-800 rounded-full"
+        />
         <div class="my-6 flex justify-between space-x-2">
           <div
             class="text-3xl leading-tight flex flex-col justify-between space-y-2 items-start"
           >
+            <span class="font-bold">{{
+              $t('pages.how_to_stake_cro.steps.wallet.staked_balance')
+            }}</span>
             <span class="font-bold">{{
               $t('pages.how_to_stake_cro.steps.wallet.available_balance')
             }}</span>
@@ -26,6 +36,9 @@
           <div
             class="text-3xl leading-tight flex flex-col justify-between space-y-2 items-start"
           >
+            <span class="ml-1 flex items-center">
+              {{ staked }}
+            </span>
             <span class="ml-1 flex items-center">
               {{ balance }}
               <button
@@ -103,7 +116,9 @@
           :disabled="loading"
           type="number"
           min="0"
-          :max="parseInt($store.state.balance)"
+          step="0.01"
+          lang="en"
+          :max="parseFloat($store.state.balance).toFixed(2)"
           class="rounded-full w-full md:w-2/6 h-16 px-12 mb-3 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
         />
         <button
@@ -161,6 +176,14 @@
         </button>
       </div>
 
+      <a
+        :href="explorerLink"
+        target="_blank"
+        class="underline hover:no-underline text-gray-200 hover:text-gray-200 mb-2"
+        :title="$t('pages.how_to_stake_cro.steps.wallet.explorer')"
+        >{{ $t('pages.how_to_stake_cro.steps.wallet.explorer') }}</a
+      >
+
       <disclaimer />
 
       <buttons-logout />
@@ -181,10 +204,17 @@ export default {
   computed: {
     validAmount() {
       return (
-        /^([0-9]*)$/.test(this.amount) &&
+        /^([0-9]*(\.[0-9]{1,2})?)$/.test(this.amount) &&
         this.amount > 0 &&
-        this.amount <= parseInt(this.$store.state.balance) &&
+        this.amount <= parseFloat(this.$store.state.balance) &&
         !this.loading
+      )
+    },
+    staked() {
+      return (
+        this.$store.state.staked +
+        ' ' +
+        this.$chain.config('PREFIX').toUpperCase()
       )
     },
     balance() {
@@ -201,6 +231,13 @@ export default {
         this.$chain.config('PREFIX').toUpperCase()
       )
     },
+    explorerLink() {
+      return (
+        this.$chain.config('EXPLORER') +
+        '/account/' +
+        this.$store.state.account.address
+      )
+    },
   },
   mounted() {
     setInterval(async () => {
@@ -214,7 +251,7 @@ export default {
         await this.$store.dispatch('fetchRewards')
         this.reloadingBalance = false
       }
-    }, 5000)
+    }, 10000)
   },
   methods: {
     async stake() {

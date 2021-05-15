@@ -1,5 +1,5 @@
 <template>
-  <p class="leading-normal pb-32 text-sm md:text-xl mb-8 w-full">
+  <p class="leading-normal pb-32 sm:text-xs mt-8 w-full">
     {{ $t('disclaimer.desc') }}
     <NuxtLink
       prefetch
