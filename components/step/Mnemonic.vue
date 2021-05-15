@@ -10,12 +10,8 @@
         <h1 class="my-12 text-5xl font-bold leading-tight">
           {{ $t('pages.how_to_stake_cro.steps.mnemonic.title') }}
         </h1>
-        <p
-          class="leading-normal text-sm md:text-xl mb-8"
-          v-html="$t('pages.how_to_stake_cro.steps.mnemonic.desc')"
-        ></p>
       </div>
-      <div class="w-full pt-1 pb-32 flex flex-col md:flex-row">
+      <div class="w-full pt-1 pb-3 flex flex-col md:flex-row">
         <textarea
           v-model="mnemonic"
           :disabled="loading"
@@ -75,6 +71,8 @@
           }}</span>
         </button>
       </div>
+
+      <disclaimer />
     </div>
   </transition>
 </template>

@@ -96,12 +96,8 @@
             </span>
           </div>
         </div>
-        <p
-          class="leading-normal text-sm md:text-base mb-8"
-          v-html="$t('pages.how_to_stake_cro.steps.wallet.desc')"
-        ></p>
       </div>
-      <div class="w-full pt-1 pb-32 flex flex-col md:flex-row">
+      <div class="w-full pt-1 pb-3 flex flex-col md:flex-row">
         <input
           v-model="amount"
           :disabled="loading"
@@ -164,6 +160,8 @@
           }}</span>
         </button>
       </div>
+
+      <disclaimer />
 
       <logout-button />
     </div>

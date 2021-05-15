@@ -74,7 +74,7 @@ export default {
           buttons: {
             defi: `Install Mobile DeFi Wallet App`,
             mnemonic: `Access Wallet with Mnemonic`,
-            desktop: `Download CDC Desktop Walle`
+            desktop: `Download CDC Desktop Wallet`
           }
         },
         defi: {
@@ -183,14 +183,7 @@ export default {
         },
         mnemonic: {
           title: `Please enter your mnemonic phrase.`,
-          desc: `
-          <strong class="text-red-600">Disclaimer:</strong> By using this option,
-          you are accepting that all responsibility belongs to you.
-          Crypto Lion only serve this option on
-          <strong class="text-green-500">https://cryptolion.finance</strong>
-          address. Please beware of scammers. We never store any data of you, and your wallet.
-          You can check our open source code from the link on footer.
-          `,
+          desc: ``,
           button: `Access Wallet`
         },
         wallet: {
@@ -201,14 +194,7 @@ export default {
           renew_button_title: `Renew`,
           rewards_confirm: `All rewards will be withdrawn. Please confirm.`,
           stake_confirm: `The amount will be staked. Please confirm.`,
-          desc: `
-          <strong class="text-red-600">Disclaimer:</strong> By using this option,
-          you are accepting that all responsibility belongs to you.
-          Crypto Lion only serve this option on
-          <strong class="text-green-500">https://cryptolion.finance</strong>
-          address. Please beware of scammers. We never store any data of you, and your wallet.
-          You can check our open source code from the link on footer.
-          `,
+          desc: ``,
           button: `Delegate`
         },
         final: {
@@ -270,6 +256,10 @@ export default {
     title: `Click to copy delegation address.`,
     message: `Copy Staking Address`,
     done_message: `Copied!`
+  },
+
+  disclaimer: {
+    desc: `By using this wallet service, you are accepting our `,
   },
 
   cookie: {

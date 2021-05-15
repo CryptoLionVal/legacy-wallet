@@ -275,6 +275,10 @@ export default {
     done_message: `Kopyalandı!`
   },
 
+  disclaimer: {
+    desc: `Bu servisi kullanarak kabul ettiğiniz şartlara bu sayfadan göz atabilirsiniz: `,
+  },
+
   cookie: {
     message: `Çerezleri trafik analizi için kullanmamıza izin verir misiniz? Detaylar için lütfen gizlilik sayfamızı ziyaret edin.`,
     accept_button: `Evet`,
