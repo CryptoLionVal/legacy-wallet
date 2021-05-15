@@ -37,14 +37,6 @@ export default {
       src: '@/plugins/gtag.js',
       mode: 'client',
     },
-    ...(process.env.NODE_ENV === 'production'
-      ? [
-          {
-            src: '@/plugins/gtag.js',
-            mode: 'client',
-          },
-        ]
-      : []),
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

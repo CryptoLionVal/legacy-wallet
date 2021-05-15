@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueGtag from 'vue-gtag'
 
-export default ({ app }) => {
+export default ({ app, isDev }) => {
+  if (isDev) return
+
   const GDPR = localStorage ? localStorage.getItem('GDPR:accepted') : 'true'
 
   Vue.use(

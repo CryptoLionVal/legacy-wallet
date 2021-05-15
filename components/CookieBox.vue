@@ -51,6 +51,8 @@
 </template>
 
 <script>
+import { bootstrap } from 'vue-gtag'
+
 export default {
   data() {
     return {
@@ -71,7 +73,6 @@ export default {
     },
     accept() {
       if (process.browser && !!localStorage) {
-        // eslint-disable-next-line no-undef
         bootstrap().then((gtag) => {
           this.isOpen = false
 
