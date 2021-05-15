@@ -12,7 +12,25 @@ export default {
     terms: {
       title: `Terms & Conditions`,
       meta_description: `Terms & Conditions of using Crypto Lion Staking Service`,
-      content: `TODO`,
+      content: `
+      <h2 class="text-3xl">General</h2>
+      <br>
+      <p>
+      Each user responsible for their delegated CROs. Crypto Lion under no circumstances accept any responsibility.
+      In order to get news about updates and possible downtimes consider following us from Twitter or Telegram.
+      </p>
+      <br>
+      <h2 class="text-3xl">Wallet Service</h2>
+      <br>
+      <p>
+          <strong class="text-red-600">Disclaimer:</strong> By using this option,
+          you are accepting that all responsibility belongs to you.
+          Crypto Lion only serve this option on
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          address. Please beware of scammers. We never store any data of you, and your wallet.
+          You can check our open source code from the link on footer.
+      </p>
+      `,
     },
     privacy: {
       title: `Privacy Policy`,

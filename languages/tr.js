@@ -13,7 +13,26 @@ export default {
     terms: {
       title: `Kurallar ve Koşullar`,
       meta_description: `Crypto Lion CRO fonlama servisinin kuralları ve koşulları.`,
-      content: `TODO`,
+      content: `
+      <h2 class="text-3xl">Genel</h2>
+      <br>
+      <p>
+      Kullanıcı fonladığı CRO'lardan sorumludur. Crypto Lion hiçbir sorumluluk kabul etmez. Bakım
+      çalışmaları ve olası hizmet dışı durumlarından haberdar olmak için Twitter veya Telegramdan takip ediniz.
+      </p>
+      <br>
+      <h2 class="text-3xl">Cüzdan Hizmeti</h2>
+      <br>
+      <p>
+          <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
+          kullanarak bütün sorumluğun size ait olduğunu kabul etmiş oluyorsunuz.
+          Crypto Lion bu hizmeti yalnızca
+          <strong class="text-green-500">https://cryptolion.finance</strong>
+          adresinden sağlamaktadır. Cüzdan bilgileriniz hiçbir şekilde
+          saklanmaz. Kaynak kodunu en altta yer alan bağlantıdan
+          inceleyebilirsiniz.
+      </p>
+      `,
     },
     privacy: {
       title: `Gizlilik Politikası`,

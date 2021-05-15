@@ -7,9 +7,7 @@
         {{ $t('pages.terms.title') }}
       </h1>
 
-      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-        {{ $t('pages.terms.content') }}
-      </div>
+      <div class="text-gray-800" v-html="$t('pages.terms.content')"></div>
     </div>
   </section>
 </template>
