@@ -88,7 +88,7 @@
           </span>
         </a>
 
-        <logout-button />
+        <buttons-logout />
       </div>
     </div>
   </transition>

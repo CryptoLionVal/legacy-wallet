@@ -12,7 +12,7 @@
 
     <step-final />
 
-    <divider />
+    <theme-divider />
   </div>
 </template>
 

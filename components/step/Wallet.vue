@@ -163,7 +163,7 @@
 
       <disclaimer />
 
-      <logout-button />
+      <buttons-logout />
     </div>
   </transition>
 </template>

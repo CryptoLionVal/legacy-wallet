@@ -91,7 +91,7 @@
           </svg>
           CRYPTO LION
         </NuxtLink>
-        <lazy-rate />
+        <lazy-cards-rate />
       </div>
       <div class="block lg:hidden pr-4">
         <button

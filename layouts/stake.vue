@@ -1,10 +1,10 @@
 <template>
   <div>
-    <navbar />
+    <theme-navbar />
 
     <Nuxt />
 
-    <area-footer />
+    <theme-footer />
 
     <address-copier />
 

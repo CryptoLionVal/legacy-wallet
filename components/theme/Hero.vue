@@ -32,6 +32,6 @@
         </div>
       </div>
     </div>
-    <divider />
+    <theme-divider />
   </div>
 </template>

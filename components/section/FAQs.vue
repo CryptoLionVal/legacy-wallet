@@ -15,7 +15,7 @@
         />
       </div>
       <div class="flex flex-col justify-center pb-4 px-2 md:px-12 my-12">
-        <f-a-q
+        <cards-f-a-q
           v-for="(question, i) in questions"
           :key="question.title"
           :title="question.title"
@@ -23,7 +23,7 @@
           :seperate="question.separate"
           :desc="question.desc"
         >
-        </f-a-q>
+        </cards-f-a-q>
       </div>
     </div>
   </section>
