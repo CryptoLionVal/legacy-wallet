@@ -275,6 +275,12 @@ export default {
     done_message: `Kopyalandı!`
   },
 
+  statusButton: {
+    name: `Ana Ağ`,
+    testNetName: `Test Ağı`,
+    message: `: Son {gap} bloktan {missed} tanesi imzalanamadı.`
+  },
+
   disclaimer: {
     desc: `Bu servisi kullanarak kabul ettiğiniz şartlara bu sayfadan göz atabilirsiniz: `,
   },

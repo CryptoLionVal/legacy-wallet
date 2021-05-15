@@ -10,9 +10,9 @@
       :class="{ 'animate-pulse': !loaded }"
     >
       {{ name }}
-      <span :class="{ hidden: !showDesc }"
-        >: Missed {{ missed }} blocks in last {{ gap }} blocks.</span
-      >
+      <span :class="{ hidden: !showDesc }">{{
+        $t('statusButton.message', { gap, missed })
+      }}</span>
     </span>
   </div>
 </template>

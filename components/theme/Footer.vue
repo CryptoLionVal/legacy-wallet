@@ -145,12 +145,12 @@
 
       <div class="flex flex-row space-x-2 mx-8 mb-3">
         <lazy-buttons-status
-          name="Mainnet"
+          :name="$t('statusButton.name')"
           :validator="$chain.config('T_VALIDATOR')"
           :rpc="$chain.config('RPC')"
         />
         <lazy-buttons-status
-          name="Croeseid Testnet"
+          :name="$t('statusButton.testNetName')"
           :validator="$chain.config('T_VALIDATOR', 'TESTNET')"
           :rpc="$chain.config('RPC', 'TESTNET')"
         />

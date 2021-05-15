@@ -262,6 +262,12 @@ export default {
     desc: `By using this wallet service, you are accepting our `,
   },
 
+  statusButton: {
+    name: `Main-net`,
+    testNetName: `Croeseid Test-net`,
+    message: `: Missed { missed } blocks in last { gap } blocks.`
+  },
+
   cookie: {
     message: `Could we use cookies for analytics? To read details please visit our
         privacy policy page.`,
