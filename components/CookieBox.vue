@@ -58,7 +58,7 @@ export default {
     }
   },
   created() {
-    if (!this.getGDPR() === true && this.$config.dev) {
+    if (!this.getGDPR() === true) {
       this.isOpen = true
     }
   },
