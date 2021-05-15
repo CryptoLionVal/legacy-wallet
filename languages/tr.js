@@ -18,7 +18,26 @@ export default {
     privacy: {
       title: `Gizlilik Politikası`,
       meta_description: `Crypto Lion CRO fonlama servisinin gizlilik politikası.`,
-      content: `TODO`,
+      content: `
+      <h2 class="text-3xl">Çerezler</h2>
+      <br>
+      <p>
+      Çerezler bilgisayarınızda siteler boyunca kaydedilen küçük bilgilerdir.
+      </p>
+      <p>
+      Eğer kabul ederseniz deneyiminizi daha iyi hale getirmek üzere Google Analytics yardımıyla bu site üzerindeki gezinme verinizi toplayacağız.
+      </p>
+      <p>
+      <a class="underline"
+      rel="nofollow"
+      href="https://policies.google.com/technologies/partner-sites?hl=tr-TR"
+      target="_blank">Buradan</a>
+       detaylı bilgi edinebilirsiniz.
+      </p>
+      <p>
+      Eğer kabul etmezseniz bu bilgiler toplanmaz.
+      </p>
+      `,
     },
     how_to_stake_cro: {
       title: `Nasıl stake edilir?`,
@@ -235,6 +254,12 @@ export default {
     title: `Validator adresini kopyalamak için tıklayın.`,
     message: `Validator adresini kopyala`,
     done_message: `Kopyalandı!`
+  },
+
+  cookie: {
+    message: `Çerezleri trafik analizi için kullanmamıza izin verir misiniz? Detaylar için lütfen gizlilik sayfamızı ziyaret edin.`,
+    accept_button: `Evet`,
+    deny_button: `Hayır`
   },
 
   hero: {

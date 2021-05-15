@@ -9,6 +9,8 @@
     <address-copier />
 
     <dialog-modal />
+
+    <cookie-box />
   </div>
 </template>
 

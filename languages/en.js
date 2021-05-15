@@ -17,7 +17,29 @@ export default {
     privacy: {
       title: `Privacy Policy`,
       meta_description: `Privacy Policy of using Crypto Lion Staking Service`,
-      content: `TODO`,
+      content: `
+      <h2 class="text-3xl">Cookies</h2>
+      <br>
+      <p>
+      Cookies are small text files that are placed on your computer by websites that you visit.
+      </p>
+      <p>
+      If you choose to accept the use of cookies, we will use Google Analytics in order to collect information on how you are using the website.
+      </p>
+      <p>
+      Such information will allow us to improve the website.
+      </p>
+      <p>
+      You can read an overview of Google's privacy policy
+      <a class="underline"
+      rel="nofollow"
+      href="https://policies.google.com/technologies/partner-sites?hl=en-GB&amp;gl=uk"
+      target="_blank">here</a>.
+      </p>
+      <p>
+      These information will not be collected if you deny the use of cookies.
+      </p>
+      `,
     },
     how_to_stake_cro: {
       title: `Staking Explained`,
@@ -230,6 +252,13 @@ export default {
     title: `Click to copy delegation address.`,
     message: `Copy Staking Address`,
     done_message: `Copied!`
+  },
+
+  cookie: {
+    message: `Could we use cookies for analytics? To read details please visit our
+        privacy policy page.`,
+    accept_button: `Yes`,
+    deny_button: `No`
   },
 
   hero: {

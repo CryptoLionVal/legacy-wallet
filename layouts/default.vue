@@ -9,6 +9,8 @@
     <area-footer />
 
     <address-copier />
+
+    <cookie-box />
   </div>
 </template>
 
