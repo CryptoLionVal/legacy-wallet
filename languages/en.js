@@ -498,7 +498,7 @@ export default {
             title: `Status of both maın and test net servers`,
             target: `_blank`,
             href:
-              `https://status.cryptolion.finance/`
+              `https://cryptolion.freshstatus.io/`
           }
         ]
       },

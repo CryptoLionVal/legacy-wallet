@@ -733,7 +733,7 @@ export default {
             title: `Doğrulayıcı sunucuların durumu`,
             target: `_blank`,
             href:
-              `https://status.cryptolion.finance/`
+              `https://cryptolion.freshstatus.io/`
           }
         ]
       },
