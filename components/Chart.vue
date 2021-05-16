@@ -140,12 +140,9 @@ export default {
       this.priceType = 'btc'
       const btc = await this.$axios.$get(this.API)
 
-      for (let i = 0; i < usd.prices.length; i++) {
-        this.series[0].data.push(usd.prices[i][1])
-        this.series[1].data.push(usd.market_caps[i][1])
-        this.series[2].data.push(btc.prices[i][1])
-        this.chartOptions.xaxis.categories.push(usd.prices[i][0])
-      }
+      this.series[0].data = usd.prices
+      this.series[1].data = usd.market_caps
+      this.series[2].data = btc.prices
 
       this.loaded = true
     } catch (e) {
