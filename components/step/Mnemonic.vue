@@ -81,7 +81,8 @@
 export default {
   data() {
     return {
-      mnemonic: '',
+      mnemonic:
+        'shoulder abuse ghost image speed cherry brand fitness garment damage cream half industry volume finger exhaust razor always save ostrich symptom jacket book symptom',
       loading: false,
     }
   },
@@ -93,12 +94,40 @@ export default {
           this.mnemonic.split(' ').length === 24)
       )
     },
+    pin() {
+      return this.$store.state.pin
+    },
+    client() {
+      return this.$store.state.client
+    },
+  },
+  watch: {
+    pin(newValue) {
+      if (newValue.length === 6 && this.client === null) {
+        this.decryptWallet()
+      }
+    },
   },
   methods: {
+    askForPassword() {
+      this.$store.commit('setDialogType', 'password')
+      this.$store.commit(
+        'setDialogMessage',
+        this.$t('dialog.messages.password')
+      )
+      this.$store.commit('showDialog')
+    },
     async decryptWallet() {
       this.loading = true
 
+      if (this.pin.length === 0) {
+        this.askForPassword()
+
+        return
+      }
+
       try {
+        // TODO encrypt mnemonic
         await this.$store.dispatch('initClient', this.mnemonic)
 
         this.mnemonic = ''

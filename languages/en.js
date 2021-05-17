@@ -270,6 +270,18 @@ export default {
     message: `: Missed { missed } blocks in last { gap } blocks.`
   },
 
+  dialog: {
+    messages: {
+      password: `Please enter a 6 digit number password to secure your wallet during the session: `,
+      confirm: `Please confirm your password:`,
+    },
+    buttons: {
+      default: `Okay`,
+      confirm: `Confirm`,
+      reject: `Close`,
+    },
+  },
+
   cookie: {
     message: `Could we use cookies for analytics? To read details please visit our
         privacy policy page.`,

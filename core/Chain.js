@@ -1,4 +1,4 @@
-import Lion from '@mcanvar/lion'
+import Lion from '@/core/Lion'
 import NetworksConfig from '@/networks.config'
 
 export default class Chain {

@@ -3,9 +3,11 @@ import Big from 'big.js'
 export const state = () => ({
   dialog: {
     show: false,
+    type: 'warning',
     message: '',
   },
   step: 'first',
+  pin: '',
   validator: '',
   wallet: null,
   account: null,
@@ -27,6 +29,12 @@ export const mutations = {
   },
   setDialogMessage(state, message) {
     state.dialog.message = message
+  },
+  setDialogType(state, type) {
+    state.dialog.type = type
+  },
+  setPin(state, pin) {
+    state.pin = pin
   },
   setStep(state, status) {
     state.step = status
@@ -138,5 +146,10 @@ export const actions = {
     commit('setClient', null)
     commit('setBalance', 0)
     commit('setLastHash', '')
+  },
+
+  resetDialog({ commit }) {
+    commit('setDialogMessage', '')
+    commit('setDialogType', 'warning')
   },
 }
