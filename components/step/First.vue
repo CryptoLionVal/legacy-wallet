@@ -2,10 +2,24 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'first'"
-      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      class="
+        container
+        px-8
+        mx-auto
+        flex flex-wrap flex-col
+        md:flex-row
+        items-center
+      "
     >
       <div
-        class="flex flex-col w-full justify-center items-start text-center md:text-left"
+        class="
+          flex flex-col
+          w-full
+          justify-center
+          items-start
+          text-center
+          md:text-left
+        "
       >
         <h1 class="my-16 text-5xl font-bold leading-tight">
           {{ $t('pages.how_to_stake_cro.steps.first.title') }}
@@ -16,7 +30,26 @@
       </div>
       <div class="w-full pt-6 pb-32 flex flex-col">
         <button
-          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="
+            rounded-full
+            flex flex-row
+            content-center
+            justify-center
+            flex-1
+            p-6
+            m-6
+            bg-white
+            text-gray-800
+            font-bold
+            shadow-lg
+            focus:outline-none
+            focus:shadow-outline
+            transform
+            transition
+            hover:scale-105
+            duration-300
+            ease-in-out
+          "
           @click="$store.commit('setStep', 'defi')"
         >
           <svg
@@ -37,7 +70,26 @@
           </span>
         </button>
         <button
-          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="
+            rounded-full
+            flex flex-row
+            content-center
+            justify-center
+            flex-1
+            p-6
+            m-6
+            bg-white
+            text-gray-800
+            font-bold
+            shadow-lg
+            focus:outline-none
+            focus:shadow-outline
+            transform
+            transition
+            hover:scale-105
+            duration-300
+            ease-in-out
+          "
           @click="$store.commit('setStep', 'mnemonic')"
         >
           <svg
@@ -58,7 +110,26 @@
           </span>
         </button>
         <button
-          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="
+            rounded-full
+            flex flex-row
+            content-center
+            justify-center
+            flex-1
+            p-6
+            m-6
+            bg-white
+            text-gray-800
+            font-bold
+            shadow-lg
+            focus:outline-none
+            focus:shadow-outline
+            transform
+            transition
+            hover:scale-105
+            duration-300
+            ease-in-out
+          "
           @click="navigate"
         >
           <svg

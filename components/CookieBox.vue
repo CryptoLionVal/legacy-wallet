@@ -1,7 +1,28 @@
 <template>
   <div
     v-if="isOpen"
-    class="flex justify-between items-center fixed z-50 w-2/6 h-32 bottom-0 right-0 m-6 p-6 shadow-2xl transform transition hover:scale-105 duration-300 ease-in-out bg-white text-gray-800 rounded-full"
+    class="
+      flex
+      justify-between
+      items-center
+      fixed
+      z-50
+      w-2/6
+      h-32
+      bottom-0
+      right-0
+      m-6
+      p-6
+      shadow-2xl
+      transform
+      transition
+      hover:scale-105
+      duration-300
+      ease-in-out
+      bg-white
+      text-gray-800
+      rounded-full
+    "
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +56,24 @@
       </p>
 
       <button
-        class="font-bold text-sm gradient text-white rounded-full py-1 px-3 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        class="
+          font-bold
+          text-sm
+          gradient
+          text-white
+          rounded-full
+          py-1
+          px-3
+          shadow
+          opacity-75
+          focus:outline-none
+          focus:shadow-outline
+          transform
+          transition
+          hover:scale-105
+          duration-300
+          ease-in-out
+        "
         @click.prevent="accept"
       >
         {{ $t('cookie.accept_button') }}

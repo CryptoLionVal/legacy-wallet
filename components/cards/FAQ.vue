@@ -1,7 +1,16 @@
 <template>
   <div class="flex flex-wrap">
     <div
-      class="w-full flex flex-row align-middle font-bold text-xl text-gray-800 px-6 py-2 cursor-pointer"
+      class="
+        w-full
+        flex flex-row
+        align-middle
+        font-bold
+        text-xl text-gray-800
+        px-6
+        py-2
+        cursor-pointer
+      "
       @click="opened = !opened"
     >
       <span class="w-11/12">{{ title }}</span>

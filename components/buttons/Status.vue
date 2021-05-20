@@ -1,6 +1,16 @@
 <template>
   <div
-    class="flex items-center py-1 px-2 cursor-pointer bg-opacity-25 flex-initial space-x-1 rounded-full"
+    class="
+      flex
+      items-center
+      py-1
+      px-2
+      cursor-pointer
+      bg-opacity-25
+      flex-initial
+      space-x-1
+      rounded-full
+    "
     :class="{ 'bg-gray-500': loaded }"
     @click="showDesc = true"
   >

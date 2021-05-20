@@ -7,7 +7,14 @@
             <NuxtLink
               prefetch
               :to="localePath('/')"
-              class="text-blue-900 no-underline hover:no-underline font-bold text-4xl lg:text-5xl"
+              class="
+                text-blue-900
+                no-underline
+                hover:no-underline
+                font-bold
+                text-4xl
+                lg:text-5xl
+              "
               :title="$t('footer.logo.link.title')"
             >
               <svg
@@ -105,7 +112,12 @@
               >
                 <a
                   v-if="typeof link.href === 'string'"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  class="
+                    no-underline
+                    hover:underline
+                    text-gray-800
+                    hover:text-pink-500
+                  "
                   :href="link.href"
                   :title="link.title"
                   >{{ link.name }}</a
@@ -114,7 +126,12 @@
                   v-else
                   prefetch
                   :to="localePath(link.href.path)"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  class="
+                    no-underline
+                    hover:underline
+                    text-gray-800
+                    hover:text-pink-500
+                  "
                   :title="link.title"
                   >{{ link.name }}</NuxtLink
                 >
@@ -126,14 +143,24 @@
                 <nuxt-link
                   v-if="$i18n.locale === 'tr'"
                   key="en"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  class="
+                    no-underline
+                    hover:underline
+                    text-gray-800
+                    hover:text-pink-500
+                  "
                   :to="switchLocalePath('en')"
                   >English</nuxt-link
                 >
                 <nuxt-link
                   v-else
                   key="tr"
-                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  class="
+                    no-underline
+                    hover:underline
+                    text-gray-800
+                    hover:text-pink-500
+                  "
                   :to="switchLocalePath('tr')"
                   >Türkçe</nuxt-link
                 >

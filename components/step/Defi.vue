@@ -7,13 +7,26 @@
     >
       <div class="container max-w-5xl mt-32 mx-auto m-8">
         <h1
-          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200"
+          class="
+            w-full
+            my-2
+            text-5xl
+            font-bold
+            leading-tight
+            text-center text-gray-200
+          "
         >
           {{ $t('pages.how_to_stake_cro.title') }}
         </h1>
         <div class="w-full mb-4">
           <div
-            class="flex flex-wrap md:flex-no-wrap space-y-2 md:space-y-0 md:space-x-5 content-between"
+            class="
+              flex flex-wrap
+              md:flex-no-wrap
+              space-y-2
+              md:space-y-0 md:space-x-5
+              content-between
+            "
           >
             <cards-step
               v-for="step in $t('pages.how_to_stake_cro.steps.defi.steps')"
@@ -33,7 +46,28 @@
         </div>
         <div class="text-center w-full">
           <a
-            class="rounded-full flex flex-row content-center cursor-pointer justify-center w-1/5 p-1 mt-6 mb-32 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-200 ease-in-out"
+            class="
+              rounded-full
+              flex flex-row
+              content-center
+              cursor-pointer
+              justify-center
+              w-1/5
+              p-1
+              mt-6
+              mb-32
+              bg-white
+              text-gray-800
+              font-bold
+              shadow-lg
+              focus:outline-none
+              focus:shadow-outline
+              transform
+              transition
+              hover:scale-105
+              duration-200
+              ease-in-out
+            "
             @click.prevent="$store.commit('setStep', 'first')"
           >
             <svg

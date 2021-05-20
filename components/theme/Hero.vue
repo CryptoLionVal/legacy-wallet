@@ -2,10 +2,25 @@
   <div>
     <div class="pt-24 px-4">
       <div
-        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+        class="
+          container
+          px-3
+          mx-auto
+          flex flex-wrap flex-col
+          md:flex-row
+          items-center
+        "
       >
         <div
-          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+          class="
+            flex flex-col
+            w-full
+            md:w-2/5
+            justify-center
+            items-start
+            text-center
+            md:text-left
+          "
         >
           <p
             class="uppercase tracking-loose w-full"
@@ -20,7 +35,25 @@
             :hidden="['wallet', 'final'].includes($store.state.step)"
             prefetch
             :title="$t('stake_now.title')"
-            class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            class="
+              mx-auto
+              lg:mx-0
+              bg-white
+              text-gray-800
+              font-bold
+              rounded-full
+              my-6
+              py-4
+              px-8
+              shadow-lg
+              focus:outline-none
+              focus:shadow-outline
+              transform
+              transition
+              hover:scale-105
+              duration-300
+              ease-in-out
+            "
             :to="localePath('how-to-stake-cro')"
             @click.native="$store.commit('setStep', 'mnemonic')"
           >

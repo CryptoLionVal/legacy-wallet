@@ -2,10 +2,24 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'wallet'"
-      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      class="
+        container
+        px-8
+        mx-auto
+        flex flex-wrap flex-col
+        md:flex-row
+        items-center
+      "
     >
       <div
-        class="flex flex-col w-full justify-center items-start text-left md:text-left"
+        class="
+          flex flex-col
+          w-full
+          justify-center
+          items-start
+          text-left
+          md:text-left
+        "
       >
         <h1 class="my-6 text-5xl leading-tight flex flex-row items-center">
           <span class="font-bold">
@@ -17,11 +31,26 @@
           readonly
           type="text"
           size="46"
-          class="bg-white opacity-75 py-1 focus:outline-none px-3 text-gray-800 rounded-full"
+          class="
+            bg-white
+            opacity-75
+            py-1
+            focus:outline-none
+            px-3
+            text-gray-800
+            rounded-full
+          "
         />
         <div class="my-6 flex justify-between space-x-2">
           <div
-            class="text-3xl leading-tight flex flex-col justify-between space-y-2 items-start"
+            class="
+              text-3xl
+              leading-tight
+              flex flex-col
+              justify-between
+              space-y-2
+              items-start
+            "
           >
             <span class="font-bold">{{
               $t('pages.how_to_stake_cro.steps.wallet.staked_balance')
@@ -34,7 +63,14 @@
             </span>
           </div>
           <div
-            class="text-3xl leading-tight flex flex-col justify-between space-y-2 items-start"
+            class="
+              text-3xl
+              leading-tight
+              flex flex-col
+              justify-between
+              space-y-2
+              items-start
+            "
           >
             <span class="ml-1 flex items-center">
               {{ staked }}
@@ -119,7 +155,20 @@
           step="0.01"
           lang="en"
           :max="parseFloat($store.state.balance).toFixed(2)"
-          class="rounded-full w-full md:w-2/6 h-16 px-12 mb-3 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
+          class="
+            rounded-full
+            w-full
+            md:w-2/6
+            h-16
+            px-12
+            mb-3
+            font-extrabold
+            text-xl
+            py-4
+            text-primary
+            normal-case
+            focus:outline-none
+          "
         />
         <button
           :disabled="!validAmount"
@@ -131,7 +180,28 @@
             'bg-teal-300': !loading,
             'bg-gray-300': loading,
           }"
-          class="rounded-full flex flex-row h-16 justify-center w-full md:w-1/6 inline-block hover:bg-teal-400 p-4 md:mx-6 text-primary font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          class="
+            rounded-full
+            flex flex-row
+            h-16
+            justify-center
+            w-full
+            md:w-1/6
+            inline-block
+            hover:bg-teal-400
+            p-4
+            md:mx-6
+            text-primary
+            font-bold
+            shadow-lg
+            focus:outline-none
+            focus:shadow-outline
+            transform
+            transition
+            hover:scale-105
+            duration-300
+            ease-in-out
+          "
           @click="stake"
         >
           <svg
@@ -179,7 +249,13 @@
       <a
         :href="explorerLink"
         target="_blank"
-        class="underline hover:no-underline text-gray-200 hover:text-gray-200 mb-2"
+        class="
+          underline
+          hover:no-underline
+          text-gray-200
+          hover:text-gray-200
+          mb-2
+        "
         :title="$t('pages.how_to_stake_cro.steps.wallet.explorer')"
         >{{ $t('pages.how_to_stake_cro.steps.wallet.explorer') }}</a
       >
