@@ -64,26 +64,31 @@ export default class Chain {
     return await Secp256k1HdWallet.deserialize(serialized, pin)
   }
 
-  async delegate(transferAmount = 0, encrypted, pin) {
+  async delegate(
+    transferAmount = 0,
+    encrypted,
+    pin,
+    memo = 'Tx created via https://cryptolion.finance wallet.'
+  ) {
     const amount = coin(transferAmount, 'base' + this.config('PREFIX'))
-
-    const memo = await this.decryptWallet(encrypted, pin)
 
     return await this.client.delegateTokens(
       this.account.address,
       this.config('VALIDATOR'),
       amount,
-      memo.secret.data
+      memo
     )
   }
 
-  async withdraw(encrypted, pin) {
-    const memo = await this.decryptWallet(encrypted, pin)
-
+  async withdraw(
+    encrypted,
+    pin,
+    memo = 'Tx created via https://cryptolion.finance wallet.'
+  ) {
     return await this.client.withdrawRewards(
       this.account.address,
       this.config('VALIDATOR'),
-      memo.secret.data
+      memo
     )
   }
 }

@@ -13,7 +13,6 @@ export const state = () => ({
   rewards: 0,
   staked: 0,
   lastHash: '',
-  memo: 'Tx created via https://cryptolion.finance wallet.',
 })
 
 // TODO: refactor
