@@ -26,10 +26,9 @@
             {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
           </span>
         </h1>
-        <div class="my-6 flex justify-between space-x-2">
+        <div class="my-6 flex text-xs md:text-3xl justify-between space-x-2">
           <div
             class="
-              text-3xl
               leading-tight
               flex flex-col
               justify-between
@@ -50,7 +49,9 @@
                   py-1
                   focus:outline-none
                   px-3
-                  text-gray-800 text-base
+                  text-gray-800
+                  md:text-base
+                  text-xs
                   rounded-full
                 "
               />
@@ -67,7 +68,6 @@
           </div>
           <div
             class="
-              text-3xl
               leading-tight
               flex flex-col
               justify-between

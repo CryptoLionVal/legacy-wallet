@@ -6,8 +6,11 @@
       justify-between
       items-center
       fixed
+      text-xs
+      md:text-base
       z-50
-      w-2/6
+      w-5/6
+      md:w-2/6
       h-32
       bottom-0
       right-0
