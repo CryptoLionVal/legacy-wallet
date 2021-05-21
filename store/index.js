@@ -7,20 +7,20 @@ export const state = () => ({
     message: '',
   },
   step: 'first',
-  pin: '',
-  validator: '',
-  wallet: null,
-  account: null,
-  client: null,
+  pin: 'TODO',
+  encryptedWallet: null,
   balance: 0,
   rewards: 0,
   staked: 0,
   lastHash: '',
-  memo: 'Tx created via cryptolion.finance wallet.',
+  memo: 'Tx created via https://cryptolion.finance wallet.',
 })
 
 // TODO: refactor
 export const mutations = {
+  set: (state, { name, value }) => {
+    state[name] = value
+  },
   showDialog(state) {
     state.dialog.show = true
   },
@@ -33,104 +33,90 @@ export const mutations = {
   setDialogType(state, type) {
     state.dialog.type = type
   },
-  setPin(state, pin) {
-    state.pin = pin
-  },
-  setStep(state, status) {
-    state.step = status
-  },
-  setValidator(state) {
-    state.validator = this.$chain.config('VALIDATOR')
-  },
-  setWallet(state, wallet) {
-    state.wallet = wallet
-  },
-  setAccount(state, account) {
-    state.account = account
-  },
-  setClient(state, client) {
-    state.client = client
-  },
-  setBalance(state, balance) {
-    state.balance = balance
-  },
-  setReward(state, rewards) {
-    state.rewards = rewards
-  },
-  setStaked(state, staked) {
-    state.staked = staked
-  },
-  setLastHash(state, lastHash) {
-    state.lastHash = lastHash
-  },
 }
 
 export const actions = {
   async initClient({ commit, state, dispatch }, mnemonic) {
-    const wallet = await this.$chain.lion.setWallet(mnemonic)
-    const account = (await wallet.getAccounts()).shift()
+    // TODO: check existence on session storage
+    const encryptedWallet = await this.$chain.init(mnemonic, state.pin)
 
-    commit('setWallet', wallet)
-    commit('setAccount', account)
-
-    const client = await this.$chain.lion.setClient()
-
-    commit('setClient', client)
+    commit('set', {
+      name: 'encryptedWallet',
+      value: encryptedWallet,
+    })
+    // TODO: save it on session storage
 
     await dispatch('fetchBalance')
     await dispatch('fetchRewards')
-
-    commit('setValidator')
   },
 
   async fetchBalance({ commit, state }) {
-    let balance = await this.$chain.lion.getBalance(state.account.address)
+    let balance = await this.$chain.client.getBalance(
+      this.$chain.account.address,
+      'base' + this.$chain.config('PREFIX')
+    )
 
     balance = new Big(balance.amount)
     balance = balance.div(100000000)
-    commit('setBalance', balance.toPrecision(5))
+
+    commit('set', {
+      name: 'balance',
+      value: balance.toPrecision(5),
+    })
   },
 
   async fetchRewards({ commit, state }) {
     const account = await this.$axios.$get(
-      this.$chain.config('EXPLORER_API') + '/accounts/' + state.account.address
+      this.$chain.config('EXPLORER_API') +
+        '/accounts/' +
+        this.$chain.account.address
     )
 
     if (account.result.totalRewards.length) {
       let rewards = new Big(account.result.totalRewards[0].amount)
       rewards = rewards.div(100000000)
-      commit('setReward', rewards.toPrecision(5))
+      commit('set', {
+        name: 'rewards',
+        value: rewards.toPrecision(5),
+      })
 
       let staked = new Big(account.result.bondedBalance[0].amount)
       staked = staked.div(100000000)
-      commit('setStaked', staked.toPrecision(5))
+      commit('set', {
+        name: 'staked',
+        value: staked.toPrecision(5),
+      })
 
       return
     }
 
-    commit('setReward', 0)
+    commit('set', {
+      name: 'rewards',
+      value: 0,
+    })
   },
 
   async stake({ commit, state, dispatch }, amount) {
-    const response = await this.$chain.lion.delegate(
-      state.account.address,
-      state.validator,
+    const response = await this.$chain.delegate(
       amount * 100000000,
-      state.memo
+      state.encryptedWallet,
+      state.pin
     )
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 
-    commit('setLastHash', response.transactionHash)
+    commit('set', {
+      name: 'lastHash',
+      value: response.transactionHash,
+    })
 
     await dispatch('fetchBalance')
   },
 
   async withdraw({ state, dispatch }) {
-    const response = await this.$chain.lion.withdraw(
-      state.account.address,
-      state.validator,
-      state.memo
+    const response = await this.$chain.withdraw(
+      state.encryptedWallet,
+      state.pin
     )
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
@@ -141,11 +127,22 @@ export const actions = {
   },
 
   resetStore({ commit }) {
-    commit('setStep', 'first')
-    commit('setWallet', null)
-    commit('setClient', null)
-    commit('setBalance', 0)
-    commit('setLastHash', '')
+    commit('set', {
+      name: 'step',
+      value: 'first',
+    })
+    commit('set', {
+      name: 'encryptedWallet',
+      value: null,
+    })
+    commit('set', {
+      name: 'balance',
+      value: 0,
+    })
+    commit('set', {
+      name: 'lastHash',
+      value: '',
+    })
   },
 
   resetDialog({ commit }) {

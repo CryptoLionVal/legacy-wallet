@@ -27,7 +27,7 @@
           </span>
         </h1>
         <input
-          :value="$store.state.account.address"
+          :value="$chain.account.address"
           readonly
           type="text"
           size="46"
@@ -311,7 +311,7 @@ export default {
       return (
         this.$chain.config('EXPLORER') +
         '/account/' +
-        this.$store.state.account.address
+        this.$chain.account.address
       )
     },
   },
@@ -323,7 +323,7 @@ export default {
         this.$store.state.step === 'wallet'
       ) {
         this.reloadingBalance = true
-        // await this.$store.dispatch('fetchBalance')
+        await this.$store.dispatch('fetchBalance')
         await this.$store.dispatch('fetchRewards')
         this.reloadingBalance = false
       }
@@ -339,10 +339,12 @@ export default {
 
       this.loading = true
 
+      // TODO: Confirm password
+
       try {
         await this.$store.dispatch('stake', this.amount)
 
-        this.$store.commit('setStep', 'final')
+        this.$store.commit('set', { name: 'step', value: 'final' })
       } catch (error) {
         this.$store.commit('setDialogMessage', error.message)
         this.$store.commit('showDialog')
@@ -359,6 +361,8 @@ export default {
 
       this.loading = true
       this.withdrawingRewards = true
+
+      // TODO: Confirm password
 
       try {
         await this.$store.dispatch('withdraw')

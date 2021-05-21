@@ -134,8 +134,7 @@
 export default {
   data() {
     return {
-      mnemonic:
-        'shoulder abuse ghost image speed cherry brand fitness garment damage cream half industry volume finger exhaust razor always save ostrich symptom jacket book symptom',
+      mnemonic: '',
       loading: false,
     }
   },
@@ -151,7 +150,7 @@ export default {
       return this.$store.state.pin
     },
     client() {
-      return this.$store.state.client
+      return this.$chain.client
     },
   },
   watch: {
@@ -180,12 +179,11 @@ export default {
       }
 
       try {
-        // TODO encrypt mnemonic
         await this.$store.dispatch('initClient', this.mnemonic)
 
         this.mnemonic = ''
 
-        this.$store.commit('setStep', 'wallet')
+        this.$store.commit('set', { name: 'step', value: 'wallet' })
       } catch (error) {
         this.$store.commit('setDialogMessage', error.message)
         this.$store.commit('showDialog')

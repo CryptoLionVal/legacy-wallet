@@ -50,7 +50,7 @@
             duration-300
             ease-in-out
           "
-          @click="$store.commit('setStep', 'defi')"
+          @click="$store.commit('set', { name: 'step', value: 'defi' })"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@
             duration-300
             ease-in-out
           "
-          @click="$store.commit('setStep', 'mnemonic')"
+          @click="$store.commit('set', { name: 'step', value: 'mnemonic' })"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@
 export default {
   methods: {
     navigate() {
-      this.$store.commit('setStep', 'desktop')
+      this.$store.commit('set', { name: 'step', value: 'desktop' })
       this.$router.push(
         this.localePath('how-to-stake-cro') +
           '#' +

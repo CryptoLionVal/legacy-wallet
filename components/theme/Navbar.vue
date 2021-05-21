@@ -170,7 +170,9 @@
               "
               class="inline-block py-2 px-4 no-underline"
               :title="link.title"
-              @click.native="$store.commit('setStep', 'first')"
+              @click.native="
+                $store.commit('set', { name: 'step', value: 'first' })
+              "
               >{{ link.name }}</NuxtLink
             >
           </li>
@@ -243,7 +245,7 @@ export default {
       }
     },
     buttonText() {
-      return this.$store.state.client === null
+      return this.$chain.client === null
         ? this.$t('stake_now.name')
         : this.$store.state.balance +
             ' ' +
@@ -263,13 +265,13 @@ export default {
   },
   methods: {
     navigate() {
-      if (this.$store.state.client) {
-        this.$store.commit('setStep', 'wallet')
+      if (this.$chain.client) {
+        this.$store.commit('set', { name: 'step', value: 'wallet' })
 
         return
       }
 
-      this.$store.commit('setStep', 'mnemonic')
+      this.$store.commit('set', { name: 'step', value: 'mnemonic' })
     },
   },
 }

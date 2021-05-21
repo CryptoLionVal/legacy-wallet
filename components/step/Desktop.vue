@@ -68,7 +68,9 @@
               duration-200
               ease-in-out
             "
-            @click.prevent="$store.commit('setStep', 'first')"
+            @click.prevent="
+              $store.commit('set', { name: 'step', value: 'first' })
+            "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

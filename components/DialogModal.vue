@@ -208,7 +208,7 @@ export default {
   methods: {
     hide() {
       if (this.$store.state.dialog.type === 'password') {
-        this.$store.commit('setPin', this.first)
+        this.$store.commit('set', { name: 'pin', value: this.first })
       }
 
       this.$store.commit('hideDialog')

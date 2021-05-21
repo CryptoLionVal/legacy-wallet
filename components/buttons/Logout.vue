@@ -1,6 +1,6 @@
 <template>
   <a
-    :hidden="this.$store.state.client === null"
+    :hidden="this.$chain.client === null"
     class="
       rounded-full
       flex flex-row

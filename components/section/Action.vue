@@ -81,7 +81,9 @@
           ease-in-out
         "
         :to="localePath('how-to-stake-cro')"
-        @click.native="$store.commit('setStep', 'mnemonic')"
+        @click.native="
+          $store.commit('set', { name: 'step', value: 'mnemonic' })
+        "
       >
         {{ $t('stake_now.name') }}!
       </NuxtLink>
