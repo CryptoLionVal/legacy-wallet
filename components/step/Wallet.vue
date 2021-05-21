@@ -26,21 +26,6 @@
             {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
           </span>
         </h1>
-        <input
-          :value="$chain.account.address"
-          readonly
-          type="text"
-          size="46"
-          class="
-            bg-white
-            opacity-75
-            py-1
-            focus:outline-none
-            px-3
-            text-gray-800
-            rounded-full
-          "
-        />
         <div class="my-6 flex justify-between space-x-2">
           <div
             class="
@@ -52,6 +37,24 @@
               items-start
             "
           >
+            <span class="font-bold">
+              <input
+                ref="address"
+                :value="$chain.account.address"
+                readonly
+                type="text"
+                size="46"
+                class="
+                  bg-white
+                  opacity-75
+                  py-1
+                  focus:outline-none
+                  px-3
+                  text-gray-800 text-base
+                  rounded-full
+                "
+              />
+            </span>
             <span class="font-bold">{{
               $t('pages.how_to_stake_cro.steps.wallet.staked_balance')
             }}</span>
@@ -72,6 +75,37 @@
               items-start
             "
           >
+            <span class="flex items-center">
+              &nbsp;
+              <button
+                class="cursor-pointer mt-1"
+                :title="
+                  $t('pages.how_to_stake_cro.steps.wallet.renew_button_title')
+                "
+                :class="{
+                  'text-teal-300': !loading,
+                  'text-gray-300': loading,
+                }"
+                :disabled="loading"
+                @click="copy"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  ></path>
+                </svg>
+              </button>
+            </span>
             <span class="ml-1 flex items-center">
               {{ staked }}
             </span>
@@ -389,6 +423,22 @@ export default {
 
       this.loading = false
       this.reloadingBalance = false
+    },
+    copy() {
+      const textArea = this.$refs.address
+      textArea.focus()
+      textArea.select()
+
+      try {
+        document.execCommand('copy')
+
+        this.copied = true
+
+        setTimeout(() => (this.copied = false), 1000)
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.log('Oops, unable to copy')
+      }
     },
   },
 }
