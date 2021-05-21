@@ -39,6 +39,8 @@ export default {
       if (!confirm(this.$t('pages.how_to_stake_cro.logout_confirm'))) return
 
       this.$store.dispatch('resetStore')
+
+      this.$chain.client = null
     },
   },
 }
