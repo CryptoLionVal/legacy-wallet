@@ -2,8 +2,8 @@ export default {
   TESTNET: {
     RPC: 'https://testnet-croeseid.crypto.com:26657',
     LCD: 'https://testnet-croeseid.crypto.com:1317',
-    T_VALIDATOR: '15CDB1DCB71FE74CB7EA971E2CC17751F21984E8',
-    VALIDATOR: 'tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew',
+    T_VALIDATOR: '703B26AEA0867B03572719D22F4B8E6D93CA838C',
+    VALIDATOR: 'tcrocncl1n4t5q77kn9vf73s7ljs96m85jgg49yqpg0chrj',
     HD_PATH: "m/44'/1'/0'/0/0",
     PREFIX: 'tcro',
     EXPLORER: 'https://crypto.org/explorer/croeseid',

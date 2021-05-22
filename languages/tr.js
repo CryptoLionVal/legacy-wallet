@@ -2,7 +2,7 @@
 export default {
   title_template: `Crypto Lion CDC Main-net Blokzincirinde | %s`,
   meta_description:
-    `Crypto Lion Crypto.org deride çalışan bir imzalayıcıdır(validator).` +
+    `Crypto Lion Crypto.org Chain üzerinde çalışan bir doğrulayıcıdır(validator).` +
     ` Bu doğrulayıcıya CROlarınızı yatırarak(staking) pasif gelir elde edebilirsiniz.`,
 
   pages: {
@@ -794,18 +794,18 @@ export default {
               `https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `Nebkas Explorer`,
+            name: `Mintscan`,
             target: `_blank`,
-            title: `Nebkas.ro'ın Keşif Sitesindeyiz`,
+            title: `Mintscan Blokzincir Keşif Sitesindeyiz`,
             href:
-              `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
+              `https://www.mintscan.io/crypto-org/validators/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `Croeseid Testnet`,
+            name: `Testnet Croeseid 3`,
             target: `_blank`,
-            title: `Croeseid Testnet Ağı Keşif Sitesindeyiz`,
+            title: `Croeseid 3 Testnet Ağı Keşif Sitesindeyiz`,
             href:
-              `https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew`
+              `https://crypto.org/explorer/croeseid3/validator/tcrocncl1j6cggamet73e2ymmvl58vwj6xv3pm89phczahv`
           }
         ]
       }

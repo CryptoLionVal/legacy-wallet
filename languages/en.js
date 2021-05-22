@@ -571,18 +571,18 @@ export default {
               `https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `on Nebkas's Explorer`,
+            name: `on Mintscan by Cosmostation`,
             target: `_blank`,
-            title: `Nebkas.ro's Main-net Explorer`,
+            title: `Mintscan Main-net Explorer`,
             href:
-              `https://explorer.nebkas.ro/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
+              `https://www.mintscan.io/crypto-org/validators/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
           },
           {
-            name: `on Croeseid Testnet`,
+            name: `on Testnet Croeseid 3`,
             target: `_blank`,
-            title: `Crypto.org Croeseid Testnet Explorer`,
+            title: `Crypto.org Croeseid 3 Testnet Explorer`,
             href:
-              `https://crypto.org/explorer/croeseid/validator/tcrocncl1valsdtujgugsfhwuh8twkqpuxhr5486nlvk4ew`
+              `https://crypto.org/explorer/croeseid3/validator/tcrocncl1j6cggamet73e2ymmvl58vwj6xv3pm89phczahv`
           }
         ]
       }
