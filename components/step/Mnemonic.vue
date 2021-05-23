@@ -179,7 +179,7 @@ export default {
       }
 
       try {
-        await this.$store.dispatch('initClient', this.mnemonic)
+        await this.$store.dispatch('init', this.mnemonic)
 
         this.mnemonic = ''
 

@@ -11,7 +11,7 @@ export default class Chain {
     this.gasPrice = GasPrice.fromString('1base' + networks[chain].PREFIX)
     this.gasLimits = { send: 160000 }
     this._account = null
-    this._client = null
+    this._memo = 'Tx created via https://cryptolion.finance wallet.'
   }
 
   get account() {
@@ -22,18 +22,25 @@ export default class Chain {
     this._account = account
   }
 
-  get client() {
-    return this._client
-  }
-
-  set client(client) {
-    this._client = client
-  }
-
   config(key, network = null) {
     if (network) return this._networks[network][key]
 
     return this._networks[this._chain][key]
+  }
+
+  async client(encrypted, pin) {
+    if (this.account) {
+      const wallet = await this.decryptWallet(encrypted, pin)
+
+      return await SigningStargateClient.connectWithSigner(
+        this.config('RPC'),
+        wallet,
+        {
+          gasLimits: this.gasLimits,
+          gasPrice: this.gasPrice,
+        }
+      )
+    }
   }
 
   async init(mnemonic, pin) {
@@ -46,17 +53,6 @@ export default class Chain {
 
     this.account = (await wallet.getAccounts()).shift()
 
-    if (this.account) {
-      this.client = await SigningStargateClient.connectWithSigner(
-        this.config('RPC'),
-        wallet,
-        {
-          gasLimits: this.gasLimits,
-          gasPrice: this.gasPrice,
-        }
-      )
-    }
-
     return await wallet.serialize(pin)
   }
 
@@ -64,31 +60,26 @@ export default class Chain {
     return await Secp256k1HdWallet.deserialize(serialized, pin)
   }
 
-  async delegate(
-    transferAmount = 0,
-    encrypted,
-    pin,
-    memo = 'Tx created via https://cryptolion.finance wallet.'
-  ) {
+  async delegate(transferAmount = 0, encrypted, pin, memo = null) {
     const amount = coin(transferAmount, 'base' + this.config('PREFIX'))
 
-    return await this.client.delegateTokens(
+    const client = await this.client(encrypted, pin)
+
+    return await client.delegateTokens(
       this.account.address,
       this.config('VALIDATOR'),
       amount,
-      memo
+      memo ?? this._memo
     )
   }
 
-  async withdraw(
-    encrypted,
-    pin,
-    memo = 'Tx created via https://cryptolion.finance wallet.'
-  ) {
-    return await this.client.withdrawRewards(
+  async withdraw(encrypted, pin, memo = null) {
+    const client = await this.client(encrypted, pin)
+
+    return await client.withdrawRewards(
       this.account.address,
       this.config('VALIDATOR'),
-      memo
+      memo ?? this._memo
     )
   }
 }

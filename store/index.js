@@ -8,6 +8,7 @@ export const state = () => ({
   },
   step: 'first',
   pin: 'TODO',
+  confirmed: false,
   encryptedWallet: null,
   balance: 0,
   rewards: 0,
@@ -35,7 +36,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async initClient({ commit, state, dispatch }, mnemonic) {
+  async init({ commit, state, dispatch }, mnemonic) {
     // TODO: check existence on session storage
     const encryptedWallet = await this.$chain.init(mnemonic, state.pin)
 
@@ -45,26 +46,10 @@ export const actions = {
     })
     // TODO: save it on session storage
 
-    await dispatch('fetchBalance')
-    await dispatch('fetchRewards')
+    await dispatch('fetchBalances')
   },
 
-  async fetchBalance({ commit, state }) {
-    let balance = await this.$chain.client.getBalance(
-      this.$chain.account.address,
-      'base' + this.$chain.config('PREFIX')
-    )
-
-    balance = new Big(balance.amount)
-    balance = balance.div(100000000)
-
-    commit('set', {
-      name: 'balance',
-      value: balance.toPrecision(5),
-    })
-  },
-
-  async fetchRewards({ commit, state }) {
+  async fetchBalances({ commit, state }) {
     const account = await this.$axios.$get(
       this.$chain.config('EXPLORER_API') +
         '/accounts/' +
@@ -72,27 +57,34 @@ export const actions = {
     )
 
     if (account.result.totalRewards.length) {
-      let rewards = new Big(account.result.totalRewards[0].amount)
-      rewards = rewards.div(100000000)
+      const rewards = new Big(account.result.totalRewards[0].amount)
+        .div(100000000)
+        .toPrecision(5)
       commit('set', {
         name: 'rewards',
-        value: rewards.toPrecision(5),
+        value: rewards > 0 ? rewards : 0,
       })
-
-      let staked = new Big(account.result.bondedBalance[0].amount)
-      staked = staked.div(100000000)
-      commit('set', {
-        name: 'staked',
-        value: staked.toPrecision(5),
-      })
-
-      return
     }
 
-    commit('set', {
-      name: 'rewards',
-      value: 0,
-    })
+    if (account.result.bondedBalance.length) {
+      const staked = new Big(account.result.bondedBalance[0].amount)
+        .div(100000000)
+        .toPrecision(5)
+      commit('set', {
+        name: 'staked',
+        value: staked > 0 ? staked : 0,
+      })
+    }
+
+    if (account.result.balance.length) {
+      const balance = new Big(account.result.balance[0].amount)
+        .div(100000000)
+        .toPrecision(5)
+      commit('set', {
+        name: 'balance',
+        value: balance > 0 ? balance : 0,
+      })
+    }
   },
 
   async stake({ commit, state, dispatch }, amount) {
@@ -109,7 +101,7 @@ export const actions = {
       value: response.transactionHash,
     })
 
-    await dispatch('fetchBalance')
+    await dispatch('fetchBalances')
   },
 
   async withdraw({ state, dispatch }) {
@@ -120,9 +112,7 @@ export const actions = {
 
     if (response?.code && response.code !== 0) throw new Error(response.rawLog)
 
-    await dispatch('fetchBalance')
-
-    dispatch('fetchRewards')
+    await dispatch('fetchBalances')
   },
 
   resetStore({ commit }) {

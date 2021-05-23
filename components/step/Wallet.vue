@@ -357,8 +357,7 @@ export default {
         this.$store.state.step === 'wallet'
       ) {
         this.reloadingBalance = true
-        await this.$store.dispatch('fetchBalance')
-        await this.$store.dispatch('fetchRewards')
+        await this.$store.dispatch('fetchBalances')
         this.reloadingBalance = false
       }
     }, 10000)
@@ -415,7 +414,7 @@ export default {
       this.reloadingBalance = true
 
       try {
-        await this.$store.dispatch('fetchBalance')
+        await this.$store.dispatch('fetchBalances')
       } catch (error) {
         this.$store.commit('setDialogMessage', error.message)
         this.$store.commit('showDialog')

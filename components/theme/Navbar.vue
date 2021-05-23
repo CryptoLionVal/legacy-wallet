@@ -245,7 +245,7 @@ export default {
       }
     },
     buttonText() {
-      return this.$chain.client === null
+      return this.$store.state.balance === 0
         ? this.$t('stake_now.name')
         : this.$store.state.balance +
             ' ' +
