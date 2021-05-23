@@ -274,11 +274,11 @@ export default {
     messages: {
       password: `Please enter a 6 digit number password to secure your wallet during the session: `,
       confirm: `Please confirm your password:`,
+      wrong: `Wrong password, please try again.`,
+      unlock: `Please enter your pin:`,
     },
     buttons: {
-      default: `Okay`,
-      confirm: `Confirm`,
-      reject: `Close`,
+      close: `Close`,
     },
   },
 

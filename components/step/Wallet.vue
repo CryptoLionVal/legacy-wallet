@@ -42,13 +42,14 @@
                 :value="$chain.account.address"
                 readonly
                 type="text"
-                size="46"
+                size="40"
                 class="
                   bg-white
                   opacity-75
                   py-1
                   focus:outline-none
-                  px-3
+                  px-2
+                  md:px3
                   text-gray-800
                   md:text-base
                   text-xs
@@ -364,15 +365,22 @@ export default {
   },
   methods: {
     async stake() {
-      if (
-        this.loading ||
-        !confirm(this.$t('pages.how_to_stake_cro.steps.wallet.stake_confirm'))
-      )
-        return
+      if (this.loading) return
 
       this.loading = true
 
-      // TODO: Confirm password
+      this.$store.commit('setDialogMessage', this.$t('dialog.messages.unlock'))
+      this.$store.commit('setDialogType', 'confirm')
+      this.$store.commit('showDialog')
+      const confirmed = await this.$store.dispatch('confirmPass')
+      if (!confirmed) {
+        this.$store.commit('setDialogType', 'warning')
+        this.$store.commit('setDialogMessage', this.$t('dialog.messages.wrong'))
+        this.$store.commit('showDialog')
+
+        this.loading = false
+        return
+      }
 
       try {
         await this.$store.dispatch('stake', this.amount)
@@ -386,16 +394,24 @@ export default {
       this.loading = false
     },
     async withdrawRewards() {
-      if (
-        this.withdrawingRewards ||
-        !confirm(this.$t('pages.how_to_stake_cro.steps.wallet.rewards_confirm'))
-      )
-        return
+      if (this.withdrawingRewards) return
 
       this.loading = true
       this.withdrawingRewards = true
 
-      // TODO: Confirm password
+      this.$store.commit('setDialogMessage', this.$t('dialog.messages.unlock'))
+      this.$store.commit('setDialogType', 'confirm')
+      this.$store.commit('showDialog')
+      const confirmed = await this.$store.dispatch('confirmPass')
+      if (!confirmed) {
+        this.$store.commit('setDialogType', 'warning')
+        this.$store.commit('setDialogMessage', this.$t('dialog.messages.wrong'))
+        this.$store.commit('showDialog')
+
+        this.loading = false
+        this.withdrawingRewards = false
+        return
+      }
 
       try {
         await this.$store.dispatch('withdraw')

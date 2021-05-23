@@ -287,6 +287,18 @@ export default {
     desc: `Bu servisi kullanarak kabul ettiğiniz şartlara bu sayfadan göz atabilirsiniz: `,
   },
 
+  dialog: {
+    messages: {
+      password: `Lütfen, oturum boyunca cüzdanınızı güvenli bir şekilde şifrelemek için 6 haneli PIN oluşturun: `,
+      confirm: `Lütfen PIN'i yeniden girin:`,
+      wrong: `Yanlış şifre, işlemi gerçekleştirmek için doğru şifreyi girmelisiniz.`,
+      unlock: `Lütfen şifrenizi girin:`,
+    },
+    buttons: {
+      close: `Kapat`,
+    },
+  },
+
   cookie: {
     message: `Çerezleri trafik analizi için kullanmamıza izin verir misiniz? Detaylar için lütfen gizlilik sayfamızı ziyaret edin.`,
     accept_button: `Evet`,

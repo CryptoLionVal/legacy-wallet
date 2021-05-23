@@ -12,6 +12,8 @@
           flex
           items-end
           justify-center
+          items-center
+          m-3
           min-h-screen
           text-center
           sm:block
@@ -44,13 +46,19 @@
             sm:w-full
           "
         >
-          <h2 class="gradient w-full text-xl py-2 leading-6 px-4 text-gray-200">
+          <h2
+            v-if="dialogType !== 'warning'"
+            class="gradient w-full text-xl py-2 leading-6 px-4 text-gray-200"
+          >
             {{ $store.state.dialog.message }}
           </h2>
-          <div class="bg-white p-5 w-full">
+          <h2 v-else class="w-full text-xl pt-5 leading-6 px-4 text-gray-800">
+            {{ $store.state.dialog.message }}
+          </h2>
+          <div class="bg-white p-2 md:p-5 w-full">
             <div class="flex flex-col pt-4">
               <form
-                v-if="dialogType === 'password'"
+                v-if="dialogType === 'password' || dialogType === 'confirm'"
                 autocomplete="off"
                 class="flex justify-between w-full"
               >
@@ -63,7 +71,8 @@
                   maxlength="1"
                   class="
                     w-1/6
-                    h-16
+                    h-8
+                    md:h-16
                     mx-1
                     text-center
                     border-2
@@ -89,7 +98,8 @@
                     content-center
                     justify-center
                     flex-auto
-                    p-4
+                    p-2
+                    md:p-4
                     m-0
                     ml-2
                     gradient
@@ -108,14 +118,13 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="1 "
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="ml-2 mr-3"
+                    class="ml-2 mr-3 w-4 md:w-8 md:h-8 h-4"
                   >
                     <path
                       class="heroicon-ui"
@@ -135,7 +144,6 @@
                   justify-center
                   w-1/5
                   p-1
-                  mt-6
                   bg-transparent
                   text-red-600
                   font-bold
@@ -148,7 +156,7 @@
                 @click.prevent="$store.commit('hideDialog')"
               >
                 <span class="text-xl">
-                  {{ $t('pages.how_to_stake_cro.dialog_button') }}
+                  {{ $t('dialog.buttons.close') }}
                 </span>
               </a>
             </div>
@@ -185,11 +193,11 @@ export default {
       return this.$store.state.dialog.show
     },
     validPassword() {
-      return (
-        this.pin.length === 6 &&
-        this.first.length === 6 &&
-        this.pin === this.first
-      )
+      return this.dialogType === 'password'
+        ? this.pin.length === 6 &&
+            this.first.length === 6 &&
+            this.pin === this.first
+        : this.pin.length === 6
     },
   },
   watch: {
@@ -207,12 +215,33 @@ export default {
   },
   methods: {
     hide() {
-      if (this.$store.state.dialog.type === 'password') {
+      this.$store.commit('hideDialog')
+
+      if (this.dialogType === 'password') {
         this.$store.commit('set', { name: 'pin', value: this.first })
+        this.$store.state.saved(true)
+      } else {
+        this.$store.commit('set', { name: 'saved', value: null })
       }
 
-      this.$store.commit('hideDialog')
+      if (this.dialogType === 'confirm' && this.$store.state.pin === this.pin) {
+        this.$store.state.confirmed(true)
+      } else if (typeof this.$store.state.confirmed === 'function') {
+        this.$store.state.confirmed(false)
+      }
+
       this.$store.dispatch('resetDialog')
+      this.current = 1
+      this.first = ''
+      this.pin = ''
+      this.models = {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+        5: '',
+        6: '',
+      }
     },
     handleInput(e) {
       switch (e.key) {
@@ -245,7 +274,11 @@ export default {
 
       if (this.validPassword) this.$refs.unlock.focus()
 
-      if (this.pin.length === 6 && this.first.length === 0) {
+      if (
+        this.pin.length === 6 &&
+        this.first.length === 0 &&
+        this.dialogType === 'password'
+      ) {
         this.first = this.pin
         this.current = 1
         this.models = {

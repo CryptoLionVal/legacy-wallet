@@ -161,32 +161,30 @@ export default {
     },
   },
   methods: {
-    askForPassword() {
+    async askForPassword() {
       this.$store.commit('setDialogType', 'password')
       this.$store.commit(
         'setDialogMessage',
         this.$t('dialog.messages.password')
       )
       this.$store.commit('showDialog')
+
+      return await this.$store.dispatch('savePass')
     },
     async decryptWallet() {
       this.loading = true
 
-      if (this.pin.length === 0) {
-        this.askForPassword()
+      if (this.pin.length === 0 && (await this.askForPassword())) {
+        try {
+          await this.$store.dispatch('init', this.mnemonic)
 
-        return
-      }
+          this.mnemonic = ''
 
-      try {
-        await this.$store.dispatch('init', this.mnemonic)
-
-        this.mnemonic = ''
-
-        this.$store.commit('set', { name: 'step', value: 'wallet' })
-      } catch (error) {
-        this.$store.commit('setDialogMessage', error.message)
-        this.$store.commit('showDialog')
+          this.$store.commit('set', { name: 'step', value: 'wallet' })
+        } catch (error) {
+          this.$store.commit('setDialogMessage', error.message)
+          this.$store.commit('showDialog')
+        }
       }
 
       this.loading = false

@@ -7,8 +7,9 @@ export const state = () => ({
     message: '',
   },
   step: 'first',
-  pin: 'TODO',
-  confirmed: false,
+  pin: '',
+  confirmed: null,
+  saved: null,
   encryptedWallet: null,
   balance: 0,
   rewards: 0,
@@ -132,10 +133,40 @@ export const actions = {
       name: 'lastHash',
       value: '',
     })
+    commit('set', {
+      name: 'pin',
+      value: '',
+    })
+    commit('set', {
+      name: 'confirmed',
+      value: null,
+    })
+    commit('set', {
+      name: 'saved',
+      value: null,
+    })
   },
 
   resetDialog({ commit }) {
     commit('setDialogMessage', '')
     commit('setDialogType', 'warning')
+  },
+
+  confirmPass({ commit }) {
+    return new Promise((resolve) => {
+      commit('set', {
+        name: 'confirmed',
+        value: resolve,
+      })
+    })
+  },
+
+  savePass({ commit }) {
+    return new Promise((resolve) => {
+      commit('set', {
+        name: 'saved',
+        value: resolve,
+      })
+    })
   },
 }

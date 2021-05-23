@@ -265,7 +265,7 @@ export default {
   },
   methods: {
     navigate() {
-      if (this.$chain.client) {
+      if (this.$store.state.balance > 0) {
         this.$store.commit('set', { name: 'step', value: 'wallet' })
 
         return
