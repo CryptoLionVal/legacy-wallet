@@ -168,21 +168,24 @@
 </template>
 
 <script>
+import { Sha256 } from '@cosmjs/crypto'
+
+const models = {
+  1: '',
+  2: '',
+  3: '',
+  4: '',
+  5: '',
+  6: '',
+}
+
 export default {
   data() {
     return {
       current: 1,
       first: '',
       pin: '',
-      showDigits: false, // TODO
-      models: {
-        1: '',
-        2: '',
-        3: '',
-        4: '',
-        5: '',
-        6: '',
-      },
+      models: { ...models },
     }
   },
   computed: {
@@ -191,6 +194,9 @@ export default {
     },
     visible() {
       return this.$store.state.dialog.show
+    },
+    encryptedPin() {
+      return new Sha256(this.pin).digest().toString()
     },
     validPassword() {
       return this.dialogType === 'password'
@@ -218,30 +224,20 @@ export default {
       this.$store.commit('hideDialog')
 
       if (this.dialogType === 'password') {
-        this.$store.commit('set', { name: 'pin', value: this.first })
+        this.$store.dispatch('savePin', this.pin)
         this.$store.state.saved(true)
+      } else if (
+        this.dialogType === 'confirm' &&
+        this.$store.state.pin === this.encryptedPin
+      ) {
+        this.$store.state.confirmed(true)
+      } else if (typeof this.$store.state.confirmed === 'function') {
+        this.$store.state.confirmed(false)
       } else {
         this.$store.commit('set', { name: 'saved', value: null })
       }
 
-      if (this.dialogType === 'confirm' && this.$store.state.pin === this.pin) {
-        this.$store.state.confirmed(true)
-      } else if (typeof this.$store.state.confirmed === 'function') {
-        this.$store.state.confirmed(false)
-      }
-
-      this.$store.dispatch('resetDialog')
-      this.current = 1
-      this.first = ''
-      this.pin = ''
-      this.models = {
-        1: '',
-        2: '',
-        3: '',
-        4: '',
-        5: '',
-        6: '',
-      }
+      this.reset()
     },
     handleInput(e) {
       switch (e.key) {
@@ -281,14 +277,7 @@ export default {
       ) {
         this.first = this.pin
         this.current = 1
-        this.models = {
-          1: '',
-          2: '',
-          3: '',
-          4: '',
-          5: '',
-          6: '',
-        }
+        this.models = { ...models }
         this.$store.commit(
           'setDialogMessage',
           this.$t('dialog.messages.confirm')
@@ -296,6 +285,14 @@ export default {
 
         this.$refs[1][0].focus()
       }
+    },
+    reset() {
+      this.$store.dispatch('resetDialog')
+
+      this.current = 1
+      this.first = ''
+      this.pin = ''
+      this.models = { ...models }
     },
   },
 }

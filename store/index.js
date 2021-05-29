@@ -1,4 +1,5 @@
 import Big from 'big.js'
+import { Sha256 } from '@cosmjs/crypto'
 
 export const state = () => ({
   dialog: {
@@ -168,5 +169,11 @@ export const actions = {
         value: resolve,
       })
     })
+  },
+
+  savePin({ commit }, pin) {
+    const protectedPin = new Sha256(pin)
+
+    commit('set', { name: 'pin', value: protectedPin.digest().toString() })
   },
 }

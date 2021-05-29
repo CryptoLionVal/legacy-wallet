@@ -7,7 +7,7 @@ export default {
     HD_PATH: "m/44'/1'/0'/0/0",
     PREFIX: 'tcro',
     EXPLORER: 'https://crypto.org/explorer/croeseid3',
-    EXPLORER_API: 'https://crypto.org/service/explorer/croeseid/api/v1',
+    EXPLORER_API: 'https://crypto.org/explorer/croeseid3/api/v1',
   },
   MAINNET: {
     RPC: 'https://mainnet.crypto.org:26657',
