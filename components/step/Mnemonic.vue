@@ -149,6 +149,9 @@ export default {
     pin() {
       return this.$store.state.pin
     },
+    step() {
+      return this.$store.state.step
+    },
     client() {
       return this.$chain.client
     },
@@ -157,6 +160,17 @@ export default {
     pin(newValue) {
       if (newValue.length === 6 && this.client === null) {
         this.decryptWallet()
+      }
+    },
+    step(newValue) {
+      if (
+        newValue === 'mnemonic' &&
+        this.$store.state.encryptedWallet !== null
+      ) {
+        this.$store.commit('set', {
+          name: 'step',
+          value: 'wallet',
+        })
       }
     },
   },

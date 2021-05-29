@@ -40,7 +40,9 @@ export default {
 
       this.$store.dispatch('resetStore')
 
-      this.$chain.client = null
+      sessionStorage.removeItem('lion_encrypted_wallet')
+      sessionStorage.removeItem('lion_encrypted_pin')
+      sessionStorage.removeItem('lion_account_address')
     },
   },
 }

@@ -39,19 +39,17 @@ export const mutations = {
 
 export const actions = {
   async init({ commit, state, dispatch }, mnemonic) {
-    // TODO: check existence on session storage
     const encryptedWallet = await this.$chain.init(mnemonic, state.pin)
 
     commit('set', {
       name: 'encryptedWallet',
       value: encryptedWallet,
     })
-    // TODO: save it on session storage
 
     await dispatch('fetchBalances')
   },
 
-  async fetchBalances({ commit, state }) {
+  async fetchBalances({ commit }) {
     const account = await this.$axios.$get(
       this.$chain.config('EXPLORER_API') +
         '/accounts/' +
@@ -171,9 +169,10 @@ export const actions = {
     })
   },
 
-  savePin({ commit }, pin) {
+  savePin({ commit, state }, pin) {
     const protectedPin = new Sha256(pin)
 
     commit('set', { name: 'pin', value: protectedPin.digest().toString() })
+    sessionStorage.setItem('lion_encrypted_pin', state.pin)
   },
 }

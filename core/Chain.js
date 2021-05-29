@@ -43,7 +43,16 @@ export default class Chain {
     }
   }
 
-  async init(mnemonic, pin) {
+  async init(mnemonic = '', pin = '') {
+    if (
+      sessionStorage.getItem('lion_encrypted_wallet') &&
+      sessionStorage.getItem('lion_account_address')
+    ) {
+      this.account = JSON.parse(sessionStorage.getItem('lion_account_address'))
+
+      return sessionStorage.getItem('lion_encrypted_wallet')
+    }
+
     const path = stringToPath(this.config('HD_PATH'))
 
     const wallet = await Secp256k1HdWallet.fromMnemonic(mnemonic, {
@@ -52,8 +61,12 @@ export default class Chain {
     })
 
     this.account = (await wallet.getAccounts()).shift()
+    sessionStorage.setItem('lion_account_address', JSON.stringify(this.account))
 
-    return await wallet.serialize(pin)
+    const seriialized = await wallet.serialize(pin)
+    sessionStorage.setItem('lion_encrypted_wallet', seriialized)
+
+    return seriialized
   }
 
   async decryptWallet(serialized, pin) {

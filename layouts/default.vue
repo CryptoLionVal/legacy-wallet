@@ -15,7 +15,10 @@
 </template>
 
 <script>
+import storage from '@/mixins/storage'
+
 export default {
+  mixins: [storage],
   head() {
     return {
       titleTemplate: this.$t('title_template'),
