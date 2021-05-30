@@ -195,6 +195,12 @@ export default {
           this.$store.commit('set', { name: 'step', value: 'wallet' })
         } catch (error) {
           this.$store.dispatch('warningDialog', error.message)
+
+          this.$store.dispatch('resetStore')
+
+          sessionStorage.removeItem('lion_encrypted_wallet')
+          sessionStorage.removeItem('lion_encrypted_pin')
+          sessionStorage.removeItem('lion_account_address')
         }
       }
 
