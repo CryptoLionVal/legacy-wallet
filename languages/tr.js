@@ -17,11 +17,20 @@ export default {
       <h2 class="text-3xl">Genel</h2>
       <br>
       <p>
-      Kullanıcı fonladığı CRO'lardan sorumludur. Crypto Lion hiçbir sorumluluk kabul etmez. Bakım
-      çalışmaları ve olası hizmet dışı durumlarından haberdar olmak için Twitter veya Telegramdan takip ediniz.
+      Kullanıcı fonladığı bütün CRO'lardan sadece ve sadece kendisi sorumludur. Crypto Lion hiçbir sorumluluk kabul etmez.
+      Bakım çalışmaları ve olası hizmet dışı durumlardan haberdar olmak için Twitter veya Telegramdan takip edebilir veya
+      alt kısımda yer alan sunucu durumu linkinden haber listemize kayıt olabilirsiniz.
       </p>
       <br>
       <h2 class="text-3xl">Cüzdan Hizmeti</h2>
+      <br>
+      <p>
+      Cüzdan güvenliğini ön planda tutan yazılımımız, önce kullanıcıdan özel anahtar kelimelerini alır ve bu kelimeleri kullanıcının
+      belirlediği 6 haneli PIN ile şifreler. Şifrelenen cüzdan ile SHA256 algoritmasıyla şifrelenen PIN kullanıcının tarayıcısında
+      oturum depolama özelliği kullanılarak güvenli bir şekilde depolanır. Her işlem öncesinde kullanıcıdan tekrar PIN istenir ve
+      cüzdan geriye döndürülüp kullanılır. Kullanıcı cüzdanını kapatmak siterse bütün oturum verisi silinir. Kaynak kodunda
+      bütün akışı inceleyebilirsiniz.
+      </p>
       <br>
       <p>
           <strong class="text-red-600">Sorumluluk reddi:</strong> Bu yöntemi
@@ -29,7 +38,7 @@ export default {
           Crypto Lion bu hizmeti yalnızca
           <strong class="text-green-500">https://cryptolion.finance</strong>
           adresinden sağlamaktadır. Cüzdan bilgileriniz hiçbir şekilde
-          saklanmaz. Kaynak kodunu en altta yer alan bağlantıdan
+          saklanmaz. Kaynak kodunu en altta yer alan GitHub bağlantısından
           inceleyebilirsiniz.
       </p>
       `,
@@ -55,6 +64,27 @@ export default {
       </p>
       <p>
       Eğer kabul etmezseniz bu bilgiler toplanmaz.
+      </p>
+      <br>
+
+      <h2 class="text-3xl">Tarayıcı Oturum Depolama</h2>
+      <br>
+      <p>
+      Tarayıcı Oturum Depolama özelliği, birçok modern tarayıcının oturum bilgilerini geçiçi olarak kullanıcının bilgisyarında
+      depolayabilmesine imkan tanır. Crypto Lion aşağıda anahtar kelimeleri verilen ayarlarını kullanıcı cüzdanını açtığı andan
+      itibaren oturum depolama üzerinde depolar. Detayli bilgi için lütfen
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"
+        title="MDN Session Storage"
+        rel="nofollow"
+        class="underline"
+        target="_blank">bu kaynağı</a> inceleyin.
+      <br>
+      <br>
+      <ul>
+        <li><strong>lion_account_address</strong>: Cüzdan adres bilgisi</li>
+        <li><strong>lion_encrypted_wallet</strong>: PIN ile şifrelenmiş cüzdan bilgisi</li>
+        <li><strong>lion_encrypted_pin</strong>: SHA256 ile geri döndürülemez bir şekilde güvenli hale getirilmiş 6 haneli PIN'iniz.</li>
+      </ul>
       </p>
       `,
     },

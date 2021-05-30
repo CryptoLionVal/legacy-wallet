@@ -23,6 +23,13 @@ export default {
       <h2 class="text-3xl">Wallet Service</h2>
       <br>
       <p>
+      Our wallet software reliable and safe for end users. When you open your wallet with your secret words, we are going
+      to ask you a 6 digit number PIN to securely encrypt it and save to the session storage. Both encrypted wallet and hashed
+      user PIN stored on users computer until session end or user decide to close their wallet. Please follow the link on the footer
+      named GitHub in order to review our open source wallet code.
+      </p>
+      <br>
+      <p>
           <strong class="text-red-600">Disclaimer:</strong> By using this option,
           you are accepting that all responsibility belongs to you.
           Crypto Lion only serve this option on
@@ -56,6 +63,25 @@ export default {
       </p>
       <p>
       These information will not be collected if you deny the use of cookies.
+      </p>
+      <br>
+      <h2 class="text-3xl">Browser Session Storage</h2>
+      <br>
+      <p>
+      Session Storage API lets us store data on user's modern browser in order to achieve temporary data storage. Crypto Lion
+      Wallet stores below datas on user's computer since user open their wallet. For details please refer this
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"
+        title="MDN Session Storage"
+        rel="nofollow"
+        class="underline"
+        target="_blank">link</a>.
+      <br>
+      <br>
+      <ul>
+        <li><strong>lion_account_address</strong>: Wallet address data</li>
+        <li><strong>lion_encrypted_wallet</strong>: Encrypted wallet data via PIN</li>
+        <li><strong>lion_encrypted_pin</strong>: 6 digit hashed PIN</li>
+      </ul>
       </p>
       `,
     },
