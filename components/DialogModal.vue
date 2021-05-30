@@ -51,6 +51,10 @@
             class="gradient w-full text-xl py-2 leading-6 px-4 text-gray-200"
           >
             {{ $store.state.dialog.message }}
+
+            <button class="float-right font-black text-red-600" @click="hide">
+              x
+            </button>
           </h2>
           <h2 v-else class="w-full text-xl pt-5 leading-6 px-4 text-gray-800">
             {{ $store.state.dialog.message }}
