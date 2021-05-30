@@ -118,7 +118,7 @@ export default {
 <style scoped>
 .container {
   width: 500px;
-  top: 15vh;
+  bottom: 10vh;
   right: -405px;
 }
 .container:hover {

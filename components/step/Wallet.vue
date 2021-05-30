@@ -42,7 +42,7 @@
                 :value="$chain.account.address"
                 readonly
                 type="text"
-                size="40"
+                size="35"
                 class="
                   bg-white
                   opacity-75

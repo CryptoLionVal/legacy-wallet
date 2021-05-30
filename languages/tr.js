@@ -151,7 +151,7 @@ export default {
               next: true
             },
             {
-              title: `Yatırımınızı Stake Edin`,
+              title: `Yatırımınızı Fonlayın`,
               desc: `
            Stake sekmesine gidin ve cüzdan adresimizi yapıştırın.
           `,
@@ -198,7 +198,7 @@ export default {
               next: true
             },
             {
-              title: `Yatırımınızı Stake Edin`,
+              title: `Yatırımınızı Fonlayın`,
               desc: `
            Stake sekmesine gidin ve cüzdan adresimizi yapıştırın.
           `,
@@ -297,8 +297,8 @@ export default {
   },
 
   stake_now: {
-    name: `Stake edin`,
-    title: `Ödül kazanmak için CROlarınızı stake edin!`
+    name: `CRO Fonlayın`,
+    title: `Ödül kazanmak için CROlarınızı Fonlayın!`
   },
 
   copier: {
@@ -398,7 +398,7 @@ export default {
           `
         },
         third: {
-          title: `CRO'larınızı Crypto Lion'a stake edin`,
+          title: `CRO'larınızı Crypto Lion'a Fonlayın`,
           desc: `
             Cüzdan uygulamasını açın ve
             <span class="font-bold">Staking</span> sekmesini seçin, daha sonra

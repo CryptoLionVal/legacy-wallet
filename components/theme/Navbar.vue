@@ -13,7 +13,16 @@
         py-2
       "
     >
-      <div class="pl-4 flex flex-col md:flex-row items-center text-gray-100">
+      <div
+        class="
+          pl-4
+          flex flex-col
+          lg:flex-row
+          md:flex-row
+          items-center
+          text-gray-100
+        "
+      >
         <NuxtLink
           prefetch
           :to="localePath('/')"
@@ -142,8 +151,8 @@
         :class="contentClasses"
         class="
           w-full
-          flex-grow
-          lg:flex
+          flex flex-col
+          lg:flex-row lg:flex
           lg:items-center
           lg:w-auto
           mt-2
@@ -155,7 +164,7 @@
           z-20
         "
       >
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+        <ul class="list-reset flex justify-end w-full lg:w-5/6 items-center">
           <li class="mr-3" @click="hideMenu = true">
             <NuxtLink
               v-for="link in $t('navbar.links')"
@@ -186,9 +195,12 @@
             lg:mx-0
             font-bold
             rounded-full
-            mt-4
-            lg:mt-0
-            py-3
+            my-2
+            w-4/6
+            lg:w-1/6
+            lg:my-0
+            py-2
+            text-center
             px-6
             shadow
             opacity-75
