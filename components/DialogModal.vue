@@ -89,6 +89,7 @@
                 />
                 <button
                   ref="unlock"
+                  type="button"
                   :disabled="!validPassword"
                   :class="{
                     'cursor-not-allowed': !validPassword,

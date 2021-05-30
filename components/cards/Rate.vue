@@ -25,7 +25,7 @@
       :class="{ 'animate-ping': loading, 'animate-pulse': !loading }"
       class="inline-flex rounded-full h-2 w-2 bg-green-500 mr-2"
     ></span
-    >{{ rate }}% p.a. | 0% {{ $t('navbar.rate.fee') }}
+    >{{ rate }}% p.a. | {{ commission }}% {{ $t('navbar.rate.fee') }}
   </button>
 </template>
 
@@ -38,6 +38,7 @@ export default {
     return {
       ap: 1,
       delegated: 1,
+      commission: 0,
       loading: true,
       hidden: true,
     }
@@ -66,6 +67,13 @@ export default {
         NetworksConfig[process.env.CHAIN].EXPLORER_API + '/status'
       )
       this.delegated = parseInt(delegated.result.totalDelegated[0].amount)
+
+      const commission = await this.$axios.$get(
+        NetworksConfig[process.env.CHAIN].EXPLORER_API +
+          '/validators/' +
+          NetworksConfig[process.env.CHAIN].VALIDATOR
+      )
+      this.commission = parseInt(commission.result.commissionRate * 100)
 
       this.loading = false
     },
