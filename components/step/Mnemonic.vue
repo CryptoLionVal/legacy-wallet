@@ -176,12 +176,10 @@ export default {
   },
   methods: {
     async askForPassword() {
-      this.$store.commit('setDialogType', 'password')
-      this.$store.commit(
-        'setDialogMessage',
+      this.$store.dispatch(
+        'passwordDialog',
         this.$t('dialog.messages.password')
       )
-      this.$store.commit('showDialog')
 
       return await this.$store.dispatch('savePass')
     },
@@ -196,8 +194,7 @@ export default {
 
           this.$store.commit('set', { name: 'step', value: 'wallet' })
         } catch (error) {
-          this.$store.commit('setDialogMessage', error.message)
-          this.$store.commit('showDialog')
+          this.$store.dispatch('warningDialog', error.message)
         }
       }
 

@@ -23,17 +23,14 @@ export const mutations = {
   set: (state, { name, value }) => {
     state[name] = value
   },
+  dialog: (state, { name, value }) => {
+    state.dialog[name] = value
+  },
   showDialog(state) {
     state.dialog.show = true
   },
   hideDialog(state) {
     state.dialog.show = false
-  },
-  setDialogMessage(state, message) {
-    state.dialog.message = message
-  },
-  setDialogType(state, type) {
-    state.dialog.type = type
   },
 }
 
@@ -146,11 +143,6 @@ export const actions = {
     })
   },
 
-  resetDialog({ commit }) {
-    commit('setDialogMessage', '')
-    commit('setDialogType', 'warning')
-  },
-
   confirmPass({ commit }) {
     return new Promise((resolve) => {
       commit('set', {
@@ -174,5 +166,49 @@ export const actions = {
 
     commit('set', { name: 'pin', value: protectedPin.digest().toString() })
     sessionStorage.setItem('lion_encrypted_pin', state.pin)
+  },
+
+  warningDialog({ commit }, message) {
+    commit('set', {
+      name: 'dialog',
+      value: {
+        show: true,
+        type: 'warning',
+        message,
+      },
+    })
+  },
+
+  passwordDialog({ commit }, message) {
+    commit('set', {
+      name: 'dialog',
+      value: {
+        show: true,
+        type: 'password',
+        message,
+      },
+    })
+  },
+
+  confirmDialog({ commit }, message) {
+    commit('set', {
+      name: 'dialog',
+      value: {
+        show: true,
+        type: 'confirm',
+        message,
+      },
+    })
+  },
+
+  resetDialog({ commit }) {
+    commit('set', {
+      name: 'dialog',
+      value: {
+        show: false,
+        type: 'warning',
+        message: '',
+      },
+    })
   },
 }

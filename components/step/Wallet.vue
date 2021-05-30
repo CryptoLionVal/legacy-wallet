@@ -369,14 +369,11 @@ export default {
 
       this.loading = true
 
-      this.$store.commit('setDialogMessage', this.$t('dialog.messages.unlock'))
-      this.$store.commit('setDialogType', 'confirm')
-      this.$store.commit('showDialog')
+      this.$store.dispatch('confirmDialog', this.$t('dialog.messages.unlock'))
+
       const confirmed = await this.$store.dispatch('confirmPass')
       if (!confirmed) {
-        this.$store.commit('setDialogType', 'warning')
-        this.$store.commit('setDialogMessage', this.$t('dialog.messages.wrong'))
-        this.$store.commit('showDialog')
+        this.$store.dispatch('warningDialog', this.$t('dialog.messages.wrong'))
 
         this.loading = false
         return
@@ -387,8 +384,7 @@ export default {
 
         this.$store.commit('set', { name: 'step', value: 'final' })
       } catch (error) {
-        this.$store.commit('setDialogMessage', error.message)
-        this.$store.commit('showDialog')
+        this.$store.dispatch('warningDialog', error.message)
       }
 
       this.loading = false
@@ -399,14 +395,11 @@ export default {
       this.loading = true
       this.withdrawingRewards = true
 
-      this.$store.commit('setDialogMessage', this.$t('dialog.messages.unlock'))
-      this.$store.commit('setDialogType', 'confirm')
-      this.$store.commit('showDialog')
+      this.$store.dispatch('confirmDialog', this.$t('dialog.messages.unlock'))
+
       const confirmed = await this.$store.dispatch('confirmPass')
       if (!confirmed) {
-        this.$store.commit('setDialogType', 'warning')
-        this.$store.commit('setDialogMessage', this.$t('dialog.messages.wrong'))
-        this.$store.commit('showDialog')
+        this.$store.dispatch('warningDialog', this.$t('dialog.messages.wrong'))
 
         this.loading = false
         this.withdrawingRewards = false
@@ -416,8 +409,7 @@ export default {
       try {
         await this.$store.dispatch('withdraw')
       } catch (error) {
-        this.$store.commit('setDialogMessage', error.message)
-        this.$store.commit('showDialog')
+        this.$store.dispatch('warningDialog', error.message)
       }
 
       this.loading = false
@@ -432,8 +424,7 @@ export default {
       try {
         await this.$store.dispatch('fetchBalances')
       } catch (error) {
-        this.$store.commit('setDialogMessage', error.message)
-        this.$store.commit('showDialog')
+        this.$store.dispatch('warningDialog', error.message)
       }
 
       this.loading = false

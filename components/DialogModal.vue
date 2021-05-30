@@ -282,10 +282,10 @@ export default {
         this.first = this.pin
         this.current = 1
         this.models = { ...models }
-        this.$store.commit(
-          'setDialogMessage',
-          this.$t('dialog.messages.confirm')
-        )
+        this.$store.commit('dialog', {
+          name: 'message',
+          value: this.$t('dialog.messages.confirm'),
+        })
 
         this.$refs[1][0].focus()
       }
