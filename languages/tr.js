@@ -297,7 +297,7 @@ export default {
   },
 
   stake_now: {
-    name: `CRO Fonlayın`,
+    name: `Şimdi Fonlayın`,
     title: `Ödül kazanmak için CROlarınızı Fonlayın!`
   },
 
