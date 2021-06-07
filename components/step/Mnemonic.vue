@@ -196,6 +196,7 @@ export default {
         } catch (error) {
           this.$store.dispatch('warningDialog', error.message)
 
+          this.mnemonic = ''
           this.$store.dispatch('resetStore')
 
           sessionStorage.removeItem('lion_encrypted_wallet')

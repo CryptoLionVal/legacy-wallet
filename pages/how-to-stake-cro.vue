@@ -13,7 +13,7 @@
     <step-final />
 
     <div class="float-right text-xs relative -mt-16 text-gray-300 mr-4">
-      Crypto Lion Wallet v1.1.2
+      Crypto Lion Wallet v1.1.3
     </div>
 
     <theme-divider />
