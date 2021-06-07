@@ -123,7 +123,7 @@
         >
           <div class="flex items-center justify-center">
             <a
-              href="https://twitter.com/CryptocomLion"
+              href="https://twitter.com/CryptoLionVal"
               target="_blank"
               :title="$t('sections.why_us.cards.second.link.title')"
               class="

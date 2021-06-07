@@ -42,7 +42,7 @@
             duration-300
             ease-in-out
           "
-          href="https://twitter.com/CryptocomLion"
+          href="https://twitter.com/CryptoLionVal"
           :title="$t('pages.how_to_stake_cro.steps.final.buttons.twitter')"
           target="_blank"
         >

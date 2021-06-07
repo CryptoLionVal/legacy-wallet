@@ -547,7 +547,7 @@ export default {
             name: `Twitter`,
             target: `_blank`,
             title: `Crypto Lion Validator Twitter Address`,
-            href: `https://twitter.com/CryptocomLion`
+            href: `https://twitter.com/CryptoLionVal`
           },
           {
             name: `Telegram`,

@@ -188,7 +188,7 @@
           type="number"
           min="0"
           step="0.01"
-          lang="en"
+          pattern="[0-9]+([\.][0-9]+)?"
           :max="parseFloat($store.state.balance).toFixed(2)"
           class="
             rounded-full
