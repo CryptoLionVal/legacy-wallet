@@ -65,7 +65,7 @@ export default {
 
       const delegated = await this.$axios.$get(
         NetworksConfig[process.env.CHAIN].EXPLORER_API + '/status',
-        { withCredentials: false }
+        { crossdomain: true }
       )
       this.delegated = parseInt(delegated.result.totalDelegated[0].amount)
 
@@ -73,7 +73,7 @@ export default {
         NetworksConfig[process.env.CHAIN].EXPLORER_API +
           '/validators/' +
           NetworksConfig[process.env.CHAIN].VALIDATOR,
-        { withCredentials: false }
+        { crossdomain: true }
       )
       this.commission = parseInt(commission.result.commissionRate * 100)
 

@@ -51,7 +51,7 @@ export const actions = {
       this.$chain.config('EXPLORER_API') +
         '/accounts/' +
         this.$chain.account.address,
-      { withCredentials: false }
+      { crossdomain: true }
     )
 
     if (account.result.totalRewards.length) {
