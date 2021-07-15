@@ -64,14 +64,16 @@ export default {
       this.ap = parseInt(ap.annual_provisions)
 
       const delegated = await this.$axios.$get(
-        NetworksConfig[process.env.CHAIN].EXPLORER_API + '/status'
+        NetworksConfig[process.env.CHAIN].EXPLORER_API + '/status',
+        { withCredentials: false }
       )
       this.delegated = parseInt(delegated.result.totalDelegated[0].amount)
 
       const commission = await this.$axios.$get(
         NetworksConfig[process.env.CHAIN].EXPLORER_API +
           '/validators/' +
-          NetworksConfig[process.env.CHAIN].VALIDATOR
+          NetworksConfig[process.env.CHAIN].VALIDATOR,
+        { withCredentials: false }
       )
       this.commission = parseInt(commission.result.commissionRate * 100)
 

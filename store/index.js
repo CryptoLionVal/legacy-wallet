@@ -50,7 +50,8 @@ export const actions = {
     const account = await this.$axios.$get(
       this.$chain.config('EXPLORER_API') +
         '/accounts/' +
-        this.$chain.account.address
+        this.$chain.account.address,
+      { withCredentials: false }
     )
 
     if (account.result.totalRewards.length) {
