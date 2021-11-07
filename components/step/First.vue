@@ -42,8 +42,7 @@
             text-gray-800
             font-bold
             shadow-lg
-            focus:outline-none
-            focus:shadow-outline
+            focus:outline-none focus:shadow-outline
             transform
             transition
             hover:scale-105
@@ -82,8 +81,7 @@
             text-gray-800
             font-bold
             shadow-lg
-            focus:outline-none
-            focus:shadow-outline
+            focus:outline-none focus:shadow-outline
             transform
             transition
             hover:scale-105
@@ -122,8 +120,7 @@
             text-gray-800
             font-bold
             shadow-lg
-            focus:outline-none
-            focus:shadow-outline
+            focus:outline-none focus:shadow-outline
             transform
             transition
             hover:scale-105

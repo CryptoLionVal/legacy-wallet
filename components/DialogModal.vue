@@ -16,8 +16,7 @@
           m-3
           min-h-screen
           text-center
-          sm:block
-          sm:p-0
+          sm:block sm:p-0
         "
       >
         <div
@@ -40,10 +39,7 @@
             shadow-xl
             transform
             transition-all
-            sm:my-8
-            sm:align-middle
-            sm:max-w-lg
-            sm:w-full
+            sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
           "
         >
           <h2
@@ -111,8 +107,7 @@
                     text-gray-200
                     font-bold
                     shadow-lg
-                    focus:outline-none
-                    focus:shadow-outline
+                    focus:outline-none focus:shadow-outline
                     transform
                     transition
                     hover:scale-105

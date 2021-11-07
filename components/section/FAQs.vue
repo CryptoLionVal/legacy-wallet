@@ -26,8 +26,7 @@
             rounded-full
             py-3
             px-4
-            focus:border-blue-500
-            focus:outline-none
+            focus:border-blue-500 focus:outline-none
           "
           type="text"
         />

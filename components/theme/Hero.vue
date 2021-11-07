@@ -46,8 +46,7 @@
               py-4
               px-8
               shadow-lg
-              focus:outline-none
-              focus:shadow-outline
+              focus:outline-none focus:shadow-outline
               transform
               transition
               hover:scale-105

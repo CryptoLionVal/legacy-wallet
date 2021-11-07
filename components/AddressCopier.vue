@@ -18,8 +18,7 @@
         shadow-xl
         hover:opacity-100
         opacity-75
-        focus:outline-none
-        focus:shadow-outline
+        focus:outline-none focus:shadow-outline
         transform
         transition
         hover:scale-105

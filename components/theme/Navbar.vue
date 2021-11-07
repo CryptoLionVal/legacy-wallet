@@ -49,8 +49,7 @@
             p-1
             text-gray-500
             hover:text-gray-900
-            focus:outline-none
-            focus:shadow-outline
+            focus:outline-none focus:shadow-outline
             transform
             transition
             hover:scale-105
@@ -74,9 +73,7 @@
         class="
           w-full
           flex flex-col
-          lg:flex-row lg:flex
-          lg:items-center
-          lg:w-auto
+          lg:flex-row lg:flex lg:items-center lg:w-auto
           mt-2
           lg:mt-0
           bg-white
@@ -119,15 +116,13 @@
             rounded-full
             my-2
             w-4/6
-            lg:w-1/6
-            lg:my-0
+            lg:w-1/6 lg:my-0
             py-2
             text-center
             px-6
             shadow
             opacity-75
-            focus:outline-none
-            focus:shadow-outline
+            focus:outline-none focus:shadow-outline
             transform
             transition
             hover:scale-105

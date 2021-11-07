@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import NetworksConfig from '@/networks.config'
 import Big from 'big.js'
+import NetworksConfig from '@/networks.config'
 
 export default {
   data() {
