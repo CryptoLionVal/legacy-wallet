@@ -1,13 +1,13 @@
 export default {
   TESTNET: {
-    RPC: 'https://testnet-croeseid-3.crypto.org:26657',
-    LCD: 'https://testnet-croeseid-3.crypto.org:1317',
-    T_VALIDATOR: '5490885CE154215E79B13DDC2F40D28E0D216D87',
-    VALIDATOR: 'tcrocncl1j6cggamet73e2ymmvl58vwj6xv3pm89phczahv',
+    RPC: 'https://testnet-croeseid-4.crypto.org:26657',
+    LCD: 'https://testnet-croeseid-4.crypto.org:1317',
+    T_VALIDATOR: '71DA178AE52B2D0654102A86166CE91AC5121CB2', // node2
+    VALIDATOR: 'tcrocncl14fzksz5h72et4ssjtqpwsmhz6ysk6r4na5tr63',
     HD_PATH: "m/44'/1'/0'/0/0",
     PREFIX: 'tcro',
-    EXPLORER: 'https://crypto.org/explorer/croeseid3',
-    EXPLORER_API: 'https://crypto.org/explorer/croeseid3/api/v1',
+    EXPLORER: 'https://crypto.org/explorer/croeseid4',
+    EXPLORER_API: 'https://crypto.org/explorer/croeseid4/api/v1',
   },
   MAINNET: {
     RPC: 'https://mainnet.crypto.org:26657',
