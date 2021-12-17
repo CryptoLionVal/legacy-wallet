@@ -2,16 +2,7 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'final'"
-      class="
-        container
-        px-8
-        flex flex-col
-        w-full
-        flex-wrap
-        justify-start
-        items-start
-        text-left
-      "
+      class="container px-8 flex flex-col w-full flex-wrap justify-start items-start text-left"
     >
       <h1 class="my-10 text-5xl w-full font-bold text-green-700 leading-tight">
         {{ $t('pages.how_to_stake_cro.steps.final.title') }}
@@ -22,25 +13,7 @@
 
       <div class="w-full pt-6 pb-6 flex flex-row">
         <a
-          class="
-            rounded-full
-            flex flex-row
-            content-center
-            justify-center
-            flex-1
-            p-6
-            m-6
-            bg-white
-            text-gray-800
-            font-bold
-            shadow-lg
-            focus:outline-none focus:shadow-outline
-            transform
-            transition
-            hover:scale-105
-            duration-300
-            ease-in-out
-          "
+          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           href="https://twitter.com/CryptoLionVal"
           :title="$t('pages.how_to_stake_cro.steps.final.buttons.twitter')"
           target="_blank"
@@ -62,25 +35,7 @@
           </span>
         </a>
         <a
-          class="
-            rounded-full
-            flex flex-row
-            content-center
-            justify-center
-            flex-1
-            p-6
-            m-6
-            bg-white
-            text-gray-800
-            font-bold
-            shadow-lg
-            focus:outline-none focus:shadow-outline
-            transform
-            transition
-            hover:scale-105
-            duration-300
-            ease-in-out
-          "
+          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           href="https://t.me/CryptoLionValidator"
           :title="$t('pages.how_to_stake_cro.steps.final.buttons.telegram')"
           target="_blank"
@@ -107,43 +62,13 @@
       <a
         :href="$chain.config('EXPLORER') + '/tx/' + $store.state.lastHash"
         target="_blank"
-        class="
-          text-gray-500 text-xxs
-          mx-4
-          md:mx-0
-          font-bold
-          md:m-8
-          break-all
-          underline
-        "
+        class="text-gray-500 text-xxs mx-4 md:mx-0 font-bold md:m-8 break-all underline"
         >TX: {{ $store.state.lastHash }}</a
       >
 
       <div class="flex w-full justify-start">
         <a
-          class="
-            rounded-full
-            flex flex-row
-            content-center
-            cursor-pointer
-            justify-center
-            w-full
-            md:w-1/5
-            p-1
-            mt-6
-            bg-white
-            mr-2
-            mb-32
-            text-gray-800
-            font-bold
-            shadow-lg
-            focus:outline-none focus:shadow-outline
-            transform
-            transition
-            hover:scale-105
-            duration-200
-            ease-in-out
-          "
+          class="rounded-full flex flex-row content-center cursor-pointer justify-center w-full md:w-1/5 p-1 mt-6 bg-white mr-2 mb-32 text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-200 ease-in-out"
           @click.prevent="
             $store.commit('set', { name: 'step', value: 'wallet' })
           "

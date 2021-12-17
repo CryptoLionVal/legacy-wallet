@@ -2,29 +2,7 @@
   <div class="fixed z-50 container flex flex-row justify-end">
     <button
       :title="$t('copier.title')"
-      class="
-        mx-auto
-        flex flex-row
-        lg:mx-0
-        bg-white
-        text-gray-800
-        font-bold
-        rounded-l-full
-        mt-4
-        lg:mt-0
-        py-3
-        px-6
-        hover:shadow-2xl
-        shadow-xl
-        hover:opacity-100
-        opacity-75
-        focus:outline-none focus:shadow-outline
-        transform
-        transition
-        hover:scale-105
-        duration-300
-        ease-in-out
-      "
+      class="mx-auto flex flex-row lg:mx-0 bg-white text-gray-800 font-bold rounded-l-full mt-4 lg:mt-0 py-3 px-6 hover:shadow-2xl shadow-xl hover:opacity-100 opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
       @click="copy"
     >
       <svg

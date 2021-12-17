@@ -2,14 +2,7 @@
   <section :id="$t('sections.f_a_qs.id')" class="bg-white py-10">
     <div class="container mx-auto px-0 md:px-2 pt-4 pb-12 text-gray-800">
       <h1
-        class="
-          w-full
-          my-2
-          text-5xl
-          font-bold
-          leading-tight
-          text-center text-gray-800
-        "
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
       >
         {{ $t('sections.f_a_qs.title') }}
       </h1>
@@ -17,17 +10,7 @@
         <input
           v-model="search"
           :placeholder="$t('sections.f_a_qs.search_placeholder')"
-          class="
-            border border-primary
-            w-1/2
-            bg-white
-            appearance-none
-            block
-            rounded-full
-            py-3
-            px-4
-            focus:border-blue-500 focus:outline-none
-          "
+          class="border border-primary w-1/2 bg-white appearance-none block rounded-full py-3 px-4 focus:border-blue-500 focus:outline-none"
           type="text"
         />
       </div>

@@ -3,22 +3,7 @@
     v-if="!hidden"
     type="button"
     :title="$t('navbar.rate.title')"
-    class="
-      inline-flex
-      items-center
-      px-4
-      py-2
-      text-sm
-      leading-6
-      font-bold
-      rounded-full
-      text-green-500
-      bg-transparent
-      focus:outline-none
-      transition
-      ease-in-out
-      duration-150
-    "
+    class="inline-flex items-center px-4 py-2 text-sm leading-6 font-bold rounded-full text-green-500 bg-transparent focus:outline-none transition ease-in-out duration-150"
     @click="refresh"
   >
     <span

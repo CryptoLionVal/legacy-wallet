@@ -8,16 +8,7 @@
       aria-modal="true"
     >
       <div
-        class="
-          flex
-          items-end
-          justify-center
-          items-center
-          m-3
-          min-h-screen
-          text-center
-          sm:block sm:p-0
-        "
+        class="flex items-end justify-center items-center m-3 min-h-screen text-center sm:block sm:p-0"
       >
         <div
           class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
@@ -29,18 +20,7 @@
           >&#8203;</span
         >
         <div
-          class="
-            inline-block
-            align-bottom
-            bg-white
-            rounded-lg
-            text-left
-            overflow-hidden
-            shadow-xl
-            transform
-            transition-all
-            sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
-          "
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
         >
           <h2
             v-if="dialogType !== 'warning'"
@@ -69,17 +49,7 @@
                   v-model="models[index]"
                   type="password"
                   maxlength="1"
-                  class="
-                    w-1/6
-                    h-8
-                    md:h-16
-                    mx-1
-                    text-center
-                    border-2
-                    text-gray-800
-                    font-extrabold
-                    text-4lg
-                  "
+                  class="w-1/6 h-8 md:h-16 mx-1 text-center border-2 text-gray-800 font-extrabold text-4lg"
                   @keyup.prevent="handleInput"
                   @focus="current = index"
                 />
@@ -93,27 +63,7 @@
                     'hover:text-yellow-300': validPassword,
                     'opacity-50': !validPassword,
                   }"
-                  class="
-                    rounded-full
-                    flex
-                    content-center
-                    justify-center
-                    flex-auto
-                    p-2
-                    md:p-4
-                    m-0
-                    ml-2
-                    gradient
-                    text-gray-200
-                    font-bold
-                    shadow-lg
-                    focus:outline-none focus:shadow-outline
-                    transform
-                    transition
-                    hover:scale-105
-                    duration-300
-                    ease-in-out
-                  "
+                  class="rounded-full flex content-center justify-center flex-auto p-2 md:p-4 m-0 ml-2 gradient text-gray-200 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
                   @click.prevent="hide"
                 >
                   <svg
@@ -135,24 +85,7 @@
               </form>
               <a
                 v-else
-                class="
-                  rounded-full
-                  self-end
-                  flex flex-row
-                  content-center
-                  cursor-pointer
-                  justify-center
-                  w-1/5
-                  p-1
-                  bg-transparent
-                  text-red-600
-                  font-bold
-                  transform
-                  transition
-                  hover:scale-105
-                  duration-200
-                  ease-in-out
-                "
+                class="rounded-full self-end flex flex-row content-center cursor-pointer justify-center w-1/5 p-1 bg-transparent text-red-600 font-bold transform transition hover:scale-105 duration-200 ease-in-out"
                 @click.prevent="$store.commit('hideDialog')"
               >
                 <span class="text-xl">

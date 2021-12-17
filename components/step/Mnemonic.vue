@@ -2,24 +2,10 @@
   <transition name="fade">
     <div
       v-if="$store.state.step === 'mnemonic'"
-      class="
-        container
-        px-8
-        mx-auto
-        flex flex-wrap flex-col
-        md:flex-row
-        items-center
-      "
+      class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center"
     >
       <div
-        class="
-          flex flex-col
-          w-full
-          justify-center
-          items-start
-          text-center
-          md:text-left
-        "
+        class="flex flex-col w-full justify-center items-start text-center md:text-left"
       >
         <h1 class="my-12 text-5xl font-bold leading-tight">
           {{ $t('pages.how_to_stake_cro.steps.mnemonic.title') }}
@@ -29,21 +15,7 @@
         <textarea
           v-model="mnemonic"
           :disabled="loading"
-          class="
-            rounded-full
-            w-full
-            md:w-5/6
-            h-32
-            mb-3
-            px-12
-            focus:bg-yellow-100
-            font-extrabold
-            text-xl
-            py-4
-            text-primary
-            normal-case
-            focus:outline-none
-          "
+          class="rounded-full w-full md:w-5/6 h-32 mb-3 px-12 focus:bg-yellow-100 font-extrabold text-xl py-4 text-primary normal-case focus:outline-none"
           cols="30"
           rows="5"
         ></textarea>
@@ -55,31 +27,7 @@
             'hover:bg-yellow-400': !validMnemonic,
             'opacity-50': !validMnemonic,
           }"
-          class="
-            rounded-full
-            flex flex-row
-            items-center
-            md:flex-col
-            h-16
-            md:h-32
-            justify-center
-            w-full
-            md:w-1/6
-            inline-block
-            hover:bg-yellow-300
-            p-6
-            md:mx-6
-            bg-yellow-400
-            text-gray-800
-            font-bold
-            shadow-lg
-            focus:outline-none focus:shadow-outline
-            transform
-            transition
-            hover:scale-105
-            duration-300
-            ease-in-out
-          "
+          class="rounded-full flex flex-row items-center md:flex-col h-16 md:h-32 justify-center w-full md:w-1/6 inline-block hover:bg-yellow-300 p-6 md:mx-6 bg-yellow-400 text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           @click="decryptWallet"
         >
           <svg
