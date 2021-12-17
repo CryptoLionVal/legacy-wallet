@@ -12,7 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@cosmjs/crypto": "0.26.5",
+    "@cosmjs/crypto": "^0.26.5",
     "@cosmjs/launchpad": "0.26.5",
     "@cosmjs/proto-signing": "0.26.5",
     "@cosmjs/stargate": "0.26.5",
