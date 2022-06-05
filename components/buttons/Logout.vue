@@ -5,7 +5,7 @@
     @click.prevent="logout"
   >
     <span class="text-xl">
-      {{ $t('pages.how_to_stake_cro.logout_button') }}
+      {{ $t('pages.wallet.logout_button') }}
     </span>
   </a>
 </template>
@@ -14,7 +14,7 @@
 export default {
   methods: {
     logout() {
-      if (!confirm(this.$t('pages.how_to_stake_cro.logout_confirm'))) return
+      if (!confirm(this.$t('pages.wallet.logout_confirm'))) return
 
       this.$store.dispatch('resetStore')
 

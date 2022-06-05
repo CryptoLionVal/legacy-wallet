@@ -8,7 +8,7 @@
         class="flex flex-col w-full justify-center items-start text-center md:text-left"
       >
         <h1 class="my-12 text-5xl font-bold leading-tight">
-          {{ $t('pages.how_to_stake_cro.steps.mnemonic.title') }}
+          {{ $t('pages.wallet.steps.mnemonic.title') }}
         </h1>
       </div>
       <div class="w-full pt-1 pb-3 flex flex-col md:flex-row">
@@ -67,7 +67,7 @@
             ></path>
           </svg>
           <span class="text-2xl">{{
-            $t('pages.how_to_stake_cro.steps.mnemonic.button')
+            $t('pages.wallet.steps.mnemonic.button')
           }}</span>
         </button>
       </div>

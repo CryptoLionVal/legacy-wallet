@@ -79,7 +79,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://cryptolion.finance',
+    hostname: 'https://wallet.cryptolion.finance',
     gzip: true,
   },
 

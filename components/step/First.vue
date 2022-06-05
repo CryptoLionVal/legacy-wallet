@@ -8,34 +8,13 @@
         class="flex flex-col w-full justify-center items-start text-center md:text-left"
       >
         <h1 class="my-16 text-5xl font-bold leading-tight">
-          {{ $t('pages.how_to_stake_cro.steps.first.title') }}
+          {{ $t('pages.wallet.steps.first.title') }}
         </h1>
         <p class="leading-normal text-2xl mb-8">
-          {{ $t('pages.how_to_stake_cro.steps.first.desc') }}
+          {{ $t('pages.wallet.steps.first.desc') }}
         </p>
       </div>
       <div class="w-full pt-6 pb-32 flex flex-col">
-        <button
-          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          @click="$store.commit('set', { name: 'step', value: 'defi' })"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="text-gray-700 stroke-2 fill-current"
-            viewBox="0 0 24 24"
-            width="48"
-            height="48"
-          >
-            <path
-              class="heroicon-ui"
-              d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2zm0 2v16h8V4H8zm4 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
-            />
-          </svg>
-
-          <span class="text-l md:text-3xl">
-            {{ $t('pages.how_to_stake_cro.steps.first.buttons.defi') }}
-          </span>
-        </button>
         <button
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           @click="$store.commit('set', { name: 'step', value: 'mnemonic' })"
@@ -54,27 +33,7 @@
           </svg>
 
           <span class="text-l md:text-3xl">
-            {{ $t('pages.how_to_stake_cro.steps.first.buttons.mnemonic') }}
-          </span>
-        </button>
-        <button
-          class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          @click="navigate"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="text-gray-700 stroke-2 fill-current"
-            viewBox="0 0 24 24"
-            width="48"
-            height="48"
-          >
-            <path
-              class="heroicon-ui"
-              d="M11 14.59V3a1 1 0 0 1 2 0v11.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"
-            />
-          </svg>
-          <span class="text-l md:text-3xl">
-            {{ $t('pages.how_to_stake_cro.steps.first.buttons.desktop') }}
+            {{ $t('pages.wallet.steps.first.buttons.mnemonic') }}
           </span>
         </button>
       </div>
@@ -90,7 +49,7 @@ export default {
       this.$router.push(
         this.localePath('how-to-stake-cro') +
           '#' +
-          this.$t('pages.how_to_stake_cro.steps_id')
+          this.$t('pages.wallet.steps_id')
       )
     },
   },

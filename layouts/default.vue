@@ -2,13 +2,11 @@
   <div>
     <theme-navbar />
 
-    <theme-hero />
-
     <Nuxt />
 
     <theme-footer />
 
-    <address-copier />
+    <dialog-modal />
 
     <cookie-box />
   </div>

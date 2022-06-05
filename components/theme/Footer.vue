@@ -64,20 +64,6 @@
           </div>
         </div>
       </div>
-
-      <div class="flex flex-row space-x-2 mx-8 mb-3">
-        <lazy-buttons-status
-          :name="$t('statusButton.name')"
-          :validator="$chain.config('T_VALIDATOR')"
-          :rpc="$chain.config('RPC')"
-        />
-        <lazy-buttons-status
-          :name="$t('statusButton.testNetName')"
-          :validator="$chain.config('T_VALIDATOR', 'TESTNET')"
-          :rpc="$chain.config('RPC', 'TESTNET')"
-        />
-      </div>
-
       <p
         class="text-gray-500 text-sm pb-2 mx-8"
         v-html="$t('footer.copyright')"

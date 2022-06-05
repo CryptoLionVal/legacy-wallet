@@ -1,10 +1,6 @@
 import { stringToPath } from '@cosmjs/crypto'
-import {
-  GasPrice,
-  SigningStargateClient,
-  Secp256k1HdWallet,
-  coin,
-} from '@cosmjs/stargate'
+import { GasPrice, SigningStargateClient, coin } from '@cosmjs/stargate'
+import { Secp256k1HdWallet } from '@cosmjs/amino'
 import NetworksConfig from '@/networks.config'
 
 export default class Chain {

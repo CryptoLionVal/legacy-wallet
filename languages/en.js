@@ -1,14 +1,10 @@
 /* eslint-disable prettier/prettier */
 export default {
-  title_template: `Crypto Lion Validator on CDC Chain Main-net | %s`,
+  title_template: `Crypto Lion Wallet | %s`,
   meta_description:
-    `Crypto Lion is a blockchain validator running on Crypto.org Main-net Chain. You can make passive income by staking your CROs on it.`,
+    `Crypto Lion Wallet is a blockchain web wallet. You can make passive income by staking your CROs on it.`,
 
   pages: {
-    home: {
-      title: `Home`,
-      meta_description: `Crypto Lion is a Validator of Crypto.org Main-net to serve service of passive income for CRO holders.`
-    },
     terms: {
       title: `Terms & Conditions`,
       meta_description: `Terms & Conditions of using Crypto Lion Staking Service`,
@@ -85,7 +81,7 @@ export default {
       </p>
       `,
     },
-    how_to_stake_cro: {
+    wallet: {
       title: `Staking Explained`,
       meta_description: `Step by step explanation of staking CROs as a delegator to the Crypto Lion Crypto.org Main-net node.`,
       steps_id: `staking-steps`,
@@ -244,7 +240,7 @@ export default {
   navbar: {
     logo: {
       link: {
-        title: `Crypto Lion CRO Validator`
+        title: `Crypto Lion Wallet`
       }
     },
     links: [
@@ -252,21 +248,6 @@ export default {
         name: `Home`,
         title: `Crypto Lion Homepage`,
         href: `/en/#validator-home`
-      },
-      {
-        name: `How staking work?`,
-        title: `Simple steps of CRO staking`,
-        href: `/en/#how-cro-staking-work`
-      },
-      {
-        name: `Staking Ways`,
-        title: `How to stake CROs on Main-net, Explained`,
-        href: { path: 'how-to-stake-cro', hash: 'staking-steps' }
-      },
-      {
-        name: `FAQs`,
-        title: `Frequently Asked Questions About CDC Main-net`,
-        href: `/en/#f-a-qs`
       }
     ],
     rate: {
@@ -275,25 +256,8 @@ export default {
     }
   },
 
-  stake_now: {
-    name: `Stake Now`,
-    title: `Stake your CROs to get your rewards!`
-  },
-
-  copier: {
-    title: `Click to copy delegation address.`,
-    message: `Copy Staking Address`,
-    done_message: `Copied!`
-  },
-
   disclaimer: {
     desc: `By using this wallet service, you are accepting our `,
-  },
-
-  statusButton: {
-    name: `Main-net`,
-    testNetName: `Croeseid Test-net`,
-    message: `: Missed { missed } blocks in last { gap } blocks.`
   },
 
   dialog: {
@@ -313,200 +277,6 @@ export default {
         privacy policy page.`,
     accept_button: `Yes`,
     deny_button: `No`
-  },
-
-  hero: {
-    pre_title: `CRO Main-net Staking Rewards Set at <span class="font-bold">20%</span> APY`,
-    title: `Time for Crypto.org Chain Main-net!`,
-    desc: `
-    <span class="font-bold">5 billion</span> CRO has been allocated for
-            distribution as rewards over the next
-            <span class="font-bold">10 years</span>.
-    `
-  },
-
-  sections: {
-    how_to: {
-      title: `How staking work?`,
-      id: `how-cro-staking-work`,
-      steps: {
-        first: {
-          title: `Hold CROs and earn interest at the same time!`,
-          desc: `
-            You already have some CRO in your wallet. Great! because fully
-            decentralized Crypto.org Chain offers you
-            <span class="font-bold">20%</span> APY
-            <br />
-            <br />
-            Official source:
-
-            <a
-              class="text-pink-500 underline"
-              target="_blank"
-              href="https://blog.crypto.com/cro-mainnet-staking-rewards-set-at-20-apy/"
-              >CRO Main-net Staking Rewards</a
-            >
-          `
-        },
-        second: {
-          title: `Create a brand new Crypto.org Chain Wallet`,
-          desc: `
-              You can delegate your CROs in minutes. Just download latest
-              official desktop wallet below link and join the party!
-              <br />
-              <br />
-              Download from:
-
-              <a
-                class="text-pink-500 underline"
-                target="_blank"
-                href="https://github.com/crypto-com/chain-desktop-wallet/releases"
-                >Crypto.org Chain Desktop Wallet</a
-              >
-          `
-        },
-        third: {
-          title: `Delegate your CROs on Crypto Lion Node`,
-          desc: `
-            Open the Wallet App then select
-            <span class="font-bold">Staking</span> tab, then switch
-            <span class="font-bold">Delegate Funds</span> tab on, copy our node
-            address from right top of this website and paste in
-            <span class="font-bold">Validator address</span>
-            area. Review and accept.
-          `
-        },
-        fourth: {
-          title: `Enjoy with 20% APY!`,
-          desc: `
-              Tadaa! You have just staked your funds. Now you can have a look at
-              the transaction on our node's page and tract your rewards.
-              <br />
-              <br />
-              Our Validator's Page:
-
-              <a
-                class="text-pink-500 underline"
-                target="_blank"
-                href="https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495"
-                >Crypto Lion Node on Crypto.org Chain</a
-              >
-          `
-        }
-      }
-    },
-    why_us: {
-      title: `Why Crypto Lion Node?`,
-      cards: {
-        first: {
-          title: `Powerful Infrastructure`,
-          subtitle: `We are using latest firmware and software.`,
-          desc:
-            `We are using dedicated servers with industry standard high internet connection with latest version operating systems.`,
-          link: {
-            name: `See Statistics`,
-            title: `See how the validator performs on blockchain`
-          }
-        },
-        second: {
-          title: `Community Supported`,
-          subtitle: `We are from big Crypto.com family.`,
-          desc:
-            `We are people from the turkish community of CDC. We care friendly medium and love to meet new crypto lovers.`,
-          link: {
-            name: `Checkout Twitter`,
-            title: `Follow us on Twitter!`
-          }
-        },
-        third: {
-          title: `Reliable`,
-          subtitle: `We are also delegators of our node.`,
-          desc:
-            `We are also delegators of our node. Hundred thousands of CROs already staked on our validator.`,
-          link: {
-            name: `Our Delegators`,
-            title: `See wallets of people who chosen us`
-          }
-        }
-      }
-    },
-    f_a_qs: {
-      title: `FAQs`,
-      id: `f-a-qs`,
-      search_placeholder: `Search`,
-      items: [
-        {
-          title: `What is a validator?`,
-          desc: `
-          A full-node in consensus by broadcasting votes which contain cryptographic
-          signatures signed by their private key. Validators commit new blocks
-          in the blockchain and receive revenue in exchange for their work.
-          `,
-          separate: true
-        },
-        {
-          title: `What is 'staking'?`,
-          desc: `
-          Crypto.org Chain is a public Proof-Of-Stake (PoS) blockchain, meaning
-          that the weight of validators is determined by the amount of staking
-          tokens (CROs) bonded as collateral. These CROs can be self-delegated
-          directly by the validator or delegated to them by other CRO holders.
-          `,
-          separate: true
-        },
-        {
-          title: `What is a delegator?`,
-          desc: `
-          Delegators are CRO holders who cannot, or do not want to run a validator
-          themselves. CRO holders can delegate CROs to a validator and obtain a
-          part of their revenue in exchange.
-          `,
-          separate: true
-        },
-        {
-          title: `How can I stake?`,
-          desc: `
-          You can use our website, Defi App for mobiles, Crypto.com's Desktop wallet or using command line.
-          `,
-          separate: true
-        },
-        {
-          title: `How often can I claim my rewards?`,
-          desc: `
-          You can withdraw your CROs whatever often you want. There is no limit
-          for this operation.
-          `,
-          separate: true
-        },
-        {
-          title:
-            `Is there a cool-down time when I want to undelegate my funds?`,
-          desc: `
-          Yes. You can undelegate whenever you want but there is 28 days
-          cool-down time to be available your CROs back to your delegator
-          wallet.
-          `,
-          separate: false
-        },
-        {
-          title:
-            `Why should I trust you as a delegator? Can you access our coins?`,
-          desc: `
-          Your wallet completely belongs to you and only you have access with your
-          mnemonic secret words. You should keep them safe. We are Crossfire competition
-          participants which has experience running a tendermint node and maintenance it.
-          Plus you can always undelegate your staked CROs even any validator stop working and
-          jailed for some reason. We are guarantee that we will announce any forecast
-          about maintaining and upgrading jobs that reflects your staking.
-          `,
-          separate: false
-        }
-      ]
-    },
-    action: {
-      title: `Start Enjoying the Benefits of Staking`,
-      subtitle: `Earn interest almost 20%!`
-    }
   },
 
   footer: {
@@ -562,67 +332,17 @@ export default {
             href: `mailto:cryptolion-node@protonmail.com`
           }
         ]
-      },
-      {
-        name: `Official Resources`,
-        links: [
-          {
-            name: `Crypto.org`,
-            target: `_blank`,
-            title: `Crypto.org Chain`,
-            href: `https://crypto.org/`
-          },
-          {
-            name: `Crypto.org Chain Whitepaper`,
-            title: `Crypto.org Chain Whitepaper PDF`,
-            target: `_blank`,
-            href: `https://crypto.org/chain_whitepaper.pdf`
-          },
-          {
-            name: `Crypto.org Chain Docs`,
-            title: `Crypto.org Chain Documentation`,
-            target: `_blank`,
-            href: `https://crypto.org/docs/`
-          }
-        ]
-      },
-      {
-        name: `Explorers`,
-        links: [
-          {
-            name: `on Main-net`,
-            target: `_blank`,
-            title: `Crypto.org Chain Main-net Explorer`,
-            href:
-              `https://crypto.org/explorer/validator/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
-          },
-          {
-            name: `on Mintscan by Cosmostation`,
-            target: `_blank`,
-            title: `Mintscan Main-net Explorer`,
-            href:
-              `https://www.mintscan.io/crypto-org/validators/crocncl17xjefmgzd9k2k065289nktklj706zhk4nr7495`
-          },
-          {
-            name: `on Testnet Croeseid 3`,
-            target: `_blank`,
-            title: `Crypto.org Croeseid 3 Testnet Explorer`,
-            href:
-              `https://crypto.org/explorer/croeseid3/validator/tcrocncl1j6cggamet73e2ymmvl58vwj6xv3pm89phczahv`
-          }
-        ]
       }
     ],
     copyright: `
         All rights reserved. We are happy to share the source code on
         <a
-          href="https://github.com/mcanvar/crypto-lion"
-          title="A powerful CDC Chain Main-net Node for staking purpose."
+          href="https://github.com/CryptoLionVal/legacy-wallet"
+          title="A Cosmos Wallet for staking purpose."
           target="_blank"
           class="no-underline hover:underline text-gray-800 hover:text-pink-500"
           >GitHub</a
-        >. Feel free to make a PR, fork and use it for your non-commercial
-        purposes. May the world is a better place with our open ♥️.
+        >. Feel free to make a PR, fork and use it for your projects. May the world is a better place with our open ♥️.
     `
   }
 };

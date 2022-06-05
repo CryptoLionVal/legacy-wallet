@@ -9,7 +9,7 @@
       >
         <h1 class="my-6 text-5xl leading-tight flex flex-row items-center">
           <span class="font-bold">
-            {{ $t('pages.how_to_stake_cro.steps.wallet.title') }}
+            {{ $t('pages.wallet.steps.wallet.title') }}
           </span>
         </h1>
         <div class="my-6 flex text-xs md:text-3xl justify-between space-x-2">
@@ -27,13 +27,13 @@
               />
             </span>
             <span class="font-bold">{{
-              $t('pages.how_to_stake_cro.steps.wallet.staked_balance')
+              $t('pages.wallet.steps.wallet.staked_balance')
             }}</span>
             <span class="font-bold">{{
-              $t('pages.how_to_stake_cro.steps.wallet.available_balance')
+              $t('pages.wallet.steps.wallet.available_balance')
             }}</span>
             <span class="font-bold">
-              {{ $t('pages.how_to_stake_cro.steps.wallet.rewards') }}
+              {{ $t('pages.wallet.steps.wallet.rewards') }}
             </span>
           </div>
           <div
@@ -43,9 +43,7 @@
               &nbsp;
               <button
                 class="cursor-pointer mt-1"
-                :title="
-                  $t('pages.how_to_stake_cro.steps.wallet.renew_button_title')
-                "
+                :title="$t('pages.wallet.steps.wallet.renew_button_title')"
                 :class="{
                   'text-teal-300': !loading,
                   'text-gray-300': loading,
@@ -77,9 +75,7 @@
               {{ balance }}
               <button
                 class="cursor-pointer"
-                :title="
-                  $t('pages.how_to_stake_cro.steps.wallet.renew_button_title')
-                "
+                :title="$t('pages.wallet.steps.wallet.renew_button_title')"
                 :class="{
                   'animate-spin': loading && reloadingBalance,
                   'cursor-not-allowed': loading || reloadingBalance,
@@ -112,9 +108,7 @@
               <button
                 class="cursor-pointer text-xs flex flex-row items-center"
                 :disabled="loading || withdrawingRewards || reloadingBalance"
-                :title="
-                  $t('pages.how_to_stake_cro.steps.wallet.rewards_button_title')
-                "
+                :title="$t('pages.wallet.steps.wallet.rewards_button_title')"
                 :class="{
                   'animate-pulse': loading && withdrawingRewards,
                   'cursor-not-allowed':
@@ -205,7 +199,7 @@
             ></path>
           </svg>
           <span class="text-2xl">{{
-            $t('pages.how_to_stake_cro.steps.wallet.button')
+            $t('pages.wallet.steps.wallet.button')
           }}</span>
         </button>
       </div>
@@ -214,8 +208,8 @@
         :href="explorerLink"
         target="_blank"
         class="underline hover:no-underline text-gray-200 hover:text-gray-200 mb-2"
-        :title="$t('pages.how_to_stake_cro.steps.wallet.explorer')"
-        >{{ $t('pages.how_to_stake_cro.steps.wallet.explorer') }}</a
+        :title="$t('pages.wallet.steps.wallet.explorer')"
+        >{{ $t('pages.wallet.steps.wallet.explorer') }}</a
       >
 
       <disclaimer />

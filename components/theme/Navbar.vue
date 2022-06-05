@@ -58,16 +58,6 @@
             >
           </li>
         </ul>
-        <NuxtLink
-          prefetch
-          :class="actionClasses"
-          :title="$t('stake_now.title')"
-          class="mx-auto lg:mx-0 font-bold rounded-full my-2 w-4/6 lg:w-1/6 lg:my-0 py-2 text-center px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          :to="localePath('how-to-stake-cro')"
-          @click.native="navigate"
-        >
-          {{ buttonText }}
-        </NuxtLink>
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />

@@ -5,17 +5,17 @@
       class="container px-8 flex flex-col w-full flex-wrap justify-start items-start text-left"
     >
       <h1 class="my-10 text-5xl w-full font-bold text-green-700 leading-tight">
-        {{ $t('pages.how_to_stake_cro.steps.final.title') }}
+        {{ $t('pages.wallet.steps.final.title') }}
       </h1>
       <h3 class="mb-4">
-        {{ $t('pages.how_to_stake_cro.steps.final.desc') }}
+        {{ $t('pages.wallet.steps.final.desc') }}
       </h3>
 
       <div class="w-full pt-6 pb-6 flex flex-row">
         <a
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           href="https://twitter.com/CryptoLionVal"
-          :title="$t('pages.how_to_stake_cro.steps.final.buttons.twitter')"
+          :title="$t('pages.wallet.steps.final.buttons.twitter')"
           target="_blank"
         >
           <svg
@@ -31,13 +31,13 @@
           </svg>
 
           <span class="text-l md:text-3xl">
-            {{ $t('pages.how_to_stake_cro.steps.final.buttons.twitter') }}
+            {{ $t('pages.wallet.steps.final.buttons.twitter') }}
           </span>
         </a>
         <a
           class="rounded-full flex flex-row content-center justify-center flex-1 p-6 m-6 bg-white text-gray-800 font-bold shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           href="https://t.me/CryptoLionValidator"
-          :title="$t('pages.how_to_stake_cro.steps.final.buttons.telegram')"
+          :title="$t('pages.wallet.steps.final.buttons.telegram')"
           target="_blank"
         >
           <svg
@@ -54,7 +54,7 @@
           </svg>
 
           <span class="text-l md:text-3xl">
-            {{ $t('pages.how_to_stake_cro.steps.final.buttons.telegram') }}
+            {{ $t('pages.wallet.steps.final.buttons.telegram') }}
           </span>
         </a>
       </div>
@@ -86,7 +86,7 @@
             />
           </svg>
           <span class="text-xl">
-            {{ $t('pages.how_to_stake_cro.back_button') }}
+            {{ $t('pages.wallet.back_button') }}
           </span>
         </a>
 
